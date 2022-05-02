@@ -10,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -155,14 +155,7 @@
       <option name="project" value="LOCAL" />
       <updated>1651476883371</updated>
     </task>
-    <task id="LOCAL-00002" summary="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링">
-      <created>1651478200911</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1651478200911</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
