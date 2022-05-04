@@ -64,13 +64,29 @@
 -----------------------------------------  
 ### 🛠Skill & Tools
 #### Backend
-*
-*
-*
-*
-*
-*
-#### Frontend
+* Django  
+* Python  
+* Pycharm    
+
+#### DB  
+* MySQL  
+
+#### Frontend  
+* HTML  
+* CSS  
+* Js  
+
+#### ML,DL
+* Jupyter notebook
+* Pytorch
+* Tensorflow
+
+#### Platforms  
+*  ELK  
+* Hadoop  
+* Spark  
+* Kafka(보류)
+
 
 
 -----------------------------------------
