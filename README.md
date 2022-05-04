@@ -90,6 +90,7 @@
 ### 📅 WBS
 ![wbs](https://user-images.githubusercontent.com/97925049/166634107-0845a4f5-ef86-4f48-8d74-39213c098789.png)
 * 개발하면서 수정 예정
+* https://github.com/SunMin0/ChatTime/blob/main/docs/ChatTime%20WBS.xlsx
 -----------------------------------------
 
 ### 🎞구현
