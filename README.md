@@ -103,7 +103,18 @@
 -----------------------------------------
 ### 🎨플랫폼 구성도
 -----------------------------------------
-### 🖊프로세스정의 및 UI 설계
+### 🖊프로세스정의
+-----------------------------------------
+### 🖥UI 설계
+
+![001](https://user-images.githubusercontent.com/97925049/166646657-146ab7b5-3ec5-4d11-ae4e-7d73b02ea672.png)
+![002](https://user-images.githubusercontent.com/97925049/166646666-674ae1c9-2eec-487e-9dc8-9a2f5feccdae.png)
+![003](https://user-images.githubusercontent.com/97925049/166646668-0914ac8c-5bdc-4a9d-b276-7bd6e3bae9de.png)
+![004](https://user-images.githubusercontent.com/97925049/166646670-1af04463-d3d9-426f-8428-c4fb8867c930.png)
+![005](https://user-images.githubusercontent.com/97925049/166646671-4765ff7d-21e4-4ad1-bec9-edc1ce254d9e.png)
+![006](https://user-images.githubusercontent.com/97925049/166646674-b1183a1b-3dc5-44d1-a477-5559de288719.png)
+![007](https://user-images.githubusercontent.com/97925049/166646677-ceaab510-71d4-448c-b722-18155ad94efa.png)
+
 -----------------------------------------
 ### 📅 WBS
 ![wbs](https://user-images.githubusercontent.com/97925049/166634107-0845a4f5-ef86-4f48-8d74-39213c098789.png)
