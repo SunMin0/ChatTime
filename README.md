@@ -63,6 +63,8 @@
 
 -----------------------------------------  
 ### 🛠Skill & Tools
+![로고](https://user-images.githubusercontent.com/97925049/166637055-4f666242-f076-42ba-af36-7e377ed8379d.png)
+
 #### Backend
 * Django  
 * Python  
