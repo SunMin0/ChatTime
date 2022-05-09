@@ -1,0 +1,51 @@
+<!doctype HTML>
+{% load static %}
+
+<head>
+	<meta charset="UTF-8">
+	<title>로그인</title>
+	<link rel="stylesheet" href="{%static 'css/login.css' %}">
+	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="main-container">
+		<div class="main-wrap">
+		<header>
+				<CENTER><img src="{%static 'images/logo1.png' %}" width=250 height=250 ></CENTER>
+		</header>
+		<section class="login-input-section-wrap">
+			<div class="login-input-wrap">
+				<input placeholder="아이디" type="text"></input>
+			</div>
+			<div class="login-input-wrap password-wrap">
+				<input placeholder="비밀번호" type="password"></input>
+			</div>
+			<div class="login-button-wrap">
+				 <button onclick="location.href='http://127.0.0.1:8000/index';" style='cursor:pointer;'>로그인</button>
+			</div>
+			<br>
+			<br>
+			아이디가 없으신가요? 아래 회원가입을 클릭해주세요 !
+			<br>
+			<br>
+			<div class = "login-button-wrap">
+				<button onclick="location.href='http://127.0.0.1:8000/signup';" style='cursor:pointer;'>회원가입</button>
+			</div>
+		</section>
+		<section class="Easy-sgin-in-wrap">
+			<h2>간편 로그인</h2>
+			<ul class="sign-button-list">
+				<li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
+				<li><button><i class="fab fa-line"></i><span>line</span></button></li>
+			</ul>
+			<p class="forget-msg">Forgot your Username or Password? | Sign up</p>
+		</section>
+		<footer>
+			<div class="copyright-wrap">
+			<span>	<img src="img/logo.png"> Copyright © KYcompany All Rights Reserved.</span>
+			</div>
+		</footer>
+		</div>
+	</div>
+</body>

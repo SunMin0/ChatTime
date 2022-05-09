@@ -5,6 +5,8 @@ from src.NLG import NaturalLanguageGenerator
 
 # Create your views here.
 
+
+
 def f_chat(request):
     if request.method == "GET":
         try:
@@ -16,10 +18,10 @@ def f_chat(request):
                     answer = nlg.run_nlg(text)[0]
                 except:
                     answer = "죄송해요. 알아듣지 못했어요."
-                return render(request, 'chat.html', {'text': text, 'answer': answer})
+                return render(request, 'chat/chat.html', {'text': text, 'answer': answer})
         except:
             print("except")
-        return render(request, 'chat.html')
+        return render(request, 'chat/chat.html')
     elif request.method == "POST":
         if 'blobURL' in request.POST:
             blobURL = request.POST['blobURL']
@@ -29,16 +31,16 @@ def f_chat(request):
             return JsonResponse(context)
 
 def f_chats(request):
-    return render(request, 'chats.html')
+    return render(request, 'chat/chats.html')
 
 def f_find(request):
-    return render(request, 'find.html')
+    return render(request, 'chat/find.html')
 
 def f_more(request):
-    return render(request, 'more.html')
+    return render(request, 'chat/more.html')
 
 def f_profile(request):
-    return render(request, 'profile.html')
+    return render(request, 'chat/profile.html')
 
 def f_index(request):
-    return render(request, 'index.html')
+    return render(request, 'chat/index.html')

@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import chat.views
+import user.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     path("more", chat.views.f_more),
     path("profile", chat.views.f_profile),
     path("index", chat.views.f_index),
-    path("", chat.views.f_index),
+    path("", user.views.base),
+    path("signup", user.views.signup),
 ]

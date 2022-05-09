@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링" />
+    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링">
+      <change afterPath="$PROJECT_DIR$/.idea/ChatTime.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mypage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/mypageEdit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/signin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/user/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NLU_chatbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NLU_chatbot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chats.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/chats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/find.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/find.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/more.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/profile.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -19,27 +56,35 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28L2P4eV7ixM73w7pB2CbSXzSUN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pokemon" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\static\css" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\templates\login" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\static" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\templates" />
       <recent name="C:\PythonProject\NLU_chatbot" />
-      <recent name="C:\PythonProject\NLU_chatbot\nlp\pretrained" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\PythonProject\NLU_chatbot\static\images" />
-      <recent name="C:\PythonProject\NLU_chatbot\static" />
-      <recent name="C:\PythonProject\NLU_chatbot\templates" />
-      <recent name="C:\PythonProject\NLU_chatbot\nlp\pretrained" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\templates\chat" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\templates\login" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\static\images" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime\img" />
+      <recent name="C:\Users\slinfo\PycharmProjects\ChatTime" />
     </key>
   </component>
   <component name="RunManager" selected="Python.NLG">
@@ -77,6 +122,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/NLU.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="NLU_chatbot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,6 +191,81 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="NLU_chatbot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="NLU_chatbot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="NLU_chatbot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="NLU_chatbot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="NLU_chatbot" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
     <recent_temporary>
