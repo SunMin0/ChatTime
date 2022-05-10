@@ -67,8 +67,7 @@
 
 #### Backend
 * Django  
-* Python  
-* Pycharm    
+* Python    
 
 #### DB  
 * MySQL  
@@ -84,7 +83,7 @@
 * Tensorflow
 
 #### Platforms  
-*  ELK  
+* ELK  
 * Hadoop  
 * Spark  
 * Kafka(보류)
