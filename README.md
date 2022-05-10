@@ -110,13 +110,13 @@ https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
 -----------------------------------------
 ### 🖥UI 설계
 
-<img src="https://user-images.githubusercontent.com/97925049/166646657-146ab7b5-3ec5-4d11-ae4e-7d73b02ea672.png" width=400 height= 570>
-<img src="https://user-images.githubusercontent.com/97925049/166646666-674ae1c9-2eec-487e-9dc8-9a2f5feccdae.png" width=400 height= 570>
-<img src="https://user-images.githubusercontent.com/97925049/166646668-0914ac8c-5bdc-4a9d-b276-7bd6e3bae9de.png" width=400 height= 570>
-<img src="https://user-images.githubusercontent.com/97925049/166646670-1af04463-d3d9-426f-8428-c4fb8867c930.png" width=400 height= 570>
-<img src="https://user-images.githubusercontent.com/97925049/166646671-4765ff7d-21e4-4ad1-bec9-edc1ce254d9e.png" width=400 height= 570>
-<img src="https://user-images.githubusercontent.com/97925049/166646674-b1183a1b-3dc5-44d1-a477-5559de288719.png" width=400 height= 570>
-<img src="https://user-images.githubusercontent.com/97925049/166646677-ceaab510-71d4-448c-b722-18155ad94efa.png" width=400 height= 570>
+<img src="https://user-images.githubusercontent.com/97925049/166646657-146ab7b5-3ec5-4d11-ae4e-7d73b02ea672.png" width=500 height= 650>
+<img src="https://user-images.githubusercontent.com/97925049/166646666-674ae1c9-2eec-487e-9dc8-9a2f5feccdae.png" width=500 height= 650>
+<img src="https://user-images.githubusercontent.com/97925049/166646668-0914ac8c-5bdc-4a9d-b276-7bd6e3bae9de.png" width=500 height= 650>
+<img src="https://user-images.githubusercontent.com/97925049/166646670-1af04463-d3d9-426f-8428-c4fb8867c930.png" width=500 height= 650>
+<img src="https://user-images.githubusercontent.com/97925049/166646671-4765ff7d-21e4-4ad1-bec9-edc1ce254d9e.png" width=500 height= 650>
+<img src="https://user-images.githubusercontent.com/97925049/166646674-b1183a1b-3dc5-44d1-a477-5559de288719.png" width=500 height= 650>
+<img src="https://user-images.githubusercontent.com/97925049/166646677-ceaab510-71d4-448c-b722-18155ad94efa.png" width=500 height= 650>
 
 -----------------------------------------
 ### 📅 WBS
