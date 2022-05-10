@@ -133,9 +133,9 @@ https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
 -----------------------------------------
 ### 🖥UI 설계
 
-<p style="text-align: center;">
+<div style="text-align:center;">
   <img src="https://user-images.githubusercontent.com/97925049/166646657-146ab7b5-3ec5-4d11-ae4e-7d73b02ea672.png" width="550" height="750"/>
-</p>
+</div>
   
 ![통합본100퍼](https://user-images.githubusercontent.com/97014086/167525353-8cb7a6ec-181e-4588-a2b1-9fb4af35492f.png)
 
