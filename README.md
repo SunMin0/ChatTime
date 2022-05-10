@@ -94,6 +94,29 @@
 ### 💴API 설계도
 ![API설계](https://user-images.githubusercontent.com/97925049/166633588-9c109dbc-7d1b-412b-a196-897017f3dcf2.png)
 * 개발하면서 수정 예정
+#### API 설계도에 따른 진행 상황
+
+|Feature|API|설명|진행상황|
+|------|------|------|------|
+|로그인|/|로그인,회원가입페이지|완료|
+|로그인|/|로그인 구현|진행중|
+|소셜로그인|/|카카오로그인|진행중|
+|회원가입|/signup|회원가입페이지|완료|
+|회원가입|/signup|회원가입구현,폼 양식 db전달|진행중|
+|비밀번호설정|/pw|비밀번호 재설정 페이지|진행중|
+|결제API|/pay|결제웹구현|진행중|
+|결제API|/pay|결제진행,완료구현|진행중|
+|카페메뉴|/cafe|카페메뉴페이지구현|진행중|
+|장바구니|/bag|장바구니페이지구현|진행중|
+|챗봇|/index|챗봇메인페이지구현|완료|
+|챗봇|/chats|챗봇시작구현|진행중|
+|챗봇|/chat|챗봇과의 대화 구현|진행중|
+|구글지도API|/chat|챗봇과의 대화에 구글API구현|진행중|
+
+
+
+
+
 -----------------------------------------
 
 ## 🎊산출물
@@ -110,13 +133,13 @@ https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
 -----------------------------------------
 ### 🖥UI 설계
 
-<img src="https://user-images.githubusercontent.com/97925049/166646657-146ab7b5-3ec5-4d11-ae4e-7d73b02ea672.png" width=500 height= 650>
-<img src="https://user-images.githubusercontent.com/97925049/166646666-674ae1c9-2eec-487e-9dc8-9a2f5feccdae.png" width=500 height= 650>
-<img src="https://user-images.githubusercontent.com/97925049/166646668-0914ac8c-5bdc-4a9d-b276-7bd6e3bae9de.png" width=500 height= 650>
-<img src="https://user-images.githubusercontent.com/97925049/166646670-1af04463-d3d9-426f-8428-c4fb8867c930.png" width=500 height= 650>
-<img src="https://user-images.githubusercontent.com/97925049/166646671-4765ff7d-21e4-4ad1-bec9-edc1ce254d9e.png" width=500 height= 650>
-<img src="https://user-images.githubusercontent.com/97925049/166646674-b1183a1b-3dc5-44d1-a477-5559de288719.png" width=500 height= 650>
-<img src="https://user-images.githubusercontent.com/97925049/166646677-ceaab510-71d4-448c-b722-18155ad94efa.png" width=500 height= 650>
+![001](https://user-images.githubusercontent.com/97925049/166646657-146ab7b5-3ec5-4d11-ae4e-7d73b02ea672.png)
+![002](https://user-images.githubusercontent.com/97925049/166646666-674ae1c9-2eec-487e-9dc8-9a2f5feccdae.png)
+![003](https://user-images.githubusercontent.com/97925049/166646668-0914ac8c-5bdc-4a9d-b276-7bd6e3bae9de.png)
+![004](https://user-images.githubusercontent.com/97925049/166646670-1af04463-d3d9-426f-8428-c4fb8867c930.png)
+![005](https://user-images.githubusercontent.com/97925049/166646671-4765ff7d-21e4-4ad1-bec9-edc1ce254d9e.png)
+![006](https://user-images.githubusercontent.com/97925049/166646674-b1183a1b-3dc5-44d1-a477-5559de288719.png)
+![007](https://user-images.githubusercontent.com/97925049/166646677-ceaab510-71d4-448c-b722-18155ad94efa.png)
 
 -----------------------------------------
 ### 📅 WBS
