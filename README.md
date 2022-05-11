@@ -127,7 +127,7 @@ https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
 -----------------------------------------
 ### 🎨플랫폼 구성도
 
-![pipeline](https://user-images.githubusercontent.com/97014086/167582591-401c8dcc-a05f-40db-8e30-7b7358e9e241.png)
+![pipeline0511](https://user-images.githubusercontent.com/97014086/167773819-690f8962-d7a0-4918-8527-1631c8639c2a.png)
 -----------------------------------------
 ### 🖊프로세스정의
 -----------------------------------------
