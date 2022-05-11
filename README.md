@@ -83,10 +83,9 @@
 * Tensorflow
 
 #### Platforms  
-* ELK  
-* Hadoop  
-* Spark  
-* Kafka(보류)
+* ElasticSearch
+* Logstash
+* Kibana
 
 
 
