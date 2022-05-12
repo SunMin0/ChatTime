@@ -92,6 +92,9 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * Kibana
 
 
+#### CI/CD
+* jenkins
+
 
 -----------------------------------------
 ### 💴API 설계도
