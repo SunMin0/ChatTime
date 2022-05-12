@@ -11,6 +11,7 @@
 -----------------------------------------
 ## Notion URL
 https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
+* WBS, API 설계, Team 소개
 
 -----------------------------------------
 ## 🎥 발표 영상(Youtube)
