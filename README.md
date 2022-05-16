@@ -131,7 +131,7 @@ https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
 -----------------------------------------
 ### 📅 WBS
 ![WBS](https://user-images.githubusercontent.com/97925049/168591525-677bc408-4363-48f2-a634-5fd36908df62.png)
-### notion으로 협업하면서 WBS 
+### notion으로 협업하면서 WBS 작성
 -----------------------------------------
 
 ### 🎞구현
