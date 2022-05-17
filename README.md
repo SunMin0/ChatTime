@@ -10,7 +10,7 @@
 ### 익숙한 프론트를 사용하여 사용자가 익숙하게 사용할 수 있는 인터페이스
 -----------------------------------------
 ## Notion URL
-https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
+https://nebulous-class-691.notion.site/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * WBS, API 설계, Team 소개
 
 -----------------------------------------
