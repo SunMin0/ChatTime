@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링">
-      <change afterPath="$PROJECT_DIR$/nlp/pretrained/cafe_intent_clsf_97.656_steps_10.pt" afterDir="false" />
+    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="2022-05-17 PM 3:57&#10;[Intent]&#10;- Intent 데이터 정제 후 pretrained 파일 생성&#10;- 채팅에 대한 응답을 intent로 반환하게 함.&#10;&#10;[개선사항]&#10;- Intent의 데이터셋에 추가할 수 있는 부분 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intent_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/intent_label.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/intent_clsf_99.819_steps_4.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafe_intent_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cafe_intent_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/pretrained/cafe_intent_clsf_97.656_steps_10.pt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NLG.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLG.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NLU.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="ksm" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -168,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651476883371</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2022-05-17 PM 3:57&#10;[Intent]&#10;- Intent 데이터 정제 후 pretrained 파일 생성&#10;- 채팅에 대한 응답을 intent로 반환하게 함.&#10;&#10;[개선사항]&#10;- Intent의 데이터셋에 추가할 수 있는 부분 수정">
+      <created>1652770736086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652770736086</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2022-05-17 PM 3:57&#10;[Intent]&#10;- Intent 데이터 정제 후 pretrained 파일 생성&#10;- 채팅에 대한 응답을 intent로 반환하게 함.&#10;&#10;[개선사항]&#10;- Intent의 데이터셋에 추가할 수 있는 부분 수정">
+      <created>1652770754353</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652770754353</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +204,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링" />
+    <MESSAGE value="2022-05-17 PM 3:57&#10;[Intent]&#10;- Intent 데이터 정제 후 pretrained 파일 생성&#10;- 채팅에 대한 응답을 intent로 반환하게 함.&#10;&#10;[개선사항]&#10;- Intent의 데이터셋에 추가할 수 있는 부분 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022-05-17 PM 3:57&#10;[Intent]&#10;- Intent 데이터 정제 후 pretrained 파일 생성&#10;- 채팅에 대한 응답을 intent로 반환하게 함.&#10;&#10;[개선사항]&#10;- Intent의 데이터셋에 추가할 수 있는 부분 수정" />
   </component>
 </project>
