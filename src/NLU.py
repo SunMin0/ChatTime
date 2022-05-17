@@ -16,7 +16,7 @@ class NaturalLanguageUnderstanding:
         self.entity_recog = BiLSTM_CRF(self.weights, self.dataset.entity_label, 256, 128)
 
     def model_load(self):
-        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_98.438_steps_12.pt"
+        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_97.917_steps_29.pt"
         entity_pretrain_path = "./nlp/pretrained/entity_recog_97.192_steps_3.pt"
         ood_pretrain_path = "./nlp/pretrained/ood_clsf_99.801_steps_8.pt"
 
