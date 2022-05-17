@@ -38,6 +38,9 @@ https://nebulous-class-691.notion.site/Project-Chat-Time-7edccf0e361040fba461ecc
 > c. 소셜 로그인 기능(카카오,네이버)  
 > d. 소셜 로그아웃 기능(카카오, 네이버)  
 > e. 회원 탈퇴 기능   
+![image](https://user-images.githubusercontent.com/97925049/168818200-5942043e-8bd5-47de-a967-552530d101c6.png)
+API의 secret key값과 데이터베이스에 대한 정보들을 json형식으로 따로 담아서 저장. 이것은 서버의 컴퓨터에 존재하고 COMMIT하지 않는다.
+
 * 프로필 변경기능  
 > a. 닉네임 변경  
 > b. 이메일 변경  
