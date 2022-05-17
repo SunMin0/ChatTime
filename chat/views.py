@@ -1,19 +1,31 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
-from django.shortcuts import render
 from src.NLG import NaturalLanguageGenerator
+from src.NLU import NaturalLanguageUnderstanding
+import re
 
 # Create your views here.
 
 def f_chat(request):
     if request.method == "GET":
         try:
-            text = request.GET.get('query') # 물음표 제거
-            text = text.replace('?', '')
+            text = request.GET.get('query')
+            text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text) # 특수문자 제거
+            print(text)
             if request.GET.get('query') != None:
                 try:
-                    nlg = NaturalLanguageGenerator()
-                    answer = nlg.run_nlg(text)[0]
+                    # intent 확인을 위한 임시 테스트 코드 -----------------
+                    nlu = NaturalLanguageUnderstanding()
+                    nlu.model_load()
+                    intent = nlu.predict(text)
+                    print(text, intent)
+                    answer = intent
+                    # ---------------------------------------------------
+
+                    # 원본 코드 아래 두줄----------------------------------
+                    # nlg = NaturalLanguageGenerator()
+                    # answer = nlg.run_nlg(text)[0]
+                    # ---------------------------------------------------
                 except:
                     answer = "죄송해요. 알아듣지 못했어요."
                 return render(request, 'chat.html', {'text': text, 'answer': answer})

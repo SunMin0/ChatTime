@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링" />
+    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="2022-05-02 PM 04:10&#10;[초기동작]&#10;- 초기 NLP 챗봇 FrontEnd + BackEnd&#10;- 미세먼지 크롤링 및 응답 가능.&#10;- 음성 입력시 blobURL을 전송하고 채팅창에서 재생함.&#10;&#10;[개선사항]&#10;- BackEnd 음성 데이터를 blobURL을 통해 다운받도록 개선&#10;- 미세먼지 이외에도 날씨, 맛집, 여행지 정보 크롤링">
+      <change afterPath="$PROJECT_DIR$/nlp/pretrained/cafe_intent_clsf_97.656_steps_10.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intent_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/intent_label.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/pretrained/intent_clsf_99.819_steps_4.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NLG.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLG.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NLU.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLU.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,11 +39,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/nlp/pretrained" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\PythonProject\ChatTime\nlp\pretrained" />
       <recent name="C:\PythonProject\NLU_chatbot" />
       <recent name="C:\PythonProject\NLU_chatbot\nlp\pretrained" />
     </key>

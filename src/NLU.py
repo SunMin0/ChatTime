@@ -16,39 +16,40 @@ class NaturalLanguageUnderstanding:
         self.entity_recog = BiLSTM_CRF(self.weights, self.dataset.entity_label, 256, 128)
 
     def model_load(self):
-        intent_pretrain_path = "./nlp/pretrained/intent_clsf_99.819_steps_4.pt"
+        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_97.656_steps_10.pt"
         entity_pretrain_path = "./nlp/pretrained/entity_recog_97.192_steps_3.pt"
         ood_pretrain_path = "./nlp/pretrained/ood_clsf_99.801_steps_8.pt"
 
         self.intent_clsf.load_state_dict(torch.load(intent_pretrain_path))
-        self.entity_recog.load_state_dict(torch.load(entity_pretrain_path))
-        self.ood_clsf.load_state_dict(torch.load(ood_pretrain_path))
+        # self.entity_recog.load_state_dict(torch.load(entity_pretrain_path))
+        # self.ood_clsf.load_state_dict(torch.load(ood_pretrain_path))
 
         self.intent_clsf.eval()
-        self.entity_recog.eval()
-        self.ood_clsf.eval()
+        # self.entity_recog.eval()
+        # self.ood_clsf.eval()
 
     def predict(self, query):
         tokens = self.dataset.tokenize(query)
         q2idx = self.embed.query2idx(tokens)
         x = self.dataset.prep.pad_idx_sequencing(q2idx)
         x = torch.tensor(x)
-        f = self.ood_clsf(x.unsqueeze(0))
-        ood = torch.argmax(f).tolist()
+        # f = self.ood_clsf(x.unsqueeze(0))
+        # ood = torch.argmax(f).tolist()
+        #
+        # if ood:
+        #     f = self.intent_clsf(x.unsqueeze(0))
+        #     intent = self.dataset.intents[torch.argmax(f).tolist()]
+        # else:
+        #     intent = 'ood'
+        f = self.intent_clsf(x.unsqueeze(0))
+        intent = self.dataset.intents[torch.argmax(f).tolist()]
+        # f = self.entity_recog(x.unsqueeze(0))
+        #
+        # mask = torch.where(x>0, torch.tensor([1.]), torch.tensor([0.])).type(torch.uint8)
+        #
+        # predict = self.entity_recog.decode(f, mask.view(1, -1))
 
-        if ood:
-            f = self.intent_clsf(x.unsqueeze(0))
-            intent = self.dataset.intents[torch.argmax(f).tolist()]
-        else:
-            intent = 'ood'
-
-        f = self.entity_recog(x.unsqueeze(0))
-
-        mask = torch.where(x>0, torch.tensor([1.]), torch.tensor([0.])).type(torch.uint8)
-
-        predict = self.entity_recog.decode(f, mask.view(1, -1))
-
-        return intent, predict
+        return intent
 
     def convert_nlu_result(self, query, intent, predict):
         NLU_result = {

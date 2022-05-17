@@ -88,6 +88,9 @@ class textCNN(nn.Module):
         super(textCNN, self).__init__()
         vocab_size = w2v.size()[0]
         emb_dim = w2v.size()[1]
+        self.emb_dim = emb_dim
+        self.vocab_size = vocab_size
+        self.w2v = w2v
         self.embed = nn.Embedding(vocab_size +2, emb_dim)
         self.embed.weight[2:].data.copy_(w2v)
         self.convs = nn.ModuleList([nn.Conv2d(1, dim, (w,emb_dim)) for w in kernels])
@@ -97,7 +100,6 @@ class textCNN(nn.Module):
     def forward(self, x):
         emb_x = self.embed(x)
         emb_x = emb_x.unsqueeze(1) # 예를들어 32x32일 경우 1x32x32로 만들어줌
-
         con_x = [conv(emb_x) for conv in self.convs]
         pool_x = [F.max_pool1d(x.squeeze(-1), x.size()[2]) for x in con_x]
         fc_x = torch.cat(pool_x, dim=1) # concatenate. 다 이어지게 함. (768,1)

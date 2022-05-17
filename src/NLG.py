@@ -141,9 +141,14 @@ class NaturalLanguageGenerator:
         nlu = NaturalLanguageUnderstanding()
         nlu.model_load()
         intent, predict = nlu.predict(text)
+        print("intent:",intent)
+        print("predict:", predict)
         nlu_result = nlu.convert_nlu_result(text, intent, predict)
+        print("nlu_result:", nlu_result)
         templates = self.search_template(nlu_result)
+        print("templates:", templates)
         result = self.filling_nlg_slot(templates)
+        print("result:", result)
         try:
             result = self.filling_crawl_slot(intent, result)
         except:
