@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="[Intent]&#10;- 기존에 부족한 응답조건을 개선함. (ex 큰걸로, 따뜻한걸로)&#10;&#10;2022-05-17 PM 6:19">
+    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="Intent, Entity 정확도 상승. 우리 메뉴에 최적화. 통합 테스트 완료.&#10;&#10;2022-05-23 PM 6:14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Entity] Bilstm-crf.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Entity] Bilstm-crf.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafe_intent_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cafe_intent_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cafe_search_template_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cafe_search_template_dataset.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entity_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/cafe_intent_clsf_97.917_steps_29.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/entity_recog_97.192_steps_3.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nlp/pretrained/ood_clsf_99.801_steps_8.pt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NLG.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLG.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NLU.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ai" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ai_service (2)" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -211,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652779209444</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Intent, Entity 정확도 상승. 우리 메뉴에 최적화. 통합 테스트 완료.&#10;&#10;2022-05-23 PM 6:14">
+      <created>1653297312902</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1653297312902</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,6 +245,7 @@
     <MESSAGE value="2022-05-17 PM 3:57&#10;[Intent]&#10;- Intent 데이터 정제 후 pretrained 파일 생성&#10;- 채팅에 대한 응답을 intent로 반환하게 함.&#10;&#10;[개선사항]&#10;- Intent의 데이터셋에 추가할 수 있는 부분 수정" />
     <MESSAGE value="2022-05-17 PM 4:27&#10;[Intent]&#10;- Intent 데이터 정제 후 pretrained 파일 생성&#10;- 채팅에 대한 응답을 intent로 반환하게 함.&#10;&#10;[개선사항]&#10;- Intent의 데이터셋에 추가할 수 있는 부분 수정" />
     <MESSAGE value="[Intent]&#10;- 기존에 부족한 응답조건을 개선함. (ex 큰걸로, 따뜻한걸로)&#10;&#10;2022-05-17 PM 6:19" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Intent]&#10;- 기존에 부족한 응답조건을 개선함. (ex 큰걸로, 따뜻한걸로)&#10;&#10;2022-05-17 PM 6:19" />
+    <MESSAGE value="Intent, Entity 정확도 상승. 우리 메뉴에 최적화. 통합 테스트 완료.&#10;&#10;2022-05-23 PM 6:14" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intent, Entity 정확도 상승. 우리 메뉴에 최적화. 통합 테스트 완료.&#10;&#10;2022-05-23 PM 6:14" />
   </component>
 </project>
