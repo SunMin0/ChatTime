@@ -1,0 +1,1668 @@
+question,label
+결제 하면 될까요,S-PAY O O
+결제할게요,S-PAY
+네 결제할게요,O S-PAY
+그냥 결제해주세요,O S-PAY
+결제할래요,S-PAY
+계산할게요,S-PAY
+네 계산할게요,O S-PAY
+이제 계산할게요,O S-PAY
+이제 계산해주세요,O S-PAY
+그냥 계산하겠습니다,O S-PAY
+결제하겠습니다,S-PAY
+결제 하겠습니다,S-PAY O
+계산 하겠습니다,S-PAY O
+계산하겠습니다,S-PAY
+네 이제 계산할게요,O O S-PAY
+계산 좀 하겠습니다,S-PAY O O
+계산하겠습니다,S-PAY
+결제하겠습니다,S-PAY
+이제 결제 하겠습니다,O S-PAY O
+아니요 계산하겠습니다,O S-PAY
+아니요 결제할래요,O S-PAY
+아니요 그냥 결제 할게요,O O S-PAY O
+아니요 그냥 계산 해주세요,O O S-PAY O
+이제 계산 할게요,O S-PAY O
+이제 결제 할게요,O S-PAY O
+이제 결제 해줘,O S-PAY O
+결제 해줘,S-PAY O
+계산 해줘,S-PAY O
+계산 해줄래,S-PAY O
+계산 해주세요,S-PAY O
+그럼 계산 부탁드리겠습니다,O S-PAY O
+그럼 결제 부탁드리겠습니다,O S-PAY O
+네 결제 부탁드려요,O S-PAY O
+네 계산 부탁드려요,O S-PAY O
+그럼 계산 해주세요,O S-PAY O
+그럼 결제 해주세요,O S-PAY O
+좋아 계산해줘,O S-PAY
+응 계산해줄래,O S-PAY
+계산 좀 해주세요,S-PAY O O
+결제 좀 해주세요,S-PAY O O
+네 계산해주세요,O S-PAY
+그냥 결제해주세요,O S-PAY
+그냥 결제해주세요,O S-PAY
+네 결제해 주세요,O S-PAY O
+결제해주시겠어요,S-PAY
+결제 부탁드려요,S-PAY O
+이제 계산할게요,O S-PAY
+계산하겠습니다,S-PAY
+계산 부탁해요,S-PAY O
+계산 할게요,S-PAY O
+이제 계산하겠습니다,O S-PAY
+계산 부탁드려요,S-PAY O
+이제 계산할게요,O S-PAY
+계산하겠습니다,S-PAY
+계산 부탁해요,S-PAY O
+계산 할게요,S-PAY O
+이제 계산하겠습니다,O S-PAY
+계산 부탁드려요,S-PAY O
+이제 계산할게요,O S-PAY
+계산하겠습니다,S-PAY
+계산 부탁해요,S-PAY O
+계산 할게요,S-PAY O
+이제 계산하겠습니다,O S-PAY
+계산 부탁드려요,S-PAY O
+그냥 결제할게요,O S-PAY
+그냥 계산할게요,O S-PAY
+결제할게요,S-PAY
+계산할게요,S-PAY
+계산할래요,S-PAY
+결제할래요,S-PAY
+그냥 결제할게요,O S-PAY
+그냥 계산할게요,O S-PAY
+결제할게요,S-PAY
+계산할게요,S-PAY
+계산할래요,S-PAY
+결제할래요,S-PAY
+그냥 결제할게요,O S-PAY
+그냥 계산할게요,O S-PAY
+결제할게요,S-PAY
+계산할게요,S-PAY
+계산할래요,S-PAY
+결제할래요,S-PAY
+결제할게,S-PAY
+계산할게,S-PAY
+응 결제할게,O S-PAY
+응 계산할게,O S-PAY
+아니 계산할게,O S-PAY
+아니 결제할게,O S-PAY
+결제해주세요,S-PAY
+결제 해 주세요,S-PAY O O
+결제 해주세요,S-PAY O
+계산해주세요,S-PAY
+계산 해 주세요,S-PAY O O
+계산 해주세요,S-PAY O
+계산좀,S-PAY
+계산좀요,S-PAY
+계산 좀,S-PAY O
+계산 좀 해줘요,S-PAY O O
+계산 좀 해주세요,S-PAY O O
+결제좀,S-PAY
+결제좀요,S-PAY
+결제 좀 해줘요,S-PAY O O
+결제 좀,S-PAY O
+결제 좀 해주세요,S-PAY O O
+결제해주실래요,S-PAY
+결제 해주실래요,S-PAY O
+결제해,S-PAY
+계산해,S-PAY
+계산해주실래요,S-PAY
+계산 해주실래요,S-PAY O
+결제 할게,S-PAY O
+계산 할게,S-PAY O
+결제할게요,S-PAY
+계산할게요,S-PAY
+계산하고싶어,S-PAY
+계산하고 싶어요,S-PAY O
+계산하고 싶어,S-PAY O
+계산하면 될까,S-PAY O
+결제하면 될까,S-PAY O
+결제하고싶어,S-PAY
+결제하고 싶어요,S-PAY O
+결제하면 될까,S-PAY O
+결제 해줄래,S-PAY O
+계산 해줄래,S-PAY O
+결제할게,S-PAY
+계산할게,S-PAY
+응 결제할게,O S-PAY
+응 계산할게,O S-PAY
+아니 계산할게,O S-PAY
+아니 결제할게,O S-PAY
+결제해주세요,S-PAY
+결제 해 주세요,S-PAY O O
+결제 해주세요,S-PAY O
+계산해주세요,S-PAY
+계산 해 주세요,S-PAY O O
+계산 해주세요,S-PAY O
+계산좀,S-PAY
+계산좀요,S-PAY
+계산 좀,S-PAY O
+계산 좀 해줘요,S-PAY O O
+계산 좀 해주세요,S-PAY O O
+결제좀,S-PAY
+결제좀요,S-PAY
+결제 좀 해줘요,S-PAY O O
+결제 좀,S-PAY O
+결제 좀 해주세요,S-PAY O O
+결제해주실래요,S-PAY
+결제 해주실래요,S-PAY O
+결제해,S-PAY
+계산해,S-PAY
+계산해주실래요,S-PAY
+계산 해주실래요,S-PAY O
+결제 할게,S-PAY O
+계산 할게,S-PAY O
+결제할게요,S-PAY
+계산할게요,S-PAY
+계산하고싶어,S-PAY
+계산하고 싶어요,S-PAY O
+계산하고 싶어,S-PAY O
+계산하면 될까,S-PAY O
+결제하면 될까,S-PAY O
+결제하고싶어,S-PAY
+결제하고 싶어요,S-PAY O
+결제하면 될까,S-PAY O
+결제 해줄래,S-PAY O
+계산 해줄래,S-PAY O
+계산요,S-PAY
+계산요,S-PAY
+결제요,S-PAY
+결제요,S-PAY
+계산해줘,S-PAY
+계산해줘,S-PAY
+결제해줘,S-PAY
+결제해줘,S-PAY
+계산해줘,S-PAY
+결제해줘,S-PAY
+계산요,S-PAY
+결제요,S-PAY
+결제할게요,S-PAY
+계산할게요,S-PAY
+결제할게,S-PAY
+계산할게,S-PAY
+사이즈업 되나요,S-SIZE O
+사이즈업 되나요,S-SIZE O
+둘 다 톨 사이즈로 주세요,B-COUNT E-COUNT B-SIZE E-SIZE O
+음료 사이즈 업 가능한가요,O B-SIZE E-SIZE O
+자몽에이드 사이즈업 되나요,S-JUICE S-SIZE O
+사이즈업 되나요,S-SIZE O
+사이즈업 되나요,S-SIZE O
+사이즈업해서 주세요,S-SIZE O
+사이즈는 라지로 부탁드리겠습니다,O S-SIZE O
+그란데로 부탁드려요,S-SIZE O
+그란데 사이즈로 부탁드립니다,B-SIZE E-SIZE O
+라지로 주세요,S-SIZE O
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+그러면 사이즈업 가능한가요,O S-SIZE O
+아이스 음료도 사이즈업 가능한가요,S-TEMP O S-SIZE O
+그럼 하나는 사이즈 업해주세요,O S-COUNT B-SIZE E-SIZE
+사이즈 업 가능한가요,B-SIZE E-SIZE O
+사이즈 업 가능한가요,B-SIZE E-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+그럼 라지 사이즈로 주세요,O B-SIZE E-SIZE O
+제일 큰 사이즈로 바꿔주세요,O B-SIZE E-SIZE O
+사이즈 업 부탁드려요,B-SIZE E-SIZE O
+그럼 톨로 주세요,O S-SIZE O
+사이즈업 되나요,S-SIZE O
+라지로 주세요,S-SIZE O
+카푸치노는 빅사이즈로 주시고 아메리카노는 스몰로 주시겠어요,S-COFFEE S-SIZE O S-COFFEE S-SIZE O
+아메리카노 사이즈 업도 가능한가요,S-COFFEE B-SIZE E-SIZE O
+아이스 아메리카노 사이즈업 해주실 수 있나요,S-TEMP S-COFFEE S-SIZE O O O
+아메리카노는 라지로 주시고 바닐라 라떼는 레귤러로 주세요,S-COFFEE S-SIZE O B-COFFEE E-COFFEE S-SIZE O
+아뇨 사이즈업은 돈을 더 내야하나요,O S-SIZE O O O
+작은 걸로 주세요,S-SIZE O O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+숏사이즈로 주세요,S-SIZE O
+톨로 주세요,S-SIZE O
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+그란데 사이즈로 주십시오,B-SIZE E-SIZE O
+그란데 사이즈로 줘요,B-SIZE E-SIZE O
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+그란데 사이즈로요,B-SIZE E-SIZE
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+그란데 사이즈로요,B-SIZE E-SIZE
+그란데 사이즈로 부탁합니다,B-SIZE E-SIZE O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+톨사이즈로 주세요,S-SIZE O
+그란데 사이즈로 부탁합니다,B-SIZE E-SIZE O
+그란데 사이즈로 부탁합니다,B-SIZE E-SIZE O
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+그란데로 주세요,S-SIZE O
+그란데로 주세요,S-SIZE O
+그란데로 주세요,S-SIZE O
+톨 사이즈로 주세요,B-SIZE E-SIZE O
+톨로 주세요,S-SIZE O
+톨사이즈로 부탁합니다,S-SIZE O
+톨사이즈로 부탁합니다,S-SIZE O
+톨로 주세요,S-SIZE O
+톨로 주세요,S-SIZE O
+톨사이즈로 부탁합니다,S-SIZE O
+사이즈업 되나요,S-SIZE O
+사이즈업 되나요,S-SIZE O
+사이즈업 해주세요,S-SIZE O
+사이즈업 해주세요,S-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지 사이즈로요,B-SIZE E-SIZE
+라지 사이즈로요,B-SIZE E-SIZE
+라지 사이즈로요,B-SIZE E-SIZE
+라지 사이즈로요,B-SIZE E-SIZE
+그란데,S-SIZE
+그란데,S-SIZE
+톨,S-SIZE
+톨,S-SIZE
+라지,S-SIZE
+라지,S-SIZE
+그란데로요,S-SIZE
+그란데로요,S-SIZE
+그란데로요,S-SIZE
+톨로요,S-SIZE
+톨로요,S-SIZE
+톨로요,S-SIZE
+라지로요,S-SIZE
+라지로요,S-SIZE
+라지로요,S-SIZE
+사이즈업 하겠습니다,S-SIZE O
+사이즈업 할게요,S-SIZE O
+사이즈업 하겠습니다,S-SIZE O
+사이즈업 할게요,S-SIZE O
+작은거로요,S-SIZE
+작은 사이즈로 해주세요,B-SIZE E-SIZE O
+작은 사이즈로 부탁해요,B-SIZE E-SIZE O
+작은거로요,S-SIZE
+작은 사이즈요,B-SIZE E-SIZE
+작은걸로 주세요,S-SIZE O
+작은거로 할게요,S-SIZE O
+레귤러로 할게요,S-SIZE O
+레귤러요,S-SIZE
+레귤러 사이즈로 해주세요,B-SIZE E-SIZE O
+레귤러 사이즈로 부탁해요,B-SIZE E-SIZE O
+레귤러로 부탁드려요,S-SIZE O
+레귤러 사이즈로 주세요,B-SIZE E-SIZE O
+레귤러로 주세요,S-SIZE O
+작은거로 해주세요,S-SIZE O
+작은 사이즈 부탁드려요,B-SIZE E-SIZE O
+작은걸로요,S-SIZE
+레귤러로 할게요,S-SIZE O
+레귤러요,S-SIZE
+레귤러 사이즈로 해주세요,B-SIZE E-SIZE O
+레귤러 사이즈로 부탁해요,B-SIZE E-SIZE O
+레귤러로 부탁드려요,S-SIZE O
+레귤러 사이즈로 주세요,B-SIZE E-SIZE O
+레귤러로 주세요,S-SIZE O
+작은 사이즈로 주세요,B-SIZE E-SIZE O
+작은걸로요,S-SIZE
+작은거요,S-SIZE
+레귤러로 할게요,S-SIZE O
+레귤러요,S-SIZE
+레귤러 사이즈로 해주세요,B-SIZE E-SIZE O
+레귤러 사이즈로 부탁해요,B-SIZE E-SIZE O
+레귤러로 부탁드려요,S-SIZE O
+레귤러 사이즈로 주세요,B-SIZE E-SIZE O
+레귤러로 주세요,S-SIZE O
+네 라지하고 사이즈가 어느 정도 차이나요,O S-SIZE O O O O
+작은 사이즈 나왔으면 좋겠습니다,B-SIZE E-SIZE O O
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+그란데 사이즈로 부탁드릴게요,B-SIZE E-SIZE O
+톨 사이즈로 해주세요,B-SIZE E-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+저는 톨 사이즈로 먹습니다,O B-SIZE E-SIZE O
+가장 작은 사이즈 주세요,O B-SIZE E-SIZE O
+작은 사이즈로 주세요,B-SIZE E-SIZE O
+그란데 사이즈요,B-SIZE E-SIZE
+톨 사이즈로 주세요,B-SIZE E-SIZE O
+작은 사이즈로 주세요,B-SIZE E-SIZE O
+그란데로 주세요,S-SIZE O
+그란데 사이즈로 주세요,B-SIZE E-SIZE O
+레귤러로 부탁드립니다,S-SIZE O
+톨 사이즈로 주세요,B-SIZE E-SIZE O
+전부 라지로 주세요,O S-SIZE O
+톨로 주세요,S-SIZE O
+제일 큰 거로 주세요,O S-SIZE O O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 톨사이즈로 주세요,O S-SIZE O
+레귤러로 주세요,S-SIZE O
+톨 사이즈로 주세요,B-SIZE E-SIZE O
+작은 사이즈로 주세요,B-SIZE E-SIZE O
+그란데로,S-SIZE
+톨로,S-SIZE
+라지로,S-SIZE
+레귤러로,S-SIZE
+라지로,S-SIZE
+작은걸로,S-SIZE
+작은거로,S-SIZE
+작은걸로요,S-SIZE
+작은걸로 해주세요,S-SIZE O
+작은거로 해주세요,S-SIZE O
+작은걸로 해줘요,S-SIZE O
+작은걸로 부탁해요,S-SIZE O
+그란데로,S-SIZE
+톨로,S-SIZE
+큰걸로요,S-SIZE
+큰걸로 주세요,S-SIZE O
+큰걸로 할게요,S-SIZE O
+큰걸로,S-SIZE
+큰거로,S-SIZE
+큰거로 주세요,S-SIZE O
+큰거로 할게요,S-SIZE O
+큰거로 부탁드려요,S-SIZE O
+큰걸로 부탁드려요,S-SIZE O
+더 큰거로 주세요,B-SIZE E-SIZE O
+가장 큰거로 주세요,O S-SIZE O
+가장 큰걸로 주세요,O S-SIZE O
+가장 큰 거로 주세요,O S-SIZE O O
+가장 큰 거로 할게요,O S-SIZE O O
+가장 큰걸로 부탁드려요,O S-SIZE O
+가장 큰걸로 부탁드려요,O S-SIZE O
+아이스로요,S-TEMP
+아이스로 하겠습니다,S-TEMP O
+아이스로 해주세요,S-TEMP O
+따뜻한걸로요,S-TEMP
+따뜻하게요,S-TEMP
+뜨겁게요,S-TEMP
+뜨겁게 부탁합니다,S-TEMP O
+뜨거운걸로요,S-TEMP
+따뜻한걸로요,S-TEMP
+아이스로 해주세요,S-TEMP O
+아이스로요,S-TEMP
+아이스로 하겠습니다,S-TEMP O
+아이스로 해주세요,S-TEMP O
+따뜻한걸로요,S-TEMP
+따뜻하게요,S-TEMP
+뜨겁게요,S-TEMP
+뜨겁게 부탁합니다,S-TEMP O
+뜨거운걸로요,S-TEMP
+따뜻한걸로요,S-TEMP
+아이스로 해주세요,S-TEMP O
+아이스로요,S-TEMP
+아이스로 하겠습니다,S-TEMP O
+아이스로 해주세요,S-TEMP O
+따뜻한걸로요,S-TEMP
+따뜻하게요,S-TEMP
+뜨겁게요,S-TEMP
+뜨겁게 부탁합니다,S-TEMP O
+뜨거운걸로요,S-TEMP
+따뜻한걸로요,S-TEMP
+아이스로 해주세요,S-TEMP O
+시원한걸로요,S-TEMP
+시원하게요,S-TEMP
+시원하게 해주세요,S-TEMP O
+시원한거요,S-TEMP
+시원한걸로 부탁해요,S-TEMP O
+시원하게 낫겠어요,S-TEMP O
+시원한게 좋겠네요,S-TEMP O
+시원한걸로 할래요,S-TEMP O
+시원한걸로,S-TEMP
+시원한거 주세요,S-TEMP O
+찬걸로요,S-TEMP
+차가운걸로요,S-TEMP
+차가운거 부탁드려요,S-TEMP O
+차가운거 주세요,S-TEMP O
+찬거로 할게요,S-TEMP O
+차가운게 낫겠네요,S-TEMP O
+차가운게 좋겠어요,S-TEMP O
+차가운거로 부탁해요,S-TEMP O
+차갑게 해주세요,S-TEMP O
+차갑게 해주세요,S-TEMP O
+차가운걸로요,S-TEMP
+차가운거요,S-TEMP
+시원한걸로요,S-TEMP
+시원하게요,S-TEMP
+시원하게 해주세요,S-TEMP O
+시원한거요,S-TEMP
+시원한걸로 부탁해요,S-TEMP O
+시원하게 낫겠어요,S-TEMP O
+시원한게 좋겠네요,S-TEMP O
+시원한걸로 할래요,S-TEMP O
+시원한걸로,S-TEMP
+시원한거 주세요,S-TEMP O
+찬걸로요,S-TEMP
+차가운걸로요,S-TEMP
+차가운거 부탁드려요,S-TEMP O
+차가운거 주세요,S-TEMP O
+찬거로 할게요,S-TEMP O
+차가운게 낫겠네요,S-TEMP O
+차가운게 좋겠어요,S-TEMP O
+차가운거로 부탁해요,S-TEMP O
+차갑게 해주세요,S-TEMP O
+차갑게 해주세요,S-TEMP O
+차가운걸로요,S-TEMP
+차가운거요,S-TEMP
+시원한걸로요,S-TEMP
+시원하게요,S-TEMP
+시원하게 해주세요,S-TEMP O
+시원한거요,S-TEMP
+시원한걸로 부탁해요,S-TEMP O
+시원하게 낫겠어요,S-TEMP O
+시원한게 좋겠네요,S-TEMP O
+시원한걸로 할래요,S-TEMP O
+시원한걸로,S-TEMP
+시원한거 주세요,S-TEMP O
+찬걸로요,S-TEMP
+차가운걸로요,S-TEMP
+차가운거 부탁드려요,S-TEMP O
+차가운거 주세요,S-TEMP O
+찬거로 할게요,S-TEMP O
+차가운게 낫겠네요,S-TEMP O
+차가운게 좋겠어요,S-TEMP O
+차가운거로 부탁해요,S-TEMP O
+차갑게 해주세요,S-TEMP O
+차갑게 해주세요,S-TEMP O
+차가운걸로요,S-TEMP
+차가운거요,S-TEMP
+시원한걸로요,S-TEMP
+시원하게요,S-TEMP
+시원하게 해주세요,S-TEMP O
+시원한거요,S-TEMP
+시원한걸로 부탁해요,S-TEMP O
+시원하게 낫겠어요,S-TEMP O
+시원한게 좋겠네요,S-TEMP O
+시원한걸로 할래요,S-TEMP O
+시원한걸로,S-TEMP
+시원한거 주세요,S-TEMP O
+찬걸로요,S-TEMP
+차가운걸로요,S-TEMP
+차가운거 부탁드려요,S-TEMP O
+차가운거 주세요,S-TEMP O
+카푸치노도 차갑게 할 수 있나요,S-COFFEE S-TEMP O O O
+카페모카 따뜻하게 되나요,S-COFFEE S-TEMP O
+음료 온도를 좀 더 차갑게 가능할까요,O O O O S-TEMP O
+스무디를 따뜻한 온도로 데워주실 수 있어요,S-JUICE S-TEMP O O O O
+홍자는 차갑게도 가능한가요,S-TEA S-TEMP O
+아메리카노 좀 더 뜨겁게 해 주실 수 있나요,S-COFFEE O O S-TEMP O O O O
+이 날씨에 차가운 거 먹어요,O O S-TEMP O O
+미지근하게 되나요,O O
+라지로 따뜻한 음료 가능한가요,S-SIZE S-TEMP O O
+뜨겁지 않게 해주실 수 있나요,S-TEMP O O O O
+그럼 아이스로는 되나요,O S-TEMP O
+시원한 걸로 해주세요,S-TEMP O O
+그럼 아이스로 한잔 주세요,O S-TEMP S-COUNT O
+네 따뜻하게 해주실 수 있나요,O S-TEMP O O O
+카라멜 마끼아또 따듯하게 해도 되나요,B-COFFEE E-COFFEE S-TEMP O O
+레몬차 너무 뜨겁지 않게 한 잔 주시겠어요,S-TEA O S-TEMP O B-COUNT E-COUNT O
+아이스로 주세요,S-TEMP O
+아이스로 부탁해요,S-TEMP O
+아이스로 해주세요,S-TEMP O
+차갑게 주세요,S-TEMP O
+차갑게 부탁해요,S-TEMP O
+차갑게 해주세요,S-TEMP O
+차가운 걸로 주세요,S-TEMP O O
+아이스로요,S-TEMP
+핫으로요,S-TEMP
+아이스로 주세요,S-TEMP O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+따뜻하게 부탁드릴게요,S-TEMP O
+아이스로 부탁드려요,S-TEMP O
+뜨거운 걸로 주세요,S-TEMP O O
+아이스로 하나 주세요,S-TEMP S-COUNT O
+아이스로 주세요,S-TEMP O
+아이스로 주세요,S-TEMP O
+아이스로 해주세요,S-TEMP O
+따뜻한 걸로 주세요,S-TEMP O O
+차가운 걸로 주세요,S-TEMP O O
+네 시원한걸로요,O S-TEMP
+시원한걸로 주세요,S-TEMP O
+시원한거 주세요,S-TEMP O
+시원한거로 하나 주세요,S-TEMP S-COUNT O
+시원한거로 부탁드려요,S-TEMP O
+시원하게 해주세요,S-TEMP O
+시원하게 부탁해요,S-TEMP O
+시원하게 주세요,S-TEMP O
+네 따뜻하게 해주세요,O S-TEMP O
+따뜻한 거요,S-TEMP O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로요,O S-TEMP O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로 주세요 ,O S-TEMP O O 
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한거 주세요,O S-TEMP O
+따뜻한 걸로 주세요,S-TEMP O O
+네 따뜻하게 주세요,O S-TEMP O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로,O S-TEMP O
+시원한 걸로 주세요,S-TEMP O O
+네 따뜻하게 해주세요,O S-TEMP O
+아이스로 주세요,S-TEMP O
+따뜻한걸로 주세요,S-TEMP O
+따뜻한걸로 주세요 ,S-TEMP O 
+네 따뜻하게 해주세요,O S-TEMP O
+따뜻하게 해주세요,S-TEMP O
+아니요 아이스요,O S-TEMP
+네 따뜻한 거 주세요,O S-TEMP O O
+네 따뜻한 거로 주세요,O S-TEMP O O
+네 따뜻하게 해주세요,O S-TEMP O
+아니요 시원한거요,O S-TEMP
+네 따뜻한거 주세요,O S-TEMP O
+아이스로 주세요,S-TEMP O
+네 따뜻하게요,O S-TEMP
+네 따뜻한 걸로요,O S-TEMP O
+따뜻하게 주세요,S-TEMP O
+네 따뜻한 걸로요,O S-TEMP O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+따뜻하게 주세요,S-TEMP O
+네 따뜻하게 주세요,O S-TEMP O
+네 따뜻한 걸로,O S-TEMP O
+네 따뜻하게 주세요,O S-TEMP O
+네 따뜻한 걸로 주세요,O S-TEMP O O
+시원한거로 해줘,S-TEMP O
+차가운거로 해줘,S-TEMP O
+뜨거운거로 해줘,S-TEMP O
+시원한거로 해줘,S-TEMP O
+차가운거로 해줘,S-TEMP O
+뜨거운거로 해줘,S-TEMP O
+시원한거로 해주세요,S-TEMP O
+차가운거로 해주세요,S-TEMP O
+뜨거운거로 해주세요,S-TEMP O
+시원한거로 부탁해요,S-TEMP O
+차가운거로 부탁해요,S-TEMP O
+뜨거운거로 부탁해요,S-TEMP O
+시원한거로,S-TEMP
+차가운거로,S-TEMP
+뜨거운거로,S-TEMP
+시원한거로 해줄래,S-TEMP O
+차가운거로 해줄래,S-TEMP O
+뜨거운거로 해줄래,S-TEMP O
+시원한거로 해줘요,S-TEMP O
+차가운거로 해줘요,S-TEMP O
+뜨거운거로 해줘요,S-TEMP O
+시원한거로 해줄래요,S-TEMP O
+차가운거로 해줄래요,S-TEMP O
+뜨거운거로 해줄래요,S-TEMP O
+시원한거로 부탁합니다,S-TEMP O
+차가운거로 부탁합니다,S-TEMP O
+뜨거운거로 부탁합니다,S-TEMP O
+찬거로,S-TEMP
+차운거로,S-TEMP
+차운거로 해줘,S-TEMP O
+차운거 부탁해요,S-TEMP O
+차운거 해주세요,S-TEMP O
+찬거로 해주세요,S-TEMP O
+찬거로 해줘요,S-TEMP O
+따뜻한거로,S-TEMP
+따뜻한거로 해줘요,S-TEMP O
+따뜻한거로 부탁해요,S-TEMP O
+따뜻한거요,S-TEMP
+따뜻한게 낫겠어요,S-TEMP O
+따뜻한거로 해주세요,S-TEMP O
+뜨거운걸로 해주세요,S-TEMP O
+아니다 뜨거운걸로요,O S-TEMP
+아니다 차가운걸로요,O S-TEMP
+아니다 따뜻한걸로요,O S-TEMP
+아니다 시원한걸로요,O S-TEMP
+뜨거운걸로 해줘요,S-TEMP O
+뜨거운걸로요,S-TEMP
+뜨거운걸로 부탁드려요,S-TEMP O
+뜨거운걸로 부탁해요,S-TEMP O
+뜨거운걸로 부탁드립니다,S-TEMP O
+뜨거운걸로 바꿀게요,S-TEMP O
+뜨거운걸로 할게요,S-TEMP O
+그럼 뜨거운걸로 주세요,O S-TEMP O
+뜨거운걸로 해주세요,S-TEMP O
+아니다 뜨거운걸로요,O S-TEMP
+아니다 차가운걸로요,O S-TEMP
+아니다 따뜻한걸로요,O S-TEMP
+아니다 시원한걸로요,O S-TEMP
+뜨거운걸로 해줘요,S-TEMP O
+뜨거운걸로요,S-TEMP
+뜨거운걸로 부탁드려요,S-TEMP O
+뜨거운걸로 부탁해요,S-TEMP O
+뜨거운걸로 부탁드립니다,S-TEMP O
+뜨거운걸로 바꿀게요,S-TEMP O
+뜨거운걸로 할게요,S-TEMP O
+그럼 뜨거운걸로 주세요,O S-TEMP O
+찬거 주세요,S-TEMP O
+찬거 하겠습니다,S-TEMP O
+찬거 부탁해요,S-TEMP O
+찬거 주십시오,S-TEMP O
+찬거 하겠습니다,S-TEMP O
+찬거 부탁해요,S-TEMP O
+찬거 주십시오,S-TEMP O
+온도는 찬거 할게요,O S-TEMP O
+뜨거운거 부탁합니다,S-TEMP O
+뜨거운거 하겠습니다,S-TEMP O
+뜨거운거 부탁해요,S-TEMP O
+뜨거운거 주십시오,S-TEMP O
+뜨거운거 주세요,S-TEMP O
+뜨거운거 주세요,S-TEMP O
+온도는 뜨거운거 할래요,O S-TEMP O
+그럼 뜨거운거 주세요,O S-TEMP O
+그럼 찬거 주세요,O S-TEMP O
+찬거 땡기네요,S-TEMP O
+뜨거운거 땡기네요,S-TEMP O
+뜨거운거 부탁드려요,S-TEMP O
+아이스로요,S-TEMP
+아이스로 하겠습니다,S-TEMP O
+아이스로 해주세요,S-TEMP O
+따뜻한걸로요,S-TEMP
+따뜻하게요,S-TEMP
+뜨겁게요,S-TEMP
+뜨겁게 부탁합니다,S-TEMP O
+뜨거운걸로요,S-TEMP
+따뜻한걸로요,S-TEMP
+아이스로 해주세요,S-TEMP O
+아이스로요,S-TEMP
+아이스로 하겠습니다,S-TEMP O
+아이스로 해주세요,S-TEMP O
+따뜻한걸로요,S-TEMP
+따뜻하게요,S-TEMP
+뜨겁게요,S-TEMP
+뜨겁게 부탁합니다,S-TEMP O
+뜨거운걸로요,S-TEMP
+따뜻한걸로요,S-TEMP
+아이스로 해주세요,S-TEMP O
+아이스로요,S-TEMP
+아이스로 하겠습니다,S-TEMP O
+아이스로 해주세요,S-TEMP O
+따뜻한걸로요,S-TEMP
+따뜻하게요,S-TEMP
+뜨겁게요,S-TEMP
+뜨겁게 부탁합니다,S-TEMP O
+뜨거운걸로요,S-TEMP
+따뜻한걸로요,S-TEMP
+아이스로 해주세요,S-TEMP O
+시원한걸로요,S-TEMP
+시원하게요,S-TEMP
+시원하게 해주세요,S-TEMP O
+시원한거요,S-TEMP
+시원한걸로 부탁해요,S-TEMP O
+시원하게 낫겠어요,S-TEMP O
+시원한게 좋겠네요,S-TEMP O
+시원한걸로 할래요,S-TEMP O
+시원한걸로,S-TEMP
+시원한거 주세요,S-TEMP O
+찬걸로요,S-TEMP
+차가운걸로요,S-TEMP
+차가운거 부탁드려요,S-TEMP O
+차가운거 주세요,S-TEMP O
+찬거로 할게요,S-TEMP O
+차가운게 낫겠네요,S-TEMP O
+차가운게 좋겠어요,S-TEMP O
+차가운거로 부탁해요,S-TEMP O
+차갑게 네잔 해주세요,S-TEMP S-COUNT O
+차갑게 다섯잔 해주세요,S-TEMP S-COUNT O
+차가운걸로요,S-TEMP
+차가운거요,S-TEMP
+시원한걸로요,S-TEMP
+시원하게요,S-TEMP
+시원하게 세 개 해주세요,S-TEMP B-COUNT E-COUNT O
+시원한거요,S-TEMP
+시원한걸로 부탁해요,S-TEMP O
+시원하게 낫겠어요,S-TEMP O
+시원한게 좋겠네요,S-TEMP O
+시원한걸로 할래요,S-TEMP O
+시원한걸로 다섯개 주세요,S-TEMP S-COUNT O
+시원한거 주세요,S-TEMP O
+찬걸로요,S-TEMP
+차가운걸로요,S-TEMP
+차가운걸로,S-TEMP
+저 카푸치노로 주문할게요,O S-COFFEE O
+그럼 이 기프티콘 쓰고 다른걸로 주문할게요,O O O O O O
+자바칩 프라푸치노에 휘핑 빼고요,B-COFFEE E-COFFEE O O
+네 스콘도 3개 같이 주세요,O S-BAKE S-COUNT O O
+카푸치노 차갑게 세 잔 되나요,S-COFFEE S-TEMP B-COUNT E-COUNT O
+그럼 그거 한잔하고 카페라떼 네 잔 주세요,O O S-COUNT S-COFFEE B-COUNT E-COUNT O
+그럼 밀크티 하나 주시겠어요,O S-TEA S-COUNT O
+저는 우선 따뜻한 물이랑 커피주세요,O O S-TEMP S-TEA S-COFFEE
+디카페인으로 한잔 주문할게요,O S-COUNT O
+네 오늘의 커피로 네 잔 주세요,O B-COFFEE E-COFFEE B-COUNT E-COUNT O
+페퍼민트 티 하나주세요,B-TEA E-TEA S-COUNT
+그럼 블루베리 머핀도 세 개 같이 주세요,O B-BAKE E-BAKE B-COUNT E-COUNT O O
+카페라테 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+베이글도 하나 부탁드려요,S-BAKE S-COUNT O
+어니언 크림으로 네 개 부탁드릴게요,B-BAKE E-BAKE B-COUNT E-COUNT O
+바닐라라테도 하나 주세요,S-COFFEE S-COUNT O
+카페라테 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+네 카페라테 디카페인으로 다섯 개 주세요,O S-COFFEE O B-COUNT E-COUNT O
+자몽에이드랑 과일 생크림 케이크 1조각 주세요,S-JUICE B-BAKE I-BAKE E-BAKE S-COUNT O
+아이스 프라푸치노 3잔 주세요,S-TEMP S-COFFEE S-COUNT O
+따뜻한 라테 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+이 쿠키도 3개 함께 주세요,O S-BAKE S-COUNT O O
+그럼 두유로 바꿔서 카페라테 두 잔 주세요,O O O S-COFFEE B-COUNT E-COUNT O
+이 치즈케이크도 한 조각 주세요,O S-BAKE B-COUNT E-COUNT O
+스무디 한 잔 주세요,S-JUICE B-COUNT E-COUNT O
+그럼 딸기 스무디 하나 주세요,O B-JUICE E-JUICE S-COUNT O
+치즈케이크도 한 조각 주세요,S-BAKE B-COUNT E-COUNT O
+딸기 주스로 네잔 주세요,B-JUICE E-JUICE S-COUNT O
+당근 케이크 한 조각 같이 주세요,B-BAKE E-BAKE B-COUNT E-COUNT O O
+플랫 화이트 한 잔 주세요,B-COFFEE E-COFFEE B-COUNT E-COUNT O
+네 레드벨벳 케이크 한조각 주세요,O B-BAKE E-BAKE S-COUNT O
+따뜻한 밀크티 2잔 주세요,S-TEMP S-TEA S-COUNT O
+티라미슈도 두개 주세요,S-BAKE S-COUNT O
+아아에 샷 추가 부탁드려요,S-COFFEE O O O
+카페모카 두잔 주세요,S-COFFEE S-COUNT O
+샌드위치랑 카페라테 주세요,S-BAKE S-COFFEE O
+라테 20개 주문할게요,S-COFFEE S-COUNT O
+베이글과 머핀 전부 주세요,S-BAKE S-BAKE O O
+초코 라테 한잔 주세요,B-COFFEE E-COFFEE S-COUNT O
+밀크티 3잔 주문할게요,S-TEA S-COUNT O
+티라미수 케이크도 1개 주세요,B-BAKE E-BAKE S-COUNT O
+그럼 자몽차 한잔 주세요,O S-TEA S-COUNT O
+그럼 감귤 라테 2잔이랑 인절미 쏙쏙 붕어빵 2개 주세요,O B-COFFEE E-COFFEE S-COUNT B-BAKE I-BAKE E-BAKE S-COUNT O
+초코머핀도 하나 추가해주세요,S-BAKE S-COUNT O
+녹차라테 1잔 주세요,S-COFFEE S-COUNT O
+아이스 바닐라 라테도 한 잔 주세요,S-TEMP B-COFFEE E-COFFEE B-COUNT E-COUNT O
+그러면 스콘 하나랑 라테 한 잔 주세요,O S-BAKE S-COUNT S-COFFEE B-COUNT E-COUNT O
+네 블루베리 스무디 1개 더 추가로 주세요,O B-JUICE E-JUICE S-COUNT O O O
+아 저 이 티라미수도 하나 주세요,O O O S-BAKE S-COUNT O
+그럼 디카페인 라테 한잔해주세요,O O S-COFFEE S-COUNT
+그럼 초코머핀 하나 주세요,O S-BAKE S-COUNT O
+카페라테 한잔 주세요,S-COFFEE S-COUNT O
+아이스 말차 라테에 에스프레소 샷 하나 추가해서 주세요,S-TEMP B-COFFEE E-COFFEE S-COFFEE O S-COUNT O O
+그럼 추천해주신 치즈 케이크도 두 조각 같이 주세요,O O B-BAKE E-BAKE B-COUNT E-COUNT O O
+그린 티 프라푸치노 하나 주세요,B-COFFEE I-COFFEE E-COFFEE S-COUNT O
+에스프레소 한 잔하고 카페모카 두 잔 주세요,S-COFFEE B-COUNT E-COUNT S-COFFEE B-COUNT E-COUNT O
+초코 케이크 한 조각 주세요,B-BAKE E-BAKE B-COUNT E-COUNT O
+민트 초코 프라푸치노 5잔 주세요,B-COFFEE I-COFFEE E-COFFEE S-COUNT O
+쿠앤크 치노 하나요,B-COFFEE E-COFFEE S-COUNT
+자몽 피지와 다섯 개 주세요,B-JUICE E-JUICE B-COUNT E-COUNT O
+그럼 캐머마일 아이스로 하나 주세요,O S-TEA S-TEMP S-COUNT O
+화이트 모카 한 잔 주세요,B-COFFEE E-COFFEE B-COUNT E-COUNT O
+카페라테 다섯 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+모카 라테 1잔 주세요,B-COFFEE E-COFFEE S-COUNT O
+치즈케이크 하나 추가해주세요,S-BAKE S-COUNT O
+치즈 케이크 하나같이 주문할게요,B-BAKE E-BAKE S-COUNT O
+그럼 루이보스 차갑게 하나랑 유자차 하나 할게요,O S-TEA S-TEMP S-COUNT S-TEA S-COUNT O
+캐러멜 프라푸치노주세요,B-COFFEE E-COFFEE
+그럼 그걸로 할게요,O O O
+쿠키도 세 개 주세요,S-BAKE B-COUNT E-COUNT O
+크랜베리 스콘 두 개도 포장해주세요,B-BAKE E-BAKE B-COUNT E-COUNT O
+아이스 바닐라라테 두 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+그럼 밀크티 한잔 주시겠어요,O S-TEA S-COUNT O
+치즈 케이크도 하나 주세요,B-BAKE E-BAKE S-COUNT O
+라테 2잔이랑 치즈케이크 1조각 주세요,S-COFFEE S-COUNT S-BAKE S-COUNT O
+아이스 녹차라테랑 마카롱 종류별로 주세요,S-TEMP S-COFFEE S-BAKE O O
+쿠키앤크림하고 초콜릿하고 스트로베리로 해서 포장해주세요,S-BAKE S-BAKE S-BAKE O O
+아이스 라테 한잔 주세요,S-TEMP S-COFFEE S-COUNT O
+바닐라 라테 한잔 주세요,B-COFFEE E-COFFEE S-COUNT O
+아이스 카페모카와 허니브레드 주세요,S-TEMP S-COFFEE S-BAKE O
+치즈베이글도 같이 주세요,S-BAKE O O
+네 커피 맛 별로 안 나게 해주세요,O S-COFFEE O O O O O
+로즈 재스민 티 따뜻한 거 하나하고요 적립도 할게요,B-TEA I-TEA E-TEA S-TEMP O S-COUNT O O
+치즈케이크도 하나 주세요,S-BAKE S-COUNT O
+치즈케이크랑 포크 2개 주실 수 있나요,S-BAKE O S-COUNT O O O
+라테 한 잔이요,S-COFFEE B-COUNT E-COUNT
+초코케이크도 주세요,S-BAKE O
+라테만 주세요,S-COFFEE O
+카페모카 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+토마토주스 설탕 빼고 한 잔 주세요,S-JUICE O O B-COUNT E-COUNT O
+그럼 캐러멜 프라푸치노 라지 하나랑 블루베리 치즈케이크 하나 주세요,O B-COFFEE E-COFFEE S-SIZE S-COUNT B-BAKE E-BAKE S-COUNT O
+에스프레소 한 잔 있어요,S-COFFEE B-COUNT E-COUNT O
+양이 제일 많은 것으로 주세요,O O O O O
+그리고 차가운 것으로 주세요,O S-TEMP O O
+그걸로 주세요,O O
+캐러멜마키아토 하나 주실래요,S-COFFEE S-COUNT O
+그럼 세트메뉴로 하나 주세요,O O S-COUNT O
+커피 2잔 주세요,S-COFFEE S-COUNT O
+그러면 얼 그레이 티 한 잔과 초코케이크 한 조각 주세요,O B-TEA I-TEA E-TEA B-COUNT E-COUNT S-BAKE B-COUNT E-COUNT O
+카페라테 한 잔이요,S-COFFEE B-COUNT E-COUNT
+라테 두 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 카페라테 한 잔이요,S-TEMP S-COFFEE B-COUNT E-COUNT
+그럼 초코 쿠키도 1봉지 부탁드려요,O B-BAKE E-BAKE S-COUNT O
+그럼 미숫가루 사이즈업 2잔 주문할게요,O S-JUICE S-SIZE S-COUNT O
+치즈케이크 한 조각도 추가할게요,S-BAKE B-COUNT E-COUNT O
+자바칩 프라푸치노 주세요,B-COFFEE E-COFFEE O
+초코케이크도 두조각 같이 주세요,S-BAKE S-COUNT O O
+토피넛 라테 따뜻하게 하나요,B-COFFEE E-COFFEE S-TEMP S-COUNT
+베이글도 하나 데워주세요,S-BAKE S-COUNT O
+바닐라 라테 주세요,B-COFFEE E-COFFEE O
+자바칩 프라푸치노 한 잔 주시겠어요,B-COFFEE E-COFFEE B-COUNT E-COUNT O
+그럼 에스프레소 한 잔 부탁드립니다,O S-COFFEE B-COUNT E-COUNT O
+카페라테 샷 추가해서 주세요,S-COFFEE O O O
+티 4개 주세요,S-TEA S-COUNT O
+캐머마일 5잔 주세요,S-TEA S-COUNT O
+그럼 바닐라 라테랑 블루베리 크림 와플 하나 주세요,O B-COFFEE E-COFFEE B-BAKE I-BAKE E-BAKE S-COUNT O
+그럼 많이 달지 않게 부탁드릴게요,O O O O O
+당근 케이크 2조각 할게요,B-BAKE E-BAKE S-COUNT O
+카페라테 한잔 주세요,S-COFFEE S-COUNT O
+치즈케이크 한 조각도 추가해 주세요,S-BAKE B-COUNT E-COUNT O O
+그럼 아이스 카페모카 얼음 많이 넣어서 주세요,O S-TEMP S-COFFEE O O O O
+빵 종류가 세트 말고도 있으면 같이 주세요,S-BAKE O O O O O O
+아이스 모카 한잔 주세요,S-TEMP S-COFFEE S-COUNT O
+애플파이 하나도 같이 포장해주세요,S-BAKE S-COUNT O O
+돌체 라테 하나 주세요,B-COFFEE E-COFFEE S-COUNT O
+그럼 유자차 하나 자몽차 하나씩 테이크아웃할게요,O S-TEA S-COUNT S-TEA S-COUNT O
+딸기 라테 4개 주세요,B-COFFEE E-COFFEE S-COUNT O
+아 그러면 새로운 메뉴로 2잔 부탁드려요,O O O O S-COUNT O
+당근 케이크로 부탁드릴게요,B-BAKE E-BAKE O
+그럼 밀크티도 한잔 주세요,O S-TEA S-COUNT O
+아이스 캐러멜 마키아토 하나 주세요,S-TEMP B-COFFEE E-COFFEE S-COUNT O
+그러면 캐러멜 라테 한 잔 주세요,O B-COFFEE E-COFFEE B-COUNT E-COUNT O
+그럼 녹차라테 하나 주세요,O S-COFFEE S-COUNT O
+아이스 카페라테 한 잔이랑 당근 케이크 하나 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT B-BAKE E-BAKE S-COUNT O
+아이스 레몬 티로 세 잔 포장해주세요,S-TEMP B-TEA E-TEA B-COUNT E-COUNT O
+블루베리 치즈케이크 주세요,B-BAKE E-BAKE O
+라테 아이스로 5잔 주세요,S-COFFEE S-TEMP S-COUNT O
+커피랑 같이 주세요,S-COFFEE O O
+캐러멜 마키아토로 주세요,B-COFFEE E-COFFEE O
+그러면 자몽 주스 하나로 부탁드릴게요,O B-JUICE E-JUICE S-COUNT O
+클럽 샌드위치도 하나 주세요,B-BAKE E-BAKE S-COUNT O
+카페모카 한잔 주세요,S-COFFEE S-COUNT O
+생크림 케이크 한 조각도 같이 주세요,B-BAKE E-BAKE B-COUNT E-COUNT O O
+두유로 아이스 카페라테 한잔 부탁드립니다,O S-TEMP S-COFFEE S-COUNT O
+튜너 샌드위치도 2개 주세요,B-BAKE E-BAKE S-COUNT O
+마카롱 네 개 포함해서 같이 주세요,S-BAKE B-COUNT E-COUNT O O O
+캐러멜마키아토 한 잔이랑 에스프레소 한 잔이요,S-COFFEE B-COUNT E-COUNT S-COFFEE B-COUNT E-COUNT
+당근 케이크 한 조각 주세요,B-BAKE E-BAKE B-COUNT E-COUNT O
+아이스 라테 하나 주세요,S-TEMP S-COFFEE S-COUNT O
+아이스 라테 한 잔요,S-TEMP S-COFFEE B-COUNT E-COUNT
+치즈케이크도 4개 주세요,S-BAKE S-COUNT O
+그럼 따뜻한 라테 라지로 한 잔이요,O S-TEMP S-COFFEE S-SIZE B-COUNT E-COUNT
+네 그리고 치즈케이크 한 조각 주세요,O O S-BAKE B-COUNT E-COUNT O
+그럼 샌드위치 4개랑 카페라테 5잔 주세요,O S-BAKE S-COUNT S-COFFEE S-COUNT O
+딸기 스무디 한 잔 주세요,B-JUICE E-JUICE B-COUNT E-COUNT O
+그럼 초코케이크랑 치즈 케이크 포장해주세요,O S-BAKE B-BAKE E-BAKE O
+그럼 아이스 한 잔으로 테이크아웃 해주시겠어요,O S-TEMP B-COUNT E-COUNT O O
+카페라테 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+그러면 딸기 에이드 1잔이랑 블루베리 스무디 1잔 주세요,O B-JUICE E-JUICE S-COUNT B-JUICE E-JUICE S-COUNT O
+쿠키도 같이 하나 부탁드릴게요,S-BAKE O S-COUNT O
+그럼 옥수수빵이랑 카푸치노 한 잔 구매할게요,O S-BAKE S-COFFEE B-COUNT E-COUNT O
+캐러멜마키아토 하나하고 컵케이크 한 조각 주세요,S-COFFEE S-COUNT S-BAKE B-COUNT E-COUNT O
+그린 티 프라푸치노 한잔 주세요,B-COFFEE I-COFFEE E-COFFEE S-COUNT O
+그럼 케이크도 한 조각 주세요,O S-BAKE B-COUNT E-COUNT O
+초코 바나나 스무디 하나 주세요,B-JUICE I-JUICE E-JUICE S-COUNT O
+티라미슈 케이크로 2조각 주세요,B-BAKE E-BAKE S-COUNT O
+그럼 치즈케이크 하나 주세요,O S-BAKE S-COUNT O
+아이스 카페모카 하나 주세요,S-TEMP S-COFFEE S-COUNT O
+아이스 딜라이트 라테로 한 잔 주세요,S-TEMP B-COFFEE E-COFFEE B-COUNT E-COUNT O
+그럼 라테를 디카페인으로 해주세요,O S-COFFEE O O
+티라미슈도 하나같이 주세요,S-BAKE S-COUNT O
+카페모카 위에 휘핑크림 빼고 주세요,S-COFFEE O O O O
+카페라테 하나 주세요,S-COFFEE S-COUNT O
+그러면 슈크림 라테로 주세요,O B-COFFEE E-COFFEE O
+아이스 카페모카 하나 주세요,S-TEMP S-COFFEE S-COUNT O
+바닐라 라테 아이스로 한 잔 주세요,B-COFFEE E-COFFEE S-TEMP B-COUNT E-COUNT O
+그럼 카페라테 디카페인으로 한 잔 주세요,O S-COFFEE O B-COUNT E-COUNT O
+아이스 아메카노 한잔 주세요,S-TEMP S-COFFEE S-COUNT O
+베이글도 하나 주세요,S-BAKE S-COUNT O
+블루베리 머핀하고 플래시 구콘 주세요,B-BAKE E-BAKE O O O
+유자차 따뜻하게 스몰사이즈로 마시고 갈게요,S-TEA S-TEMP S-SIZE O O
+라떼 작은 거 하나 주세요,S-COFFEE S-SIZE O S-COUNT O
+카페 비엔나 한 잔 주세요,B-COFFEE E-COFFEE B-COUNT E-COUNT O
+카페라떼 따뜻한 거 작은 사이즈로 주세요,S-COFFEE S-TEMP O B-SIZE E-SIZE O
+아이스티 한 잔만 주세요,S-TEA B-COUNT E-COUNT O
+고소한 원두 한 병 주세요,O O B-COUNT E-COUNT O
+솔티치즈 카페라떼 하나만 주세요,B-COFFEE E-COFFEE S-COUNT O
+블루베리 주스 한 잔 주세요,B-JUICE E-JUICE B-COUNT E-COUNT O
+수제와플 하나 주세요,S-BAKE S-COUNT O
+비 따뜻한거 한잔이랑 콜드브루로 주세요,O S-TEMP S-COUNT S-COFFEE O
+단팥 도너츠 하나하고 고로케 하나 주세요,B-BAKE E-BAKE S-COUNT S-BAKE S-COUNT O
+우리 고로케 한 개 더 주세요,O S-BAKE B-COUNT E-COUNT O O
+핫초코 하나만 주세요,S-TEA S-COUNT O
+생자몽 티 따뜻하게 한 잔 주세요,B-TEA E-TEA S-TEMP B-COUNT E-COUNT O
+카페 라떼로 주세요,B-COFFEE E-COFFEE O
+더치 라떼 따뜻한거 하나 줘요,B-COFFEE E-COFFEE S-TEMP S-COUNT O
+아이스아메리카노 하나요,S-COFFEE S-COUNT
+솔티치즈 카페라떼 하나 줘요,B-COFFEE E-COFFEE S-COUNT O
+블루베리 주스 한 잔 주세요,B-JUICE E-JUICE B-COUNT E-COUNT O
+따뜻한 아메리카노 한 잔 아이스라떼 한 잔이요,S-TEMP S-COFFEE B-COUNT E-COUNT S-COFFEE B-COUNT E-COUNT
+아메리카노 톨 사이즈로 주세요,S-COFFEE B-SIZE E-SIZE O
+아이스 아메리카노 한잔이요,S-TEMP S-COFFEE S-COUNT
+카푸치노 한잔이랑 아메리카노 두잔 주세요,S-COFFEE S-COUNT S-COFFEE S-COUNT O
+카페라떼 하나 주세요,S-COFFEE S-COUNT O
+뉴욕 치즈케이크 하나 주세요,B-BAKE E-BAKE S-COUNT O
+카페 라떼 하나 주세요,B-COFFEE E-COFFEE S-COUNT O
+초콜릿 라떼 하나 주세요,B-COFFEE E-COFFEE S-COUNT O
+플레인 요거트 하나랑 쿠키프라페 주세요,B-JUICE E-JUICE S-COUNT S-COFFEE O
+아메리카노 한잔 주세요,S-COFFEE S-COUNT O
+카페라떼 하나 주세요,S-COFFEE S-COUNT O
+쿠앤크마카롱이랑 딸기마카롱도 하나씩 주세요,S-BAKE S-BAKE S-COUNT O
+아메리카노 한잔 주문 할 수 있을까요,S-COFFEE S-COUNT O O O O
+초코 마카롱이랑 요거트 마카롱도 하나씩 더 주세요,B-BAKE E-BAKE B-BAKE E-BAKE S-COUNT O O
+아이스 아메리카노랑 따뜻한 라떼로 주세요,S-TEMP S-COFFEE S-TEMP S-COFFEE O
+그러면 아메리카노 하나랑 쿠키프라페 휘핑빼고 하나주세요,O S-COFFEE S-COUNT S-COFFEE O S-COUNT
+아메리카노 다섯잔 주세요,S-COFFEE S-COUNT O
+아이스 아메리카노 한 잔 가능한가요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 사이즈 업해주세요,S-TEMP S-COFFEE B-SIZE E-SIZE
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+커피 하나 주세요,S-COFFEE S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+저 따뜻한 아메리카노 한 잔하고 아이스 라테 한 잔 주세요,O S-TEMP S-COFFEE B-COUNT E-COUNT S-TEMP S-COFFEE B-COUNT E-COUNT O
+아메리카노 다섯 잔이요,S-COFFEE B-COUNT E-COUNT
+디카페인 아이스 아메리카노 4잔 주세요,B-COFFEE I-COFFEE E-COFFEE S-COUNT O
+아이스 아메리카노 한 잔 주문할게요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+그러면 따뜻한 아메리카노 한 잔과 아이스 아메리카노 한 잔 포장해 주세요,O S-TEMP S-COFFEE B-COUNT E-COUNT S-TEMP S-COFFEE B-COUNT E-COUNT O O
+카페모카에 휘핑크림 올려주세요,S-COFFEE O O
+아이스 아메리카노 두 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 30개 주세요,S-TEMP S-COFFEE S-COUNT O
+그러면 아메리카노 티라미슈 세트에 카페모카로 변경해서 주문하겠습니다,O S-COFFEE S-BAKE O S-COFFEE O O
+그럼 아메리카노랑 바닐라 라테 세잔 주세요,O S-COFFEE B-COFFEE E-COFFEE S-COUNT O
+더치라떼로 하나 주세요,S-COFFEE S-COUNT O
+아이스 아메리카노 한잔 주세요,S-TEMP S-COFFEE S-COUNT O
+소금커피 한 번 먹어볼게요,S-COFFEE O O O
+아메리카노 하나 주세요,S-COFFEE S-COUNT O
+콜드브루 시원하게 한 잔 주세요,S-COFFEE S-TEMP B-COUNT E-COUNT O
+그냥 기본적인 콜드브루 하나 주세요,O O S-COFFEE S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 두 잔이랑 치즈케이크 한 개 주세요,S-COFFEE B-COUNT E-COUNT S-BAKE B-COUNT E-COUNT O
+아메리카노 한잔 주세요,S-COFFEE S-COUNT O
+아메리카노 한 잔이랑 바닐라 라테 한 잔 주세요,S-COFFEE B-COUNT E-COUNT B-COFFEE E-COFFEE B-COUNT E-COUNT O
+그거랑 아메리카노 세잔 주세요,O S-COFFEE S-COUNT O
+카페라떼 한 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+저 아메리카노에 샷 추가해서 주세요,O S-COFFEE O O O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 하나 따뜻한 자몽치 하나 주세요,S-TEMP S-COFFEE S-COUNT S-TEMP S-TEA S-COUNT O
+그냥 따뜻한 걸로 주시고 따뜻한 아메리카노도 한잔 더 주실 수 있나요,O S-TEMP O O S-TEMP S-COFFEE S-COUNT O O O O
+아이스 아메리카노 세잔 주세요,S-TEMP S-COFFEE S-COUNT O
+그럼 크로크무슈와 아이스 아메리카노로 할게요,O S-BAKE S-TEMP S-COFFEE O
+카페라떼 하나 주세요,S-COFFEE S-COUNT O
+아이스 아메리카노 하나랑 녹차라테 주세요,S-TEMP S-COFFEE S-COUNT S-COFFEE O
+아메리카노 두 잔 마키아토 한잔 주세요,S-COFFEE B-COUNT E-COUNT S-COFFEE S-COUNT O
+아이스 아메리카노 하나랑 카페모카 하나 주세요,S-TEMP S-COFFEE S-COUNT S-COFFEE S-COUNT O
+아메리카노 1잔 주세요,S-COFFEE S-COUNT O
+아메리카노 두 잔 주문할게요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한 잔이랑 스콘 하나 할게요,S-TEMP S-COFFEE B-COUNT E-COUNT S-BAKE S-COUNT O
+아이스 아메리카노랑 밀크티 차가운 거랑 치즈케이크 하나 주세요,S-TEMP S-COFFEE S-TEA S-TEMP O S-BAKE S-COUNT O
+카페라떼 따뜻한 거 레귤러로 한 잔 주세요,S-COFFEE S-TEMP O S-SIZE B-COUNT E-COUNT O
+아메리카노 아이스로 하나요,S-COFFEE S-TEMP S-COUNT
+아메리카노 하나요,S-COFFEE S-COUNT
+아메리카노 한잔 줘요,S-COFFEE S-COUNT O
+아메리카노 2잔 주세요,S-COFFEE S-COUNT O
+아이스 아메리카노 두 잔이랑 말차 케이크 한 개 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT B-BAKE E-BAKE B-COUNT E-COUNT O
+라떼 따뜻한 걸로 하나 주세요,S-COFFEE S-TEMP O S-COUNT O
+카푸치노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 샷 추가로 주세요,S-COFFEE O O O
+카페라떼 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노랑 샌드위치 주세요,S-TEMP S-COFFEE S-BAKE O
+핫 아메리카노 두 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 주세요,S-TEMP S-COFFEE O
+아이스 아메리카노랑 블루베리 케이크 세트로 주세요,S-TEMP S-COFFEE B-BAKE E-BAKE O O
+카페라떼 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+초콜렛 라떼 하나 주세요,B-COFFEE E-COFFEE S-COUNT O
+카페라떼 하나 주세요,S-COFFEE S-COUNT O
+시그니처 초콜렛으로 한 잔 주세요,B-COFFEE E-COFFEE B-COUNT E-COUNT O
+일단 생크림 카스텔라 2조각 주세요,O B-BAKE E-BAKE S-COUNT O
+아메리카노 숏 사이즈 세잔 주세요,S-COFFEE B-SIZE E-SIZE S-COUNT O
+카페라떼 하나 주세요,S-COFFEE S-COUNT O
+아메리카노 하나요,S-COFFEE S-COUNT
+토마토 주스 하나 주세요,B-JUICE E-JUICE S-COUNT O
+얼음 반만 넣은 아메리카노 2잔 주시겠어요,O O O S-COFFEE S-COUNT O
+아메리카노 한 잔이랑 초코 라테 한잔 주세요,S-COFFEE B-COUNT E-COUNT B-COFFEE E-COFFEE S-COUNT O
+네 사이즈가 숏사이즈 톨사이즈 이렇게 있어요,O O S-SIZE S-SIZE O O
+그냥 아이스 아메리카노로 할게요,O S-TEMP S-COFFEE O
+돌체라뗴 하나 주세요,S-COFFEE S-COUNT O
+토마토 주스 하나 주세요,B-JUICE E-JUICE S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+초코라떼 하나 주세요,S-COFFEE S-COUNT O
+아메리카노 하나 주세요,S-COFFEE S-COUNT O
+그러면 아이스 아메리카노 가장 큰 사이즈로 세잔 주세요,O S-TEMP S-COFFEE O B-SIZE E-SIZE S-COUNT O
+더치 하나 주세요,S-COFFEE S-COUNT O
+아이스 아메리카노 샷 추가 가능한가요,S-TEMP S-COFFEE O O O
+카페라떼 아이스로 하나 주시고 사이즈 있나요,S-COFFEE S-TEMP S-COUNT O O O
+카페라떼 시럽 좀 넣어서 아이스로 해주세요 ,S-COFFEE O O O S-TEMP O 
+더치커피로 하나주세요,S-COFFEE S-COUNT
+아이스 아메리카노 한잔 주세요 아 그리고 샷 하나 추가요,S-TEMP S-COFFEE S-COUNT O O O O S-COUNT O
+아메리카노도 여섯 잔 부탁드립니다,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 하나 주세요,S-TEMP S-COFFEE S-COUNT O
+딸기 바나나 섞은거 한잔 주세요,B-JUICE E-JUICE O S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+저는 뜨겁게 자몽차 두잔 주세요,O S-TEMP S-TEA S-COUNT O
+아이스 아메리카노 샷 추가 하나랑 아이스 초코 라테 한 잔 주세요,S-TEMP S-COFFEE O O S-COUNT S-TEMP B-COFFEE E-COFFEE B-COUNT E-COUNT O
+아메리카노 한잔 주세요,S-COFFEE S-COUNT O
+아메리카노 4000원 하나 주문하겠습니다,S-COFFEE O S-COUNT O
+아이스 아메리카노 하나 주세요,S-TEMP S-COFFEE S-COUNT O
+그러면 아메리카노 라지 사이즈 하나 주세요,O S-COFFEE B-SIZE E-SIZE S-COUNT O
+아메리카노 하나 주세요,S-COFFEE S-COUNT O
+저 카모마일 한 잔 따뜻하게 주세요,O S-TEA B-COUNT E-COUNT S-TEMP O
+그럼 아이스 아메리카노랑 치즈케이크 주세요,O S-TEMP S-COFFEE S-BAKE O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한 잔 샷 추가해서 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O O O
+아메리카노 4잔 주세요,S-COFFEE S-COUNT O
+아메리카노 5잔 주시겠어요,S-COFFEE S-COUNT O
+카페라테 따뜻한 거 하나랑 아이스 카페라테 4잔,S-COFFEE S-TEMP O S-COUNT S-TEMP S-COFFEE S-COUNT
+아이스 아메리카노 작은 걸로 하나 주세요,S-TEMP S-COFFEE S-SIZE O S-COUNT O
+카페라테 아이스로 5잔 주세요,S-COFFEE S-TEMP S-COUNT O
+카페라테 따뜻하게 한 잔 주세요,S-COFFEE S-TEMP B-COUNT E-COUNT O
+아이스 라떼로 4잔 주세요,S-TEMP S-COFFEE S-COUNT O
+그럼 아메리카노 하나 주세요,O S-COFFEE S-COUNT O
+딸기 주스 하나 주세요,B-JUICE E-JUICE S-COUNT O
+아메리카노 5잔 주세요,S-COFFEE S-COUNT O
+아메리카노 하나요,S-COFFEE S-COUNT
+카푸치노 하나랑 라떼 하나랑 따뜻한 걸로 주세요,S-COFFEE S-COUNT S-COFFEE S-COUNT S-TEMP O O
+아이스 라떼 하나요,S-TEMP S-COFFEE S-COUNT
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 샷 추가해서 주세요,S-COFFEE O O O
+아이스 아메리카노 두 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아메리카노 하나요,S-COFFEE S-COUNT
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 1잔 딸기 스무디 1잔 주세요,S-TEMP S-COFFEE S-COUNT B-JUICE E-JUICE S-COUNT O
+그럼 아이스 아메리카노 2잔 주세요,O S-TEMP S-COFFEE S-COUNT O
+그럼 아메리카노 한 잔하고 핫 샌드위치 한 개 주세요,O S-COFFEE B-COUNT E-COUNT S-TEMP S-BAKE B-COUNT E-COUNT O
+카푸치노 4잔 주세요,S-COFFEE S-COUNT O
+카페라떼 한 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+라떼 하나 주세요,S-COFFEE S-COUNT O
+레몬 차 한 잔 주세요,B-TEA E-TEA B-COUNT E-COUNT O
+라떼 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+순수 에이드 5잔 주세요,B-JUICE E-JUICE S-COUNT O
+허브티 4잔 주세요,S-TEA S-COUNT O
+케모마일 차갑게 5잔 주세요,S-TEA S-TEMP S-COUNT O
+아이스 아메리카노 두 잔이랑 치즈케이크 한조각 할게요,S-TEMP S-COFFEE B-COUNT E-COUNT S-BAKE S-COUNT O
+아메리카노 한잔 주세요,S-COFFEE S-COUNT O
+아이스 아메리카노 한 잔이요,S-TEMP S-COFFEE B-COUNT E-COUNT
+아메리카노 따뜻한 걸로 세잔 주세요,S-COFFEE S-TEMP O S-COUNT O
+레귤러 사이즈 아메리카노와 베이글 하나 주세요,B-SIZE E-SIZE S-COFFEE S-BAKE S-COUNT O
+아이스 아메리카노 하나 주세요,S-TEMP S-COFFEE S-COUNT O
+아이스 아메리카노랑 블루베리 머핀 주세요,S-TEMP S-COFFEE B-BAKE E-BAKE O
+아이스 아메리카노 하나 주시겠어요,S-TEMP S-COFFEE S-COUNT O
+아이스 아메리카노 세 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아이스 커피로 세 잔 천천히 해주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O O
+그럼 아이스 아메리카노 샷 추가해서 세 잔 주세요,O S-TEMP S-COFFEE O O B-COUNT E-COUNT O
+아메리카노 한 잔이요,S-COFFEE B-COUNT E-COUNT
+아이스 아메리카노 한 잔이요,S-TEMP S-COFFEE B-COUNT E-COUNT
+아이스 아메리카노 30잔 해주세요,S-TEMP S-COFFEE S-COUNT O
+아이스 아메리카노 하나 주세요,S-TEMP S-COFFEE S-COUNT O
+아메리카노 두 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 레귤러 사이즈 하나랑요 티라미수 하나요,S-COFFEE B-SIZE E-SIZE S-COUNT S-BAKE S-COUNT
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아메리카노 따듯한 걸로 두 잔 주세요,S-COFFEE S-TEMP O B-COUNT E-COUNT O
+아메리카노 한잔하고 치즈 케이크 하나 주시겠어요,S-COFFEE S-COUNT B-BAKE E-BAKE S-COUNT O
+그럼 아이스 아메리카노 라지 사이즈 샷 추가해주세요,O S-TEMP S-COFFEE B-SIZE E-SIZE O O
+바닐라 라떼 하나 주세요,B-COFFEE E-COFFEE S-COUNT O
+그럼 아메리카노 세잔 주세요,O S-COFFEE S-COUNT O
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+그럼 밀크티 세 잔 주세요,O S-TEA B-COUNT E-COUNT O
+아메리카노 2잔 카페라테 2잔 디카페인으로 테이크아웃해주세요,S-COFFEE S-COUNT S-COFFEE S-COUNT O O
+초코 라테 1개 아메리카노 5잔이요,B-COFFEE E-COFFEE S-COUNT S-COFFEE S-COUNT
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한잔 주세요,S-TEMP S-COFFEE S-COUNT O
+아이스 아메리카노 2잔 주세요,S-TEMP S-COFFEE S-COUNT O
+보리찰떡 하나 하고 아메리카노 한 잔 주세요,S-BAKE S-COUNT O S-COFFEE B-COUNT E-COUNT O
+아메리카노 4개 주세요,S-COFFEE S-COUNT O
+아메리카노 5개 주세요,S-COFFEE S-COUNT O
+아메리카노 뜨거운 걸로 하나 주세요,S-COFFEE S-TEMP O S-COUNT O
+톨 사이즈로 아이스 아메리카노 하나 주세요,B-SIZE E-SIZE S-TEMP S-COFFEE S-COUNT O
+아이스 아메리카노 한 잔 주세요 ,S-TEMP S-COFFEE B-COUNT E-COUNT O 
+아메리카노 하나 따뜻한 걸로 주세요,S-COFFEE S-COUNT S-TEMP O O
+아메리카노 4잔 주세요,S-COFFEE S-COUNT O
+그럼 밤라떼 하나 주세요,O S-COFFEE S-COUNT O
+그러면 아메리카노 따뜻한 거 한 잔 주세요,O S-COFFEE S-TEMP O B-COUNT E-COUNT O
+오늘의 커피랑 아이스 아메리카노 4개 주세요,B-COFFEE E-COFFEE S-TEMP S-COFFEE S-COUNT O
+네 아이스 아메리카노도 하나 주세요,O S-TEMP S-COFFEE S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 따뜻한거 하나 주세요,S-COFFEE S-TEMP S-COUNT O
+그럼 비엔나 커피 하나 주세요,O B-COFFEE E-COFFEE S-COUNT O
+모과차 한 잔하고 아메리카노 뜨거운 걸로 하나 주세요,S-TEA B-COUNT E-COUNT S-COFFEE S-TEMP O S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+따뜻한 아메리카노 작은 걸로 4개 주세요,S-TEMP S-COFFEE S-SIZE O S-COUNT O
+아메리카노 시원하게 하나 주세요,S-COFFEE S-TEMP S-COUNT O
+오트밀 라떼 한 잔 주세요,B-COFFEE E-COFFEE B-COUNT E-COUNT O
+페퍼민트 허브티로 하나 주세요,B-TEA E-TEA S-COUNT O
+카페라떼 따뜻한 거 하나 주세요,S-COFFEE S-TEMP O S-COUNT O
+라떼 따뜻한 거 테이크아웃으로 한 잔 주세요,S-COFFEE S-TEMP O O B-COUNT E-COUNT O
+라떼 하나 주세요,S-COFFEE S-COUNT O
+그러면 조금 진하게 라떼 따뜻한 거 한 잔 주세요,O O O S-COFFEE S-TEMP O B-COUNT E-COUNT O
+아이스 아메리카노랑 카푸치노 한 잔씩 주세요,S-TEMP S-COFFEE S-COFFEE B-COUNT E-COUNT O
+바나나 주스 하나랑 아메리카노 하나 주세요,B-JUICE E-JUICE S-COUNT S-COFFEE S-COUNT O
+생크림 소프트 쉬폰 이거 하나 주세요,B-BAKE I-BAKE E-BAKE O S-COUNT O
+블루마운틴 아메리카노 주세요,B-COFFEE E-COFFEE O
+아메리카노 한 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+아메키라노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+그냥 아메리카노 한 잔 주세요,O S-COFFEE B-COUNT E-COUNT O
+라떼 한 잔 살게요,S-COFFEE B-COUNT E-COUNT O
+여기 밀크티 팔아요,O S-TEA O
+밀크티 한잔 살게요,S-TEA S-COUNT O
+플랜클링레몬 하나 주세요,S-JUICE S-COUNT O
+아메리카노 따뜻한 거 하나 주세요,S-COFFEE S-TEMP O S-COUNT O
+아메리카노 따뜻하게 한 잔 주세요,S-COFFEE S-TEMP B-COUNT E-COUNT O
+일반 아메리카노로 5개 주세요,O S-COFFEE S-COUNT O
+토마토주스 너무 달게하진 말고 하나 주세요,S-JUICE O O O S-COUNT O
+카페라떼 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+바닐라딜라이트 네 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+유로드립 한 잔 하구요 카푸치노 주세요,S-COFFEE B-COUNT E-COUNT O S-COFFEE O
+아메리카노 R사이즈 하나 주세요,S-COFFEE S-SIZE S-COUNT O
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+자몽에이드하고 카푸치노 4개 주세요,S-JUICE S-COFFEE S-COUNT O
+요거트 스무디 하나랑 딸기 스무디 그리고 아이스 아메리카노 주세요,B-JUICE E-JUICE S-COUNT B-JUICE E-JUICE O S-TEMP S-COFFEE O
+아메리카노 하나 주세요,S-COFFEE S-COUNT O
+아메리카노 하나 주세요,S-COFFEE S-COUNT O
+아메리카노 하나주세요,S-COFFEE S-COUNT
+레귤러 사이즈로 아메리카노 한잔 주세요,B-SIZE E-SIZE S-COFFEE S-COUNT O
+아메리카노 한잔 주세요,S-COFFEE S-COUNT O
+아메리카노 테이크 아웃으로 해주세요,S-COFFEE O O O
+일반 카푸치노 따듯하게 하나 해주실래요,O S-COFFEE S-TEMP S-COUNT O
+아메리카노 한 잔 테이크 아웃 해주세요,S-COFFEE B-COUNT E-COUNT O O O
+아메리카노 따뜻하게 한 잔주세요,S-COFFEE S-TEMP B-COUNT E-COUNT
+아메리카노 따뜻한 걸로 주세요,S-COFFEE S-TEMP O O
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한 잔이랑 라떼 따뜻하게 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT S-COFFEE S-TEMP B-COUNT E-COUNT O
+생아메리카노 한 잔 좀 주세요,S-COFFEE B-COUNT E-COUNT O O
+아메리카노 아이스 한 잔만 줄 수 있어요,S-COFFEE S-TEMP B-COUNT E-COUNT O O O
+아이스 아메리카노 하나하고 딸기 요거트 하나 주세요,S-TEMP S-COFFEE S-COUNT B-JUICE E-JUICE S-COUNT O
+아메리카노 따뜻한 거 하나 주세요,S-COFFEE S-TEMP O S-COUNT O
+커피 4잔 주세요,S-COFFEE S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 아이스 하나 주세요,S-COFFEE S-TEMP S-COUNT O
+저는 아이스 아메리카노 한 잔 주세요,O S-TEMP S-COFFEE B-COUNT E-COUNT O
+치즈케이크 하나 주세요,S-BAKE S-COUNT O
+생딸기쥬스 작은 거 하나 주세요,S-JUICE S-SIZE O S-COUNT O
+아메리카노 한 잔 하고 오리지날 프레즐 하나 주세요,S-COFFEE B-COUNT E-COUNT O B-BAKE E-BAKE S-COUNT O
+그럼 놔두고 따뜻한 아메리카노만 주세요,O O S-TEMP S-COFFEE O
+따뜻한 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아몬드 카페 라떼 하나하고 아메리카노 하나 밀크티 따뜻한 거 한 잔이요,B-COFFEE I-COFFEE E-COFFEE S-COUNT S-COFFEE S-COUNT S-TEA S-TEMP O B-COUNT E-COUNT
+그러면 그냥 아메리카노로 하나 주세요,O O S-COFFEE S-COUNT O
+그러면 아메리카노 원샷으로 주세요,O S-COFFEE O O
+그러면 아메리카노 한 잔 주세요,O S-COFFEE B-COUNT E-COUNT O
+아메리카노로 하나 주세요,S-COFFEE S-COUNT O
+아메리카노 한 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아이스아메리카노 두 개만 주세요,S-COFFEE B-COUNT E-COUNT O
+카페라떼로 2잔 주세요,S-COFFEE S-COUNT O
+아인슈페너 한 개랑 아메리카노 따뜻한거 하나 주세요,S-COFFEE B-COUNT E-COUNT S-COFFEE S-TEMP S-COUNT O
+따뜻한 아메리카노 4잔 주세요,S-TEMP S-COFFEE S-COUNT O
+더치라떼 따뜻한 거 하나 주세요,S-COFFEE S-TEMP O S-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+솔트 치즈 카페라떼 하나 주세요,B-JUICE E-JUICE S-COFFEE S-COUNT O
+블루베리 주스를 먹을게요,B-JUICE E-JUICE O
+아메리카노 제일 작은 사이즈로 3개 주세요,S-COFFEE O B-SIZE E-SIZE S-COUNT O
+아메리카노 레귤러 사이즈 하나 주세요,S-COFFEE B-SIZE E-SIZE S-COUNT O
+더치커피 하나 주세요,S-COFFEE S-COUNT O
+아메리카노 작은 사이즈로 주세요,S-COFFEE B-SIZE E-SIZE O
+카페라떼 아이스로 하나 주세요,S-COFFEE S-TEMP S-COUNT O
+아메리카노 한샷 반 주세요,S-COFFEE O O O
+카푸치노 한 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+아메리카노로 뜨겁게 5잔 해주세요,S-COFFEE S-TEMP S-COUNT O
+아메리카노 4잔 주세요,S-COFFEE S-COUNT O
+아메리카노 따뜻한 거 한 잔 주세요,S-COFFEE S-TEMP O B-COUNT E-COUNT O
+따뜻한 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+아메리카노 작은 사이즈로 한 잔 주시겠어요,S-COFFEE B-SIZE E-SIZE B-COUNT E-COUNT O
+아메리카노를 디카페인으로 주세요,S-COFFEE O O
+아메리카노 한 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+아메리카노 하나 주시겠어요,S-COFFEE S-COUNT O
+아메리카노 한 잔 텀블러에 담아주세요,S-COFFEE B-COUNT E-COUNT O O
+카푸치노 한 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+카푸치노 두 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+카푸치노 세 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+바닐라 라떼 네 잔 주시겠어요,B-COFFEE E-COFFEE B-COUNT E-COUNT O
+콜드브루 다섯 잔 주시겠어요,S-COFFEE B-COUNT E-COUNT O
+콜드 브루 라떼 한 잔 주시겠어요,B-COFFEE I-COFFEE E-COFFEE B-COUNT E-COUNT O
+아메리카노 따뜻한 거 한 잔 주시겠어요,S-COFFEE S-TEMP O B-COUNT E-COUNT O
+아보카도 하나 주세요,S-COFFEE S-COUNT O
+녹차라떼 덜 달게 하나 주시겠어요,S-COFFEE O O S-COUNT O
+반반주스 하나 주시겠어요,S-JUICE S-COUNT O
+약간 산미 나는 걸로 한 잔 주실래요,O O O O B-COUNT E-COUNT O
+아이스아메리카노 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+초코케이크 하나 주세요,S-BAKE S-COUNT O
+스무디 세 잔 주실래요,S-JUICE B-COUNT E-COUNT O
+아이스 라테 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
+마카롱 다섯 개 주세요,S-BAKE B-COUNT E-COUNT O
+에스프레소 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
+치즈케이크 하나 주문할게요,S-BAKE S-COUNT O
+더치커피는 작은 것도 팔아요,S-COFFEE S-SIZE O O
+여기 더치커피 팔아요,O S-COFFEE O
+과일 음료 4잔 주문할 수 있어요,B-JUICE E-JUICE S-COUNT O O O
+에스프레소도 주문 가능한가요,S-COFFEE O O
+딸기 스무디 5잔 되나요,B-JUICE E-JUICE S-COUNT O
+치즈케이크 두조각 있나요,S-BAKE S-COUNT O
+치즈 케이크는 지금 없나요,B-BAKE E-BAKE O O
+마카롱은 남아있나요,S-BAKE O
+핫초코 5잔 파나요,S-TEA S-COUNT O
+카페모카 주문돼요,S-COFFEE O
+캐러멜 프라푸치노 겨울에도 되나요,B-COFFEE E-COFFEE O O
+카푸치노 아이스로 되나요,S-COFFEE S-TEMP O
+케이크도 2조각 함께 주문 가능한가요,S-BAKE S-COUNT O O O
+에스프레소 4잔 가능한가요,S-COFFEE S-COUNT O
+아포가토 주문 가능한가요,S-COFFEE O O
+바닐라 라테 주문 가능한가요,B-COFFEE E-COFFEE O O
+초코 라테 되나요,B-COFFEE E-COFFEE O
+겨울인데 빙수 주문 가능할까요,O S-JUICE O O
+콜드브루 라테 되나요,B-COFFEE E-COFFEE O
+지금 딸기 스무디 2잔 주문 가능한가요,O B-JUICE E-JUICE S-COUNT O O
+그럼 딸기 에이드는 가능한가요,O B-JUICE E-JUICE O
+초코 바나나 스무디 되나요,B-JUICE I-JUICE E-JUICE O
+디카페인 커피 주문 가능한가요,O S-COFFEE O O
+초코라떼 있어요,S-COFFEE O
+카페라테 따뜻한 거 한 잔 주문 여기서 해요,S-COFFEE S-TEMP O B-COUNT E-COUNT O O O
+생과일 주스도 가능해요,B-JUICE E-JUICE O
+아이스 아메리카노 되나요,S-TEMP S-COFFEE O
+치즈 케이크도 2조각 파나요,B-BAKE E-BAKE S-COUNT O
+그러면 아메리카노는 되나요,O S-COFFEE O
+아메리카노 네잔 주문 가능한가요,S-COFFEE S-COUNT O O
+아이스 아메리카노 바로 되나요,S-TEMP S-COFFEE O O
+아메리카노 따뜻한 거 있죠,S-COFFEE S-TEMP O O
+콜드브루 파나요,S-COFFEE O
+더치 커피 있나요,B-COFFEE E-COFFEE O
+콜드브루 커피 있나요,B-COFFEE E-COFFEE O
+콜드브루 있나요,S-COFFEE O
+유자차를 좀 주시지요,S-TEA O O
+커피 좀 주시지요,S-COFFEE O O
+아메리카노 주십시오,S-COFFEE O
+유자차를 세잔 좀 주시지요,S-TEA S-COUNT O O
+커피 좀 주시지요,S-COFFEE O O
+아메리카노 주십시오,S-COFFEE O
+카페라떼 한잔 주시게나,S-COFFEE S-COUNT O
+카라멜 마끼아또 주세요,B-COFFEE E-COFFEE O
+카라멜 마끼아또 하나 주세요,B-COFFEE E-COFFEE S-COUNT O
+카라멜 마끼아또로 할게요,B-COFFEE E-COFFEE O
+카라멜 마끼아또를 먹고 싶어요,B-COFFEE E-COFFEE O O
+카라멜 마끼아또 주시겠어요,B-COFFEE E-COFFEE O
+저 카라멜 마끼아또 먹을게요,O B-COFFEE E-COFFEE O
+딸기주스 주세요,S-JUICE O
+딸기주스 하나 주세요,S-JUICE S-COUNT O
+딸기주스로 할게요,S-JUICE O
+시원한 딸기주스를 먹고 싶어요,S-TEMP S-JUICE O O
+딸기주스도 먹을게요,S-JUICE O
+딸기주스도 추가할게요,S-JUICE O
+카라멜 마끼아또도 추가할게요,B-COFFEE E-COFFEE O
+아보카도로 주세요,S-COFFEE O
+아보카도로 하나 주세요,S-COFFEE S-COUNT O
+아보카도로 할게요,S-COFFEE O
+아보카도를 먹고 싶어요,S-COFFEE O O
+아보카도로 주시겠어요,S-COFFEE O
+저 아보카도로 할게요,O S-COFFEE O
+밀크티도 추가할게요,S-TEA O
+밀크티로 주세요,S-TEA O
+밀크티로 하나 주세요,S-TEA S-COUNT O
+밀크티로 할게요,S-TEA O
+밀크티도 먹고싶어요,S-TEA O
+밀크티를 주시겠어요,S-TEA O
+저 밀크티로 먹을게요,O S-TEA O
+밀크티도 추가할게요,S-TEA O
+밀크티를 주세요,S-TEA O
+밀크티를 하나 주시겠어요,S-TEA S-COUNT O
+밀크 티로 할게요,B-TEA E-TEA O
+밀크 티를 먹고 싶네요,B-TEA E-TEA O O 
+밀크 티 좀 주시겠어요,B-TEA E-TEA O O
+저 밀크 티 먹을게요,O B-TEA E-TEA O
+밀크 티도 추가할게요,B-TEA E-TEA O
+밀크 티도 먹을게요,B-TEA E-TEA O
+밀크 티도 추가할게요,B-TEA E-TEA O
+밀크 티로 주세요,B-TEA E-TEA O
+밀크 티로 하나 주세요,B-TEA E-TEA S-COUNT O
+밀크 티로 할게요,B-TEA E-TEA O
+저 밀크티 먹고 싶어요,O S-TEA O O
+밀크티로 주시겠어요,S-TEA O
+저 그럼 밀크티 먹을게요,O O S-TEA O
+밀크 티 추가할게요,B-TEA E-TEA O
+홍차 주세요,S-TEA O
+홍차 하나 주세요,S-TEA S-COUNT O
+홍차로 할게요,S-TEA O
+홍차 한 잔 먹고 싶어요,S-TEA B-COUNT E-COUNT O O
+홍차 하나 주시겠어요,S-TEA S-COUNT O
+저 홍차 먹을게요,O S-TEA O
+홍차도 추가할게요,S-TEA O
+홍차로 주세요,S-TEA O
+홍차로 하나 주세요,S-TEA S-COUNT O
+홍차로 할게요,S-TEA O
+홍차 한잔 먹고 싶어요,S-TEA S-COUNT O O
+홍차로 주시겠어요,S-TEA O
+저 홍차로 먹을게요,O S-TEA O
+그럼 홍차도 추가할게요,O S-TEA O
+유자차로 주세요,S-TEA O
+유자차로 하나 주세요,S-TEA S-COUNT O
+유자차로 한잔 할게요,S-TEA S-COUNT O
+따뜻한 유자차를 먹고 싶어요,S-TEMP S-TEA O O
+유자차로 주시겠어요,S-TEA O
+저 유자차 먹을게요,O S-TEA O
+유자차도 추가할게요,S-TEA O
+유자차도  주세요,S-TEA  O
+유자차도 하나 주세요,S-TEA S-COUNT O
+유자차도 하나 할게요,S-TEA S-COUNT O
+녹차로 먹고 싶어요,S-TEA O O
+녹차로 주시겠어요,S-TEA O
+저 그럼 녹차 하나 먹을게요,O O S-TEA S-COUNT O
+녹차도 추가할게요,S-TEA O
+녹차도 주세요,S-TEA O
+녹차도 하나 주세요,S-TEA S-COUNT O
+녹차 따뜻한거 할게요,S-TEA S-TEMP O
+녹차 따뜻한걸로 먹고 싶어요,S-TEA S-TEMP O O
+녹차 한잔 주시겠어요,S-TEA S-COUNT O
+저 녹차 먹을게요,O S-TEA O
+녹차도 추가할래요,S-TEA O
+녹차 주세요,S-TEA O
+녹차 하나랑 유자차 한잔 주세요,S-TEA S-COUNT S-TEA S-COUNT O
+자몽차로 할게요,S-TEA O
+따뜻한 자몽차 먹고 싶어요,S-TEMP S-TEA O O
+자몽차로 주시겠어요,S-TEA O
+저 자몽차도 먹을게요,O S-TEA O
+자몽차도 추가할게요,S-TEA O
+자몽차로 한잔 주세요,S-TEA S-COUNT O
+자몽차 하나 주세요,S-TEA S-COUNT O
+그럼 자몽차로 할게요,O S-TEA O
+자몽차가 먹고 싶어요,S-TEA O O
+자몽차로 주시겠어요,S-TEA O
+저 자몽차로 먹을게요,O S-TEA O
+그럼 자몽차도 추가할게요,O S-TEA O
+자몽차랑 녹차로 주세요,S-TEA S-TEA O
+토마토 주스 하나 주세요,B-JUICE E-JUICE S-COUNT O
+토마토 주스로 할게요,B-JUICE E-JUICE O
+토마토 주스 먹고 싶어요,B-JUICE E-JUICE O O
+토마토 주스로 주시겠어요,B-JUICE E-JUICE O
+저 시원한 토마토 주스 먹을게요,O S-TEMP B-JUICE E-JUICE O
+토마토 주스도 추가할게요,B-JUICE E-JUICE O
+토마토 주스도 추가할래요,B-JUICE E-JUICE O
+토마토 주스도 한잔 추가할게요,B-JUICE E-JUICE S-COUNT O
+토마토 주스로 주실래요,B-JUICE E-JUICE O
+토마토주스로 주세요,S-JUICE O
+시원한 토마토주스로 한잔 가능한가요,S-TEMP S-JUICE S-COUNT O
+토마토주스로 하겠습니다,S-JUICE O
+토마토주스가 낫겠네요,S-JUICE O
+토마토주스로 할게요,S-JUICE O
+딸기 주스 작은 사이즈 주세요,B-JUICE E-JUICE B-SIZE E-SIZE O
+딸기 주스 하나 주세요,B-JUICE E-JUICE S-COUNT O
+딸기주스로 할게요,S-JUICE O
+딸기주스를 먹고 싶어요,S-JUICE O O
+딸기주스로 먹을게요,S-JUICE O
+딸기 주스도 추가할게요,B-JUICE E-JUICE O
+딸기주스로 주세요,S-JUICE O
+딸기주스로 하나 주세요,S-JUICE S-COUNT O
+그럼 딸기주스로 할게요,O S-JUICE O
+딸기주스를 먹고 싶어요,S-JUICE O O
+딸기주스로 먹을게요,S-JUICE O
+딸기주스 주세요,S-JUICE O
+딸기주스 하나 부탁해요,S-JUICE S-COUNT O
+딸기주스 작은 사이즈로 하나 주세요,S-JUICE B-SIZE E-SIZE S-COUNT O
+딸기주스 시원하게 하나 주세요,S-JUICE S-TEMP S-COUNT O
+딸기주스 부탁드립니다,S-JUICE O
+딸기주스 하나만 주실래요,S-JUICE S-COUNT O
+딸기 주스 주세요,B-JUICE E-JUICE O
+딸기 주스 하나 주시겠어요,B-JUICE E-JUICE S-COUNT O
+딸기 주스 추가할게요,B-JUICE E-JUICE O
+딸기주스로 할래요,S-JUICE O
+딸기 주스로 할래요,B-JUICE E-JUICE O
+딸기 주스로 하나 주세요,B-JUICE E-JUICE S-COUNT O
+블루베리주스도 추가할게요,S-JUICE O
+블루베리 주스 주세요,B-JUICE E-JUICE O
+블루베리 주스 하나 주세요,B-JUICE E-JUICE S-COUNT O
+블루베리 주스로 할게요,B-JUICE E-JUICE O
+블루베리 주스를 먹고 싶어요,B-JUICE E-JUICE O O
+블루베리 주스로 먹을게요,B-JUICE E-JUICE O
+블루베리 주스도 추가할게요,B-JUICE E-JUICE O
+블루베리 주스로 주세요,B-JUICE E-JUICE O
+블루베리 주스로 하나 주세요,B-JUICE E-JUICE S-COUNT O
+블루베리 주스로 할게요,B-JUICE E-JUICE O
+블루베리 주스를 먹고 싶어요,B-JUICE E-JUICE O O
+블루베리주스 먹을게요,S-JUICE O
+블루베리주스도 추가할게요,S-JUICE O
+블루베리주스 작은 사이즈 주세요,S-JUICE B-SIZE E-SIZE O
+블루베리주스 하나 주세요,S-JUICE S-COUNT O
+블루베리주스로 할게요,S-JUICE O
+블루베리주스를 먹고 싶어요,S-JUICE O O
+블루베리주스 먹을게요,S-JUICE O
+블루베리주스도 추가할게요,S-JUICE O
+블루베리주스로 주세요,S-JUICE O
+블루베리주스로 하나 주세요,S-JUICE S-COUNT O
+블루베리주스로 할게요,S-JUICE O
+레몬에이드를 먹고 싶어요,S-JUICE O O
+레몬에이드 먹을게요,S-JUICE O
+레몬에이드도 추가할게요,S-JUICE O
+레몬에이드 주세요,S-JUICE O
+레몬에이드 하나 주세요,S-JUICE S-COUNT O
+레몬에이드로 할게요,S-JUICE O
+레몬에이드를 먹고 싶어요,S-JUICE O O
+레몬에이드로 먹을게요,S-JUICE O
+레몬에이드로 하나 주세요,S-JUICE S-COUNT O
+시원한 레몬에이드로 할게요,S-TEMP S-JUICE O
+레몬에이드를 먹고 싶어요,S-JUICE O O
+레몬 에이드 먹을게요,B-JUICE E-JUICE O
+레몬 에이드도 추가할게요,B-JUICE E-JUICE O
+레몬 에이드 주세요,B-JUICE E-JUICE O
+레몬 에이드 하나 주세요,B-JUICE E-JUICE S-COUNT O
+레몬 에이드로 할게요,B-JUICE E-JUICE O
+레몬 에이드를 먹고 싶어요,B-JUICE E-JUICE O O
+레몬 에이드 먹을게요,B-JUICE E-JUICE O
+레몬 에이드도 추가할게요,B-JUICE E-JUICE O
+레몬 에이드 작은 사이즈 주세요,B-JUICE E-JUICE B-SIZE E-SIZE O
+레몬 에이드로 하나 주세요,B-JUICE E-JUICE S-COUNT O
+레몬 에이드로 할게요,B-JUICE E-JUICE O
+자몽 에이드를 먹고 싶어요,B-JUICE E-JUICE O O
+자몽 에이드 작은 사이즈 먹을게요,B-JUICE E-JUICE B-SIZE E-SIZE O
+자몽 에이드 하나 주세요,B-JUICE E-JUICE S-COUNT O
+자몽 에이드로 할게요,B-JUICE E-JUICE O
+자몽 에이드를 먹고 싶어요,B-JUICE E-JUICE O O
+자몽 에이드 먹을게요,B-JUICE E-JUICE O
+자몽 에이드도 추가할게요,B-JUICE E-JUICE O
+자몽 에이드 주세요,B-JUICE E-JUICE O
+자몽에이드 하나 주세요,S-JUICE S-COUNT O
+자몽에이드로 할게요,S-JUICE O
+자몽에이드를 먹고 싶어요,S-JUICE O O
+자몽에이드 먹을게요,S-JUICE O
+자몽에이드도 추가할게요,S-JUICE O
+자몽에이드 주세요,S-JUICE O
+자몽에이드 하나 주세요,S-JUICE S-COUNT O
+자몽에이드로 할게요,S-JUICE O
+자몽에이드를 먹고 싶어요,S-JUICE O O
+자몽에이드 먹을게요,S-JUICE O
+자몽에이드로 하나 주세요,S-JUICE S-COUNT O
+자몽에이드도 추가할게요,S-JUICE O
+자몽에이드 주세요,S-JUICE O
+자몽에이드 하나 주세요,S-JUICE S-COUNT O
+마카롱으로 할게요,S-BAKE O
+마카롱을 먹고 싶어요,S-BAKE O O
+마카롱으로 먹을게요,S-BAKE O
+마카롱으로 하나 주세요,S-BAKE S-COUNT O
+마카롱도 추가할게요,S-BAKE O
+마카롱도 주세요,S-BAKE O
+마카롱도 한개 주세요,S-BAKE S-COUNT O
+그럼 마카롱으로 할게요,O S-BAKE O
+마카롱을 먹고 싶어요,S-BAKE O O
+마카롱으로 먹을게요,S-BAKE O
+마카롱으로 하나 주세요,S-BAKE S-COUNT O
+마카롱도 한개만 추가할게요,S-BAKE S-COUNT O
+케이크로 두조각 주세요,S-BAKE S-COUNT O
+케이크로 한개 주세요,S-BAKE S-COUNT O
+케이크로 할게요,S-BAKE O
+케이크를 먹고 싶어요,S-BAKE O O
+케이크로 먹을게요,S-BAKE O
+케이크로 하나 주세요,S-BAKE S-COUNT O
+케이크도 추가할게요,S-BAKE O
+케이크를 2조각 주세요,S-BAKE S-COUNT O
+케이크도 하나 주세요,S-BAKE S-COUNT O
+케이크로 할게요,S-BAKE O
+케이크를 먹고 싶어요,S-BAKE O O
+케이크도 2조각 먹을게요,S-BAKE S-COUNT O
+케이크 하나 주세요,S-BAKE S-COUNT O
+케이크 추가할게요,S-BAKE O
+케이크 주세요,S-BAKE O
+케이크 하나 주세요,S-BAKE S-COUNT O
+케이크 한개 살게요,S-BAKE S-COUNT O
+케이크 먹고 싶어요,S-BAKE O O
+케이크 먹을게요,S-BAKE O
+케이크 하나 주세요,S-BAKE S-COUNT O
+케이크 하나 추가할게요,S-BAKE S-COUNT O
+케이크 주세요,S-BAKE O
+티라미슈 하나 주세요,S-BAKE S-COUNT O
+티라미슈로 할게요,S-BAKE O
+티라미슈를 먹고 싶어요,S-BAKE O O
+티라미슈로 먹을게요,S-BAKE O
+티라미슈로 하나 주세요,S-BAKE S-COUNT O
+티라미슈도 추가할게요,S-BAKE O
+티라미슈도 주세요,S-BAKE O
+티라미슈 하나 주세요,S-BAKE S-COUNT O
+티라미슈로 할게요,S-BAKE O
+티라미슈를 먹고 싶어요,S-BAKE O O
+티라미슈도 먹을게요,S-BAKE O
+티라미슈로 하나 주세요,S-BAKE S-COUNT O
+티라미슈도 추가할게요,S-BAKE O
+티라미슈로 주세요,S-BAKE O
+티라미슈로 하나 주세요,S-BAKE S-COUNT O
+쿠키로 할게요,S-BAKE O
+쿠키를 먹고 싶어요,S-BAKE O O
+쿠키 먹을게요,S-BAKE O
+쿠키로 하나 주세요,S-BAKE S-COUNT O
+쿠키도 추가할게요,S-BAKE O
+쿠키 주세요,S-BAKE O
+쿠키 하나 주세요,S-BAKE S-COUNT O
+쿠키로 할게요,S-BAKE O
+쿠키를 먹고 싶어요,S-BAKE O O
+쿠키 먹을게요,S-BAKE O
+쿠키로 하나 주세요,S-BAKE S-COUNT O
+쿠키도 추가할게요,S-BAKE O
+쿠키로 주세요,S-BAKE O
+쿠키로 하나 주세요,S-BAKE S-COUNT O
+쿠키로 할게요,S-BAKE O
+쿠키를 먹고 싶어요,S-BAKE O O
+쿠키 먹을게요,S-BAKE O
+쿠키로 하나 주세요,S-BAKE S-COUNT O
+쿠키 하나 주시겠어요,S-BAKE S-COUNT O
+쿠키 먹고 싶어요,S-BAKE O O
+쿠키가 좋겠네요,S-BAKE O
+쿠키가 낫겠네요,S-BAKE O
+쿠키가 낫겠어요,S-BAKE O
+쿠키로 할게요,S-BAKE O
+머핀으로 할게요,S-BAKE O
+머핀 한개 주세요,S-BAKE S-COUNT O
+머핀 주세요,S-BAKE O
+머핀 하나 먹을게요,S-BAKE S-COUNT O
+머핀 하나 주시겠어요,S-BAKE S-COUNT O
+머핀으로 하나 주세요,S-BAKE S-COUNT O
+머핀 한개 부탁합니다,S-BAKE S-COUNT O
+머핀을 먹을래요,S-BAKE O
+머핀으로 하겠습니다,S-BAKE O
+머핀 한개 주실래요,S-BAKE S-COUNT O
+머핀으로 세개 부탁드려요,S-BAKE S-COUNT O
+머핀으로 두개 가능할까요,S-BAKE S-COUNT O
+머핀 1개만 주세요,S-BAKE S-COUNT O
+그렇게까지 기다릴 수가 없어서 주문취소할게요 주문취소 가능한가요,O O O O O O O
+주문 취소할 수 있어요,O O O O
+주문 취소할게요,O O
+케이크 주문 하나 취소할게요,S-BAKE O S-COUNT O
+아메리카노 한 잔은 취소해주세요,S-COFFEE B-COUNT E-COUNT O
+급한 일이 생겨서 주문 취소해주세요,O O O O O
+혹시 주문 취소할 수 있을까요,O O O O O
+지금 주문 안 들어갔으면 취소하겠습니다,O O O O O
+방금 주문한 거 취소 가능할까요,O O O O O
+주문했던 거 취소 부탁합니다,O O O O
+주문취소할게요 주문취소 가능한가요,O O O
+주문 취소할 수 있을까요,O O O O
+지금 주문 취소할게요,O O O
+주문 하나 취소할게요,O S-COUNT O
+주문은 취소해주세요,O O
+급한 일이 생겨서 주문 취소해주세요,O O O O O
+혹시 주문 취소 좀 할 수 있을까,O O O O O O O
+주문 안 들어갔으면 취소할게,O O O O
+주문한거 취소 해주세요,O O O
+주문했던 거 취소 부탁해요,O O O O
+주문 취소 좀 하겠습니다,O O O O
+주문한거 취소할래요,O O
+주문 취소 할게요,O O O
+주문 취소 하겠습니다,O O O
+주문 취소좀요,O O
+주문 취소요,O O
+주문한거 취소할게요,O O
+주문 취소 좀 하겠습니다,O O O O
+주문한거 취소할래요,O O
+주문 취소 할게요,O O O
+주문 취소 하겠습니다,O O O
+주문 취소좀요,O O
+주문 취소요,O O
+주문한거 취소할게요,O O
+주문 취소 부탁드립니다,O O O
+주문한거 취소 부탁드려요,O O O
+주문했던거 취소 부탁해요,O O O
+주문취소 가능한가요,O O
+주문 취소 가능하실까요,O O O
+아 주문 취소하겠습니다,O O O
+죄송한데 주문 취소 될까요,O O O O
+아메리카노 한 잔은 취소해주세요,S-COFFEE B-COUNT E-COUNT O
+급한 일이 생겨서 주문 취소해주세요,O O O O O
+혹시 주문 취소할 수 있을까요,O O O O O
+지금 주문 안 들어갔으면 취소하겠습니다,O O O O O
+방금 주문한 거 취소 가능할까요,O O O O O
+주문했던 거 취소 부탁합니다,O O O O
+주문취소할게요 주문취소 가능한가요,O O O
+주문 취소할 수 있을까요,O O O O
+지금 주문 취소할게요,O O O
+주문 하나 취소할게요,O S-COUNT O
+그렇게까지 기다릴 수가 없어서 주문취소할게요 주문취소 가능한가요,O O O O O O O
+주문 취소할 수 있어요,O O O O
+주문 취소할게요,O O
+케이크 주문 하나 취소할게요,S-BAKE O S-COUNT O
+아메리카노 한 잔은 취소해주세요,S-COFFEE B-COUNT E-COUNT O
+급한 일이 생겨서 주문 취소해주세요,O O O O O
+혹시 주문 취소할 수 있을까요,O O O O O
+지금 주문 안 들어갔으면 취소하겠습니다,O O O O O
+방금 주문한 거 취소 가능할까요,O O O O O
+주문했던 거 취소 부탁합니다,O O O O
+주문취소할게요 주문취소 가능한가요,O O O
+주문 취소할 수 있을까요,O O O O
+지금 주문 취소할게요,O O O
+주문 하나 취소할게요,O S-COUNT O
+주문은 취소해주세요,O O
+급한 일이 생겨서 주문 취소해주세요,O O O O O
+혹시 주문 취소 좀 할 수 있을까,O O O O O O O
+주문 안 들어갔으면 취소할게,O O O O
+주문한거 취소 해주세요,O O O
+주문했던 거 취소 부탁해요,O O O O
+주문 취소 좀 하겠습니다,O O O O
+주문한거 취소할래요,O O
+주문 취소 할게요,O O O
+주문 취소 하겠습니다,O O O
+주문 취소좀요,O O
+주문 취소요,O O
+주문한거 취소할게요,O O
+주문 취소 좀 하겠습니다,O O O O
+주문한거 취소할래요,O O
+주문 취소 할게요,O O O
+주문 취소 하겠습니다,O O O
+주문 취소좀요,O O
+주문 취소요,O O
+주문한거 취소할게요,O O
+주문 취소 부탁드립니다,O O O
+주문한거 취소 부탁드려요,O O O
+주문했던거 취소 부탁해요,O O O
+주문취소 가능한가요,O O
+주문 취소 가능하실까요,O O O
+아 주문 취소하겠습니다,O O O
+죄송한데 주문 취소 될까요,O O O O
+아메리카노 한 잔은 취소해주세요,S-COFFEE B-COUNT E-COUNT O
+급한 일이 생겨서 주문 취소해주세요,O O O O O
+혹시 주문 취소할 수 있을까요,O O O O O
+지금 주문 안 들어갔으면 취소하겠습니다,O O O O O
+방금 주문한 거 취소 가능할까요,O O O O O
+주문했던 거 취소 부탁합니다,O O O O
+주문취소할게요 주문취소 가능한가요,O O O
+주문 취소할 수 있을까요,O O O O
+지금 주문 취소할게요,O O O
+주문 하나 취소할게요,O S-COUNT O
+주문 취소요,O O
+혹시 주문 취소할 수 있을까요,O O O O O
+지금 주문 안 들어갔으면 취소하겠습니다,O O O O O
+방금 주문한 거 취소 가능할까요,O O O O O
+주문했던 거 취소 부탁합니다,O O O O
+주문취소할게요 주문취소 가능한가요,O O O
+주문 취소할 수 있을까요,O O O O
+지금 주문 취소할게요,O O O
+주문 하나 취소할게요,O S-COUNT O
+지금 바빠서 주문취소 해주세요,O O O O
+주문취소 부탁드려요,O O
+그럼 주문취소좀요,O O
+그냥 주문취소할게,O O
+주문취소 할게요,O O
+네 주문취소할게요,O O
+지금 바빠서 주문취소 해주세요,O O O O
+주문취소 부탁드려요,O O
+그럼 주문취소좀요,O O
+그냥 주문취소할게,O O
+주문취소 할게요,O O
+네 주문취소할게요,O O
+주문취소할 수 있을까요,O O O
+주문취소 요청드립니다,O O
+주문 취소 요청드려요,O O O
+주문 좀 취소할게요,O O O
+취소좀요,O
+취소요,O

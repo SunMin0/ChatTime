@@ -11,14 +11,15 @@ def f_chat(request):
         try:
             text = request.GET.get('query')
             text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text) # 특수문자 제거
+            text = re.sub('쥬스','주스',text)
             print(text)
             if request.GET.get('query') != None:
                 try:
                     # intent 확인을 위한 임시 테스트 코드 -----------------
                     nlu = NaturalLanguageUnderstanding()
                     nlu.model_load()
-                    intent = nlu.predict(text)
-                    print(text, intent)
+                    intent, predict = nlu.predict(text)
+                    print(text, intent, predict)
                     answer = intent
                     # ---------------------------------------------------
 

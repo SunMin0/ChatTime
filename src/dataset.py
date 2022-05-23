@@ -41,8 +41,8 @@ class MakeDataset:
     def __init__(self):
         self.intent_data_dir = "./cafe_intent_data.csv"
         self.intent_label_dir = "./cafe_intent_label.json"
-        self.entity_label_dir = "./entity_label.json"
-        self.entity_data_dir = "./entity_data.csv"
+        self.entity_data_dir = "./cafe_entity_data.csv"
+        self.entity_label_dir = "./cafe_entity_label.json"
         self.ood_data_dir = "./ood_data.csv"
         self.intent_label = self.load_intent_label()
         self.entity_label = self.load_entity_label()

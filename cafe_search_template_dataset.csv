@@ -1,0 +1,2 @@
+question,label,slot,template
+차가운거로 주세요,음료온도요구,TEMP,온도는 {TEMP}를(을) 선택하셨습니다.
