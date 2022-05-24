@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="OOD 모델 추가, 입력데이터 전처리 코드 추가 &#10;&#10;2022-05-23 PM 10:33">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Make Entity Data-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Make Entity Data-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/[Entity] Bilstm-crf-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/[Entity] Bilstm-crf-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/[Intent] TextCNN-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/[Intent] TextCNN-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make Entity Data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Make Entity Data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NLG.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLG.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NLU.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLU.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/chats.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chats.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/find.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/find.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/more.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/more.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-    </list>
+    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -230,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653312804144</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03">
+      <created>1653368673792</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653368673792</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03">
+      <created>1653368745096</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653368745096</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +259,7 @@
     <MESSAGE value="[Intent]&#10;- 기존에 부족한 응답조건을 개선함. (ex 큰걸로, 따뜻한걸로)&#10;&#10;2022-05-17 PM 6:19" />
     <MESSAGE value="Intent, Entity 정확도 상승. 우리 메뉴에 최적화. 통합 테스트 완료.&#10;&#10;2022-05-23 PM 6:14" />
     <MESSAGE value="OOD 모델 추가, 입력데이터 전처리 코드 추가 &#10;&#10;2022-05-23 PM 10:33" />
-    <option name="LAST_COMMIT_MESSAGE" value="OOD 모델 추가, 입력데이터 전처리 코드 추가 &#10;&#10;2022-05-23 PM 10:33" />
+    <MESSAGE value="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03" />
+    <option name="LAST_COMMIT_MESSAGE" value="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03" />
   </component>
 </project>
