@@ -1,0 +1,40 @@
+{% block title %}Product Detail{% endblock %}
+{% block content %}
+<div class="container my-3">
+    <!-- message 표시 -->
+    {% if messages %}
+    <div class="alert alert-danger my-3" role="alert">
+        {% for message in messages %}
+        <strong>{{ message.tags }}</strong>
+        <ul><li>{{ message.message }}</li></ul>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <h2 class="border-bottom py-2">{{ product.subject }}</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                {% for image in product.image_set.all %}
+                <img src="{{image.file.url}}" width="100%" alt="Product Image">
+                {% endfor %}
+            </div>
+            <div class="col">
+                <h1 class="display-6">{{product.name}}</h1>
+
+                <p><span class="badge badge-secondary">Price</span> &#8361;{{product.price}}</p>
+                <form action="{% url 'cart:product_add' product.id %}" method="post">
+                    {{add_to_cart}}
+                    {% csrf_token %}
+                    <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
+
+                </form>
+                <h5><span class="badge badge-secondary">Description</span>{{product.description|linebreaks}}</h5>
+            </div>
+        </div>
+        <a href="{% url 'shop:register_product' product.id  %}"
+           class="btn btn-sm btn-outline-secondary float-right">수정</a>
+    </div>
+</div>
+
+{% endblock %}

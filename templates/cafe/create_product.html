@@ -1,0 +1,13 @@
+<body>
+<div class="container">
+    <h5 class="my-3 border-bottom pb-2">게시글 등록</h5>
+    {% if user.is_manager == 1 %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">저장하기</button>
+    </form>
+    {% endif %}
+</div>
+
+</body>

@@ -1,0 +1,51 @@
+<!-- templates/user/delete_user.html -->
+<head>
+    <br>
+    <a href="#content" onclick="location.href='http://127.0.0.1:8000/more';"
+       style='cursor:pointer; font-size: 10px; font-weight: bold; color: Red; text-shadow: 1px 1px 1.2px yellow;'>
+        <span><h1>뒤로 돌아가기</h1></span></a>
+    <br>
+    <meta charset="UTF-8">
+    <title>회원탈퇴</title>
+    <center>
+        <h2 class="blind"><h1>회원탈퇴</h1></h2>
+    </center>
+<form method="POST" novalidate>
+    {% csrf_token %}
+    <p><strong>{{ user.user_id }}</strong> 회원님의 계정이 삭제됩니다.<br>탈퇴시 개인정보 및 이용정보가 삭제되며 복구할 수 없습니다.
+        <br>본인의 비밀번호를 입력한 후 하단의 유의사항 동의에 체크하세요.</p>
+    <div>
+<!--        <label name="password" for="{{ password_form.password.id_for_label }}">{{ password_form.password.label }}</label>-->
+        {{ password_form.password }}
+        {% if password_form.password.errors %}
+        <script type="text/javascript">
+            document.getElementsByName('password')[0].setAttribute('class', 'form-control is-invalid')
+        </script>
+        {% for error in password_form.password.errors %}
+        <div class="invalid-feedback">
+            {{ error }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        <small>
+            본인인증을 위해 비밀번호를 입력해주세요.
+        </small>
+    </div>
+
+    <label>
+        <input type="checkbox" name="ck" onClick="checkDisable(this.form)">
+        <span>유의사항 동의</span>
+    </label>
+
+    <button type="submit" name="bt" disabled="true" >탈퇴하기</button>
+</form>
+
+<script type="text/javascript">
+    function checkDisable(form) {
+        if (form.ck.checked == true) {
+            form.bt.disabled = false;
+        } else {
+            form.bt.disabled = true;
+        }
+    }
+</script>

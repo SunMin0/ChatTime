@@ -1,0 +1,62 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
+      id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+<div class="span3">
+    <h2>프로필 변경</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="join_row">
+            <h3 class="join_title"><h2>닉네임</h2></h3>
+            <input type="text" id="id_u_nickname" name="u_nickname" value="" maxlength="16" required="" PLACEHOLDER="닉네임을 입력해주세요"
+                   style="width:300px;height:50x;font-size:20px;">
+        </div>
+        <div class="join_row">
+            <h3 class="join_title"><h2>이메일</h2></h3>
+            <input type="text" name="email" value="" data-email="" size="30" required=""
+                   fld_esssential="" option="regEmail" label="이메일"
+                   placeholder="예: kycompany@google.com"
+                   style="width:300px;height:30px;font-size:20px;">
+        </div>
+        <div class="join_row join_sex">
+            <h3 class="join_title"><h2>성별</h2></h3>
+            <div class="ps_box gender_code">
+                <select name="u_sex" aria-label="성별" style="width:100px;height:30px;font-size:20px;">
+                    <option value="" selected="">성별</option>
+                    <option value="M">남자</option>
+                    <option value="F">여자</option>
+                    <option value="U">선택 안함</option>
+                </select>
+            </div>
+        </div>
+        <div class="join_row join_birthday">
+            <h3 class="join_title"><h2>출생 연도</h2></h3>
+            <div class="birth_day">
+                <input type="text" name="birth_year" id="birth_year" pattern="[0-9]*"
+                       value="" label="생년월일" size="4" maxlength="4" placeholder="yyyy"
+                       style="width:50px;height:50x;font-size:20px;">
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='http://127.0.0.1:8000/profile';">뒤로</button>
+        </div>
+        </br>
+        <div>
+            <button id="submitButton" type="submit" class="btn btn-primary pull-right">프로필 변경하기</button>
+            <div>
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %}
+                        class="{{ message.tags }}" {% endif %}>{{ message }}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+</div>
+</body>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+    <title>Cafe</title>
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+
+</head>
+<body>
+<header class="top-header">
+    <div class="header__top">
+        <div class="header__column">
+            <i class="fas fa-fighter-jet"></i>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="header__column">
+            <span class="header__time">18:38</span>
+        </div>
+        <div class="header__column">
+            <i class="far fa-moon"></i>
+            <i class="fab fa-bluetooth-b"></i>
+            <span class="header__battery">100 <i class="fas fa-battery-full"></i> </span>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="header__column">
+            <span class="header__text">Edit</span>
+        </div>
+        <div class="header__column">
+            <span class="header__text">Cafe{{cafe.name}}</span>
+        </div>
+        <div class="header__column">
+            <i class="fa fa-shopping-cart"></i>
+            <a class="nav-link btn btn-outline-success" href="{% url 'cart:detail' %}" >Cart
+            </a>
+        </div>
+    </div>
+</header>
+<main class="find">
+    <section class="find__options">
+        <div class="find__option">
+            <a href="espresso" class="friends__section-name">
+                <i class="far fa fa-coffee fa-2x"></i>
+            </a>
+            <span class="find__option-title">Espresso</span>
+        </div>
+        <div class="find__option">
+            <a href="bread" class="friends__section-name">
+                <i class="fas fa-bread-slice fa-2x" style="color:brown;"></i>
+            </a>
+            <span class="find__option-title">Bread</span>
+        </div>
+        <div class="find__option">
+            <a href="juice" class="friends__section-name">
+                <i class="fas fas fa-cocktail fa-2x" style="color:skyblue;"></i>
+            </a>
+            <span class="find__option-title">Juice</span>
+        </div>
+        <div class="find__option">
+            <a href="tea" class="friends__section-name">
+                <i class="fas fa-mug-hot fa-2x" style="color:Limegreen;"></i>
+            </a>
+            <span class="find__option-title">Tea</span>
+        </div>
+    </section>
+    <section class="find__recommended">
+        <div class="recommednded_none">
+            <span class="recommended_text">Menu</span>
+        </div>
+    </section>
+
+
+
+    <section>
+    <div class="col">
+        <div class="row">
+            {% for product in products %}
+            {% if product.category == 'tea' %}
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{product.image.url}}" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product.name}}</h5><br>
+                        <p class="card-text">{{product.description}} <span class="badge badge-secondary"><br>&#8361; {{product.price}} $</span>
+                        </p>
+                         <br>
+                            <form action="{% url 'cart:product_add' product.id %}" method="post">
+                                <input type="number" name="quantity" required id="id_quantity" style="width:50px;height:20px;font-size:18px;" min="1">
+
+                                {{add_to_cart}}
+
+                                {% csrf_token %}
+                                <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <br>
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+    </section>
+
+
+
+</main>
+<nav class="tab-bar">
+    <a href="index" class="tab-bar__tab">
+        <i class="fas fa-user"></i>
+        <span class="tab-bar__title">Service</span>
+    </a>
+    <a href="chats" class="tab-bar__tab">
+        <i class="fas fa-comment"></i>
+        <span class="tab-bar__title">Chats</span>
+    </a>
+    <a href="cafe" class="tab-bar__tab tab-bar__tab-selected">
+        <i class="fas fa-search"></i>
+        <span class="tab-bar__title">Cafe</span>
+    </a>
+    <a href="more" class="tab-bar__tab">
+        <i class="fas fa-ellipsis-h"></i>
+        <span class="tab-bar__title">Info</span>
+    </a>
+</nav>
+<!--<div class="bigScreenText">-->
+<!--    <span>Please make your screen smaller.</span>-->
+</div>
+</body>
+</html>
