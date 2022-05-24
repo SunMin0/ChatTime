@@ -1,6 +1,5 @@
 import pandas as pd
 from src.NLU import NaturalLanguageUnderstanding
-import re
 
 
 class NaturalLanguageGenerator:
@@ -13,6 +12,8 @@ class NaturalLanguageGenerator:
             "RESTAURANT": "",
         }
         self.template = pd.read_csv(self.template_dir)
+        self.nlu = nlu = NaturalLanguageUnderstanding()
+        self.nlu.model_load()
 
     def make_search_key(self, nlu_result):
         intent = nlu_result.get("INTENT")
@@ -91,39 +92,20 @@ class NaturalLanguageGenerator:
                 filling_templates.append(template)
         return filling_templates
 
-    def text_preprocessing(self, text):
-        text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text)  # 특수문자 제거
-        text = re.sub('만 ', ' ', text)
-        text = re.sub('쥬스', '주스', text)
-        text = re.sub('티라미수', '티라미슈', text)
-        text = re.sub('티라미스', '티라미슈', text)
-        text = re.sub('마키아토', '마끼아또', text)
-        text = re.sub('캐러멜', '카라멜', text)
-        return text
-
     def run_nlg(self, text):
-        nlu = NaturalLanguageUnderstanding()
-        nlu.model_load()
-        print('input text:', text)
-        text = self.text_preprocessing(text)
-        print('preprocessed text:', text)
-        intent, predict = nlu.predict(text)
+        intent, predict = self.nlu.predict(text)
         print("intent:",intent)
         print("predict:", predict)
+        # ood일 경우 ood에 관련된 대답을 함
         if intent == 'ood':
-            nlu_result = {'INTENT': 'ood', 'SLOT': []}
-            templates = self.search_template(nlu_result)
-            print("nlu_result:", nlu_result)
-            print("templates:", templates)
-            return templates
+            result = self.nlu.ood_answer.return_answer(text)
+            return result
+        # ood가 아닐경우 탬플릿에 맞게 대답을 함
         else:
-            nlu_result = nlu.convert_nlu_result(text, intent, predict)
+            nlu_result = self.nlu.convert_nlu_result(text, intent, predict)
             templates = self.search_template(nlu_result)
             result = self.filling_nlg_slot(templates)
             print("nlu_result:", nlu_result)
             print("templates:", templates)
             print("result:", result)
             return result
-
-
-

@@ -4,9 +4,28 @@ from torch import nn
 import torch.nn.functional as F
 import torch
 from torchcrf import CRF
+from sentence_transformers import SentenceTransformer
+from numpy import dot
+from numpy.linalg import norm
+import pandas as pd
+
+class SBERT():
+    def __init__(self):
+        self.ood_model_pretrain_path = "./nlp/pretrained/ood_answer_pretrained_model"
+        self.ood_model = SentenceTransformer(self.ood_model_pretrain_path)
+        self.train_data = pd.read_csv('cafe_ood_answer_data.csv')
+
+    def cos_sim(self, A, B):
+        return dot(A, B) / (norm(A) * norm(B))
+
+    def return_answer(self, question):
+        embedding = self.ood_model.encode(question)
+        print("embedding:",embedding)
+        print(self.train_data.head())
+        self.train_data['score'] = self.train_data.apply(lambda x: self.cos_sim(x['embedding'], embedding), axis=1)
+        return self.train_data.loc[self.train_data['score'].idxmax()]['A']
 
 class DAN(nn.Module):
-
     def __init__(self, w2v, dim, dropout, num_class = 2):
         super(DAN, self).__init__()
         #load pretrained embedding in embedding layer.
@@ -174,3 +193,4 @@ class MakeEmbed:
                 idx = 1
             sent_idx.append(idx)
         return sent_idx
+

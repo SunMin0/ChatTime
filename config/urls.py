@@ -26,4 +26,6 @@ urlpatterns = [
     path("profile", chat.views.f_profile),
     path("index", chat.views.f_index),
     path("", chat.views.f_index),
+    path('chatbot', chat.views.chatbot),
+
 ]
