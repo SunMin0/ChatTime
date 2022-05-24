@@ -166,8 +166,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ChatTime',
-        'USER': 'root',
+        'NAME': 'ChatTime(AWS)',
+        'USER': 'admin',
         'PASSWORD': get_secret('DATABASE_PASSWORD'),
         'HOST': get_secret('DATABASE_HOST'),
         'PORT': get_secret('DATABASE_PORT'),
