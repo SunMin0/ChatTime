@@ -8,20 +8,29 @@ from sentence_transformers import SentenceTransformer
 from numpy import dot
 from numpy.linalg import norm
 import pandas as pd
+import numpy as np
 
 class SBERT():
     def __init__(self):
-        self.ood_model_pretrain_path = "./nlp/pretrained/ood_answer_pretrained_model"
-        self.ood_model = SentenceTransformer(self.ood_model_pretrain_path)
+        self.model_pretrain_path = "./nlp/pretrained/ood_answer_pretrained_model"
+        self.model = SentenceTransformer(self.model_pretrain_path)
         self.train_data = pd.read_csv('cafe_ood_answer_data.csv')
+        self.data_preprocessing()
+
+    def data_preprocessing(self):
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('\[ ', '[')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace(' \]', ']')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('    ', ' ')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('   ', ' ')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('  ', ' ')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace(' ', ',')
+        self.train_data['embedding'] = self.train_data['embedding'].apply(eval).apply(np.array)
 
     def cos_sim(self, A, B):
         return dot(A, B) / (norm(A) * norm(B))
 
     def return_answer(self, question):
-        embedding = self.ood_model.encode(question)
-        print("embedding:",embedding)
-        print(self.train_data.head())
+        embedding = self.model.encode(question)
         self.train_data['score'] = self.train_data.apply(lambda x: self.cos_sim(x['embedding'], embedding), axis=1)
         return self.train_data.loc[self.train_data['score'].idxmax()]['A']
 

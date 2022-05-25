@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03" />
+    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/[OOD] sbert-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/[OOD] sbert-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[OOD] sbert.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[OOD] sbert.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/model.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
