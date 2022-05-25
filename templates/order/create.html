@@ -20,7 +20,7 @@ order_complete_url = "{% url 'order:order_complete' %}";
         <ul class="list-group">
         {% for item in cart %}
             <li class="list-group-item">
-                {{item.quantity}}X{{item.product.name}}
+                {{item.quantity}} x {{item.product.name}}
                 <span>{{item.total_price}}</span>
             </li>
         {% endfor %}

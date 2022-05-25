@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
           integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-  />
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
     <title>Cafe</title>
     <link rel="stylesheet" href="{%static 'css/style.css' %}">
 
@@ -40,7 +40,7 @@
         </div>
         <div class="header__column">
             <i class="fa fa-shopping-cart"></i>
-            <a class="nav-link btn btn-outline-success" href="{% url 'cart:detail' %}" >Cart
+            <a class="nav-link btn btn-outline-success" href="{% url 'cart:detail' %}">Cart
             </a>
         </div>
     </div>
@@ -78,41 +78,49 @@
         </div>
     </section>
 
-
+    <br>
+    <br>
+    <br>
 
     <section>
-    <div class="col">
-        <div class="row">
-            {% for product in products %}
-            {% if product.category == 'tea' %}
-            <div class="col-4">
-                <div class="card">
-                    <img class="card-img-top" src="{{product.image.url}}" alt="Product Image">
-                    <div class="card-body">
-                        <h5 class="card-title">{{product.name}}</h5><br>
-                        <p class="card-text">{{product.description}} <span class="badge badge-secondary"><br>&#8361; {{product.price}} $</span>
-                        </p>
-                         <br>
-                            <form action="{% url 'cart:product_add' product.id %}" method="post">
-                                <input type="number" name="quantity" required id="id_quantity" style="width:50px;height:20px;font-size:18px;" min="1">
+        <div class="col">
+            <div class="row">
+                {% for product in products %}
+                {% if product.category == 'tea' %}
+                <div class="col-4">
+                    <center>
+                        <div class="card">
+                            <img class="card-img-top" src="{{product.image.url}}" alt="Product Image"
+                                 style="width:30%;height30%;">
+                            <div class="card-body">
+                                <br>
+                                <h5 class="card-title">{{product.name}}</h5><br>
+                                <p class="card-text">{{product.description}} <span class="badge badge-secondary"><br>&#8361;{{product.price}}원</span>
+                                </p>
+                                <br>
+                                <form action="{% url 'cart:product_add' product.id %}" method="post">
+                                    <input type="number" name="quantity" required id="id_quantity"
+                                           style="width:50px;height:20px;font-size:18px;" min="1">
 
-                                {{add_to_cart}}
+                                    <br>
+                                    <br>
+                                    {{add_to_cart}}
 
-                                {% csrf_token %}
-                                <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
-                            </form>
-                    </div>
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
+                                </form>
+                            </div>
+                        </div>
+                    </center>
                 </div>
+                <br>
+                {% endif %}
+                {% endfor %}
+
             </div>
-            <br>
-            {% endif %}
-            {% endfor %}
-
         </div>
-    </div>
-</div>
+        </div>
     </section>
-
 
 
 </main>

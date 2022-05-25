@@ -13,7 +13,10 @@ from django.shortcuts import render
 from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth.models import AnonymousUser
+from django.views.generic import ListView
+
 from config.settings import SOCIAL_OUTH_CONFIG
+from order.models import Order
 from users.forms import SignupForm, UpdateUserForm, UpdateProfileForm
 from .forms import CheckPasswordForm
 from django.shortcuts import redirect
@@ -269,6 +272,20 @@ def naver_logout(request):
     url = 'http://nid.naver.com/nidlogin.logout'
     webbrowser.open(url)
     return redirect('/logout')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

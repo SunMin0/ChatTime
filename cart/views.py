@@ -14,6 +14,7 @@ def add(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     form = AddProductForm(request.POST)
     print('form:',form)
+    print('cart:',cart)
     if form.is_valid():
         cd = form.cleaned_data
         print('cd:', cd)

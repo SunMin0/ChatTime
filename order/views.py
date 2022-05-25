@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView
+
 from .models import *
 from cart.cart import Cart
 from .forms import *
@@ -11,6 +13,11 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 # import weasyprint
 
+##매니저 페이지
+class OrderList(ListView):
+    model = OrderItem
+    template_name = 'manager.html'
+    context_object_name = 'order_list'
 
 def order_create(request):
     cart = Cart(request)
@@ -23,7 +30,8 @@ def order_create(request):
                 OrderItem.objects.create(order=order,
                                          product=item['product'],
                                          price=item['price'],
-                                         quantity=item['quantity']
+                                         quantity=item['quantity'],
+                                         size=item['size']
                                          )
             cart.clear()
             return render(request, 'order/created.html', {'order': order})

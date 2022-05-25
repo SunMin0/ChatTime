@@ -22,6 +22,7 @@ import users.views
 from django.conf import settings
 from django.conf.urls.static import static
 from config.settings import MEDIA_URL
+from order.views import OrderList
 
 urlpatterns = [
     #어드민
@@ -59,6 +60,8 @@ urlpatterns = [
     #order
     path('order/', include('order.urls', namespace='order')),
 
+    #매니져
+    path('manager',OrderList.as_view()),
 
     #Menu 등록
     path('create_menu', cafe.views.create_product),

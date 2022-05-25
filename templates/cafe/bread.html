@@ -77,7 +77,9 @@
             <span class="recommended_text">Menu</span>
         </div>
     </section>
-
+<br>
+    <br>
+    <br>
 
     <section>
         <div class="col">
@@ -85,11 +87,12 @@
                 {% for product in products %}
                 {% if product.category == 'bread' %}
                 <div class="col-4">
-                    <div class="card">
-                        <img class="card-img-top" src="{{product.image.url}}" alt="Product Image">
+                    <center><div class="card">
+                        <img class="card-img-top" src="{{product.image.url}}" alt="Product Image" style="width:30%;height30%;">
                         <div class="card-body">
+                            <br>
                             <h5 class="card-title">{{product.name}}</h5><br>
-                            <p class="card-text">{{product.description}} <span class="badge badge-secondary"><br>&#8361; {{product.price}} $</span>
+                            <p class="card-text">{{product.description}} <span class="badge badge-secondary"><br>&#8361; {{product.price}} 원</span>
                             </p>
                              <br>
                             <form action="{% url 'cart:product_add' product.id %}" method="post">
@@ -102,6 +105,7 @@
                             </form>
                         </div>
                     </div>
+                    </center>
                 </div>
                 <br>
                 {% endif %}

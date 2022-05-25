@@ -10,7 +10,6 @@
                 <th scope="col">Remove </th>
                 <th scope="col">Unit price</th>
                 <th scope="col">Price</th>
-                <th scope="col">Size</th>
             </tr>
         </thead>
         <tbody>
@@ -32,22 +31,21 @@
                     </form>
                 </td>
                 <td><a href="{% url 'cart:product_remove' product.id %}">Remove</a></td>
-                <td class="num">${{ item.price }}</td>
-                <td class="num">${{ item.total_price }}</td>
-                <td name="size" type="text">{{ item.size }}</td>
+                <td class="num">&#8361;{{ item.price }}</td>
+                <td class="num">&#8361;{{ item.total_price }}</td>
             </tr>
             {% endwith %}
         {% endfor %}
         <tr class="total">
             <td>Total</td>
             <td colspan="4"></td>
-            <td class="num">${{ cart.get_total_price|floatformat:"2" }}</td>
+            <td class="num">&#8361;{{ cart.get_total_price|floatformat:"2" }}</td>
         </tr>
         </tbody>
     </table>
 
     <p class="text-right">
-        <a href="http://127.0.0.1:8000/espresso" class="btn btn-secondary">Continue shopping</a>
-        <a href="{% url 'order:order_create' %}" class="btn btn-secondary">Checkout</a>
+        <a href="http://127.0.0.1:8000/espresso" class="btn btn-secondary">쇼핑계속하기</a><br><Br>
+        <a href="{% url 'order:order_create' %}" class="btn btn-secondary">계산하기</a>
     </p>
 </body>
