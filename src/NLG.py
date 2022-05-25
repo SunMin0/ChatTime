@@ -7,9 +7,9 @@ class NaturalLanguageGenerator:
         self.template_dir = "./cafe_search_template_dataset.csv"
         self.values = {
             "TEMP": "",
-            "LOCATION": "",
-            "PLACE": "",
-            "RESTAURANT": "",
+            "SIZE": "",
+            "COUNT": "",
+            "COFFEE": "",
         }
         self.template = pd.read_csv(self.template_dir)
         self.nlu = nlu = NaturalLanguageUnderstanding()
@@ -66,29 +66,29 @@ class NaturalLanguageGenerator:
 
         for template in templates:
             temp_index = template.find("{TEMP}")
-            location_index = template.find("{LOCATION}")
-            place_index = template.find("{PLACE}")
-            restaurant_index = template.find("{RESTAURANT}")
+            size_index = template.find("{SIZE}")
+            count_index = template.find("{COUNT}")
+            coffee_index = template.find("{COFFEE}")
 
             temp_flag = temp_index == -1
-            location_flag = location_index == -1
-            place_flag = place_index == -1
-            restaurant_flag = restaurant_index == -1
+            size_flag = size_index == -1
+            count_flag = count_index == -1
+            coffee_flag = coffee_index == -1
 
             cnt = 0
-            while not (temp_flag and location_flag and place_flag and restaurant_flag):
+            while not (temp_flag and size_flag and count_flag and coffee_flag):
                 if not temp_flag:
                     key = "TEMP"
                     temp_flag, template = self.replace_slot(temp_flag, key, template)
-                if not location_flag:
-                    key = "LOCATION"
-                    location_flag, template = self.replace_slot(location_flag, key, template)
-                if not place_flag:
-                    key = "PLACE"
-                    place_flag, template = self.replace_slot(place_flag, key, template)
-                if not restaurant_flag:
-                    key = "RESTAURANT"
-                    restaurant_flag, template = self.replace_slot(restaurant_flag, key, template)
+                if not size_flag:
+                    key = "SIZE"
+                    size_flag, template = self.replace_slot(size_flag, key, template)
+                if not count_flag:
+                    key = "COUNT"
+                    count_flag, template = self.replace_slot(count_flag, key, template)
+                if not coffee_flag:
+                    key = "COFFEE"
+                    coffee_flag, template = self.replace_slot(coffee_flag, key, template)
                 filling_templates.append(template)
         return filling_templates
 

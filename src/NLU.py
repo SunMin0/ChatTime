@@ -18,9 +18,9 @@ class NaturalLanguageUnderstanding:
         self.ood_answer = SBERT()
 
     def model_load(self):
-        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_98.525_steps_94.pt"
-        entity_pretrain_path = "./nlp/pretrained/cafe_entity_recog_90.804_steps_7.pt"
-        ood_clsf_pretrain_path = "./nlp/pretrained/ood_clsf_99.609_steps_9.pt"
+        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_98.698_steps_13.pt"
+        entity_pretrain_path = "./nlp/pretrained/cafe_entity_recog_87.484_steps_13.pt"
+        ood_clsf_pretrain_path = "./nlp/pretrained/ood_clsf_99.787_steps_7.pt"
 
         self.intent_clsf.load_state_dict(torch.load(intent_pretrain_path))
         self.entity_recog.load_state_dict(torch.load(entity_pretrain_path))
@@ -89,6 +89,7 @@ class NaturalLanguageUnderstanding:
     def text_preprocessing(self, text):
         text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text)  # 특수문자 제거
         text = re.sub('만 ', ' ', text)
+        text = re.sub('라뗴', '라떼', text)
         text = re.sub('쥬스', '주스', text)
         text = re.sub('티라미수', '티라미슈', text)
         text = re.sub('티라미스', '티라미슈', text)

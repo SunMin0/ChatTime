@@ -185,7 +185,6 @@ question,label
 사이즈업 되나요,S-SIZE O
 둘 다 톨 사이즈로 주세요,B-COUNT E-COUNT B-SIZE E-SIZE O
 음료 사이즈 업 가능한가요,O B-SIZE E-SIZE O
-자몽에이드 사이즈업 되나요,S-JUICE S-SIZE O
 사이즈업 되나요,S-SIZE O
 사이즈업 되나요,S-SIZE O
 사이즈업해서 주세요,S-SIZE O
@@ -195,7 +194,6 @@ question,label
 라지로 주세요,S-SIZE O
 그란데 사이즈로 주세요,B-SIZE E-SIZE O
 그러면 사이즈업 가능한가요,O S-SIZE O
-아이스 음료도 사이즈업 가능한가요,S-TEMP O S-SIZE O
 그럼 하나는 사이즈 업해주세요,O S-COUNT B-SIZE E-SIZE
 사이즈 업 가능한가요,B-SIZE E-SIZE O
 사이즈 업 가능한가요,B-SIZE E-SIZE O
@@ -206,11 +204,6 @@ question,label
 그럼 톨로 주세요,O S-SIZE O
 사이즈업 되나요,S-SIZE O
 라지로 주세요,S-SIZE O
-카푸치노는 빅사이즈로 주시고 아메리카노는 스몰로 주시겠어요,S-COFFEE S-SIZE O S-COFFEE S-SIZE O
-아메리카노 사이즈 업도 가능한가요,S-COFFEE B-SIZE E-SIZE O
-아이스 아메리카노 사이즈업 해주실 수 있나요,S-TEMP S-COFFEE S-SIZE O O O
-아메리카노는 라지로 주시고 바닐라 라떼는 레귤러로 주세요,S-COFFEE S-SIZE O B-COFFEE E-COFFEE S-SIZE O
-아뇨 사이즈업은 돈을 더 내야하나요,O S-SIZE O O O
 작은 걸로 주세요,S-SIZE O O
 톨사이즈로 주세요,S-SIZE O
 톨사이즈로 주세요,S-SIZE O
@@ -287,6 +280,7 @@ question,label
 작은거로 할게요,S-SIZE O
 레귤러로 할게요,S-SIZE O
 레귤러요,S-SIZE
+작은사이즈요,S-SIZE
 레귤러 사이즈로 해주세요,B-SIZE E-SIZE O
 레귤러 사이즈로 부탁해요,B-SIZE E-SIZE O
 레귤러로 부탁드려요,S-SIZE O
@@ -366,6 +360,118 @@ question,label
 가장 큰 거로 할게요,O S-SIZE O O
 가장 큰걸로 부탁드려요,O S-SIZE O
 가장 큰걸로 부탁드려요,O S-SIZE O
+작은사이즈 주세요,S-SIZE O
+작은사이즈로 바꿔주세요,S-SIZE O
+작은사이즈로요,S-SIZE
+작은사이즈 해주세요,S-SIZE O
+작은사이즈로,S-SIZE
+작은사이즈 부탁합니다,S-SIZE O
+작은사이즈로 해주실래요,S-SIZE O
+작은사이즈 부탁드립니다,S-SIZE O
+작은사이즈요,S-SIZE
+큰사이즈 주세요,S-SIZE O
+큰사이즈로 바꿔주세요,S-SIZE O
+큰사이즈로요,S-SIZE
+큰사이즈 해주세요,S-SIZE O
+큰사이즈로,S-SIZE
+큰사이즈 부탁합니다,S-SIZE O
+큰사이즈로 해주실래요,S-SIZE O
+큰사이즈 부탁드립니다,S-SIZE O
+큰사이즈요,S-SIZE
+큰사이즈 주세요,S-SIZE O
+큰사이즈로 바꿔주세요,S-SIZE O
+큰사이즈로요,S-SIZE
+큰사이즈 해주세요,S-SIZE O
+큰사이즈로,S-SIZE
+큰사이즈 부탁합니다,S-SIZE O
+큰사이즈로 해주실래요,S-SIZE O
+큰사이즈 부탁드립니다,S-SIZE O
+큰사이즈요,S-SIZE
+큰사이즈 주세요,S-SIZE O
+큰사이즈로 바꿔주세요,S-SIZE O
+큰사이즈로요,S-SIZE
+큰사이즈 해주세요,S-SIZE O
+큰사이즈로,S-SIZE
+큰사이즈 부탁합니다,S-SIZE O
+큰사이즈로 해주실래요,S-SIZE O
+큰사이즈 부탁드립니다,S-SIZE O
+큰사이즈요,S-SIZE
+큰 사이즈 주세요,B-SIZE E-SIZE O
+큰 사이즈로 바꿔주세요,B-SIZE E-SIZE O
+큰 사이즈로요,B-SIZE E-SIZE
+큰 사이즈 해주세요,B-SIZE E-SIZE O
+큰 사이즈로,B-SIZE E-SIZE
+큰 사이즈 부탁합니다,B-SIZE E-SIZE O
+큰 사이즈로 해주실래요,B-SIZE E-SIZE O
+큰 사이즈 부탁드립니다,B-SIZE E-SIZE O
+큰 사이즈요,B-SIZE E-SIZE
+작은거로요,S-SIZE
+큰거로요,S-SIZE
+큰거로요,S-SIZE
+큰거로,S-SIZE
+큰거로 해주세요,S-SIZE O
+큰거로 주세요,S-SIZE O
+큰거로 부탁해요,S-SIZE O
+큰거로요,S-SIZE
+큰 사이즈로 해주세요,B-SIZE E-SIZE O
+큰 사이즈로 주세요,B-SIZE E-SIZE O
+작은 사이즈로 주세요,B-SIZE E-SIZE O
+큰사이즈로 주세요,S-SIZE O
+큰사이즈로,S-SIZE
+큰사이즈요,S-SIZE
+큰 사이즈 주세요,B-SIZE E-SIZE O
+큰 사이즈로 바꿔주세요,B-SIZE E-SIZE O
+큰 사이즈로요,B-SIZE E-SIZE
+큰 사이즈 해주세요,B-SIZE E-SIZE O
+큰 사이즈로,B-SIZE E-SIZE
+큰 사이즈 부탁합니다,B-SIZE E-SIZE O
+큰 사이즈로 해주실래요,B-SIZE E-SIZE O
+큰 사이즈 부탁드립니다,B-SIZE E-SIZE O
+큰 사이즈요,B-SIZE E-SIZE
+스몰사이즈요,S-SIZE
+스몰사이즈,S-SIZE
+스몰사이즈 부탁해요,S-SIZE O
+스몰 사이즈로 해주세요,S-SIZE O O
+스몰 사이즈요,S-SIZE O
+스몰 사이즈,S-SIZE O
+스몰 사이즈 주세요,S-SIZE O O
+스몰사이즈 주세요,S-SIZE O
+스몰사이즈로 해주세요,S-SIZE O
+스몰사이즈로 해주실래요,S-SIZE O
+라지사이즈요,S-SIZE
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지사이즈,S-SIZE
+라지사이즈 주세요,S-SIZE O
+라지사이즈로 주세요,S-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지 사이즈 부탁드려요,B-SIZE E-SIZE O
+라지 사이즈로 해주실래요,B-SIZE E-SIZE O
+라지 사이즈로 부탁드립니다,B-SIZE E-SIZE O
+라지사이즈 부탁해요,S-SIZE O
+라지사이즈 주세요,S-SIZE O
+라지사이즈 주세요,S-SIZE O
+스몰사이즈요,S-SIZE
+스몰사이즈,S-SIZE
+스몰사이즈 부탁해요,S-SIZE O
+스몰 사이즈로 해주세요,S-SIZE O O
+스몰 사이즈요,S-SIZE O
+스몰 사이즈,S-SIZE O
+스몰 사이즈 주세요,S-SIZE O O
+스몰사이즈 주세요,S-SIZE O
+스몰사이즈로 해주세요,S-SIZE O
+스몰사이즈로 해주실래요,S-SIZE O
+라지사이즈요,S-SIZE
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지사이즈,S-SIZE
+라지사이즈 주세요,S-SIZE O
+라지사이즈로 주세요,S-SIZE O
+라지 사이즈로 주세요,B-SIZE E-SIZE O
+라지 사이즈 부탁드려요,B-SIZE E-SIZE O
+라지 사이즈로 해주실래요,B-SIZE E-SIZE O
+라지 사이즈로 부탁드립니다,B-SIZE E-SIZE O
+라지사이즈 부탁해요,S-SIZE O
+라지사이즈 주세요,S-SIZE O
+라지사이즈 주세요,S-SIZE O
 아이스로요,S-TEMP
 아이스로 하겠습니다,S-TEMP O
 아이스로 해주세요,S-TEMP O
@@ -476,22 +582,22 @@ question,label
 차가운걸로요,S-TEMP
 차가운거 부탁드려요,S-TEMP O
 차가운거 주세요,S-TEMP O
-카푸치노도 차갑게 할 수 있나요,S-COFFEE S-TEMP O O O
-카페모카 따뜻하게 되나요,S-COFFEE S-TEMP O
+차갑게 할 수 있나요,S-TEMP O O O
+따뜻하게 되나요,S-TEMP O
 음료 온도를 좀 더 차갑게 가능할까요,O O O O S-TEMP O
-스무디를 따뜻한 온도로 데워주실 수 있어요,S-JUICE S-TEMP O O O O
-홍자는 차갑게도 가능한가요,S-TEA S-TEMP O
-아메리카노 좀 더 뜨겁게 해 주실 수 있나요,S-COFFEE O O S-TEMP O O O O
+따뜻한 온도로 데워주실 수 있어요,S-TEMP O O O O
+차갑게도 가능한가요,S-TEMP O
+좀 더 뜨겁게 해 주실 수 있나요,O O S-TEMP O O O O
 이 날씨에 차가운 거 먹어요,O O S-TEMP O O
 미지근하게 되나요,O O
-라지로 따뜻한 음료 가능한가요,S-SIZE S-TEMP O O
+라지로 따뜻하게 가능한가요,S-SIZE S-TEMP O
 뜨겁지 않게 해주실 수 있나요,S-TEMP O O O O
 그럼 아이스로는 되나요,O S-TEMP O
 시원한 걸로 해주세요,S-TEMP O O
 그럼 아이스로 한잔 주세요,O S-TEMP S-COUNT O
 네 따뜻하게 해주실 수 있나요,O S-TEMP O O O
-카라멜 마끼아또 따듯하게 해도 되나요,B-COFFEE E-COFFEE S-TEMP O O
-레몬차 너무 뜨겁지 않게 한 잔 주시겠어요,S-TEA O S-TEMP O B-COUNT E-COUNT O
+따듯하게 해도 되나요,S-TEMP O O
+너무 뜨겁지 않게 한 잔 주시겠어요,O S-TEMP O B-COUNT E-COUNT O
 아이스로 주세요,S-TEMP O
 아이스로 부탁해요,S-TEMP O
 아이스로 해주세요,S-TEMP O
@@ -527,7 +633,7 @@ question,label
 네 따뜻한 걸로 주세요,O S-TEMP O O
 네 따뜻한 걸로요,O S-TEMP O
 네 따뜻한 걸로 주세요,O S-TEMP O O
-네 따뜻한 걸로 주세요 ,O S-TEMP O O 
+네 따뜻한 걸로 주세요,O S-TEMP O O
 네 따뜻한 걸로 주세요,O S-TEMP O O
 네 따뜻한 걸로 주세요,O S-TEMP O O
 네 따뜻한 걸로 주세요,O S-TEMP O O
@@ -540,7 +646,7 @@ question,label
 네 따뜻하게 해주세요,O S-TEMP O
 아이스로 주세요,S-TEMP O
 따뜻한걸로 주세요,S-TEMP O
-따뜻한걸로 주세요 ,S-TEMP O 
+따뜻한걸로 주세요,S-TEMP O
 네 따뜻하게 해주세요,O S-TEMP O
 따뜻하게 해주세요,S-TEMP O
 아니요 아이스요,O S-TEMP
@@ -723,7 +829,7 @@ question,label
 저는 우선 따뜻한 물이랑 커피주세요,O O S-TEMP S-TEA S-COFFEE
 디카페인으로 한잔 주문할게요,O S-COUNT O
 네 오늘의 커피로 네 잔 주세요,O B-COFFEE E-COFFEE B-COUNT E-COUNT O
-페퍼민트 티 하나주세요,B-TEA E-TEA S-COUNT
+홍차 하나주세요,S-TEA S-COUNT
 그럼 블루베리 머핀도 세 개 같이 주세요,O B-BAKE E-BAKE B-COUNT E-COUNT O O
 카페라테 한 잔 주세요,S-COFFEE B-COUNT E-COUNT O
 베이글도 하나 부탁드려요,S-BAKE S-COUNT O
@@ -737,7 +843,7 @@ question,label
 이 쿠키도 3개 함께 주세요,O S-BAKE S-COUNT O O
 그럼 두유로 바꿔서 카페라테 두 잔 주세요,O O O S-COFFEE B-COUNT E-COUNT O
 이 치즈케이크도 한 조각 주세요,O S-BAKE B-COUNT E-COUNT O
-스무디 한 잔 주세요,S-JUICE B-COUNT E-COUNT O
+레몬차 한 잔 주세요,S-TEA B-COUNT E-COUNT O
 그럼 딸기 스무디 하나 주세요,O B-JUICE E-JUICE S-COUNT O
 치즈케이크도 한 조각 주세요,S-BAKE B-COUNT E-COUNT O
 딸기 주스로 네잔 주세요,B-JUICE E-JUICE S-COUNT O
@@ -1008,7 +1114,7 @@ question,label
 더치 하나 주세요,S-COFFEE S-COUNT O
 아이스 아메리카노 샷 추가 가능한가요,S-TEMP S-COFFEE O O O
 카페라떼 아이스로 하나 주시고 사이즈 있나요,S-COFFEE S-TEMP S-COUNT O O O
-카페라떼 시럽 좀 넣어서 아이스로 해주세요 ,S-COFFEE O O O S-TEMP O 
+카페라떼 시럽 좀 넣어서 아이스로 해주세요,S-COFFEE O O O S-TEMP O
 더치커피로 하나주세요,S-COFFEE S-COUNT
 아이스 아메리카노 한잔 주세요 아 그리고 샷 하나 추가요,S-TEMP S-COFFEE S-COUNT O O O O S-COUNT O
 아메리카노도 여섯 잔 부탁드립니다,S-COFFEE B-COUNT E-COUNT O
@@ -1093,7 +1199,7 @@ question,label
 아메리카노 5개 주세요,S-COFFEE S-COUNT O
 아메리카노 뜨거운 걸로 하나 주세요,S-COFFEE S-TEMP O S-COUNT O
 톨 사이즈로 아이스 아메리카노 하나 주세요,B-SIZE E-SIZE S-TEMP S-COFFEE S-COUNT O
-아이스 아메리카노 한 잔 주세요 ,S-TEMP S-COFFEE B-COUNT E-COUNT O 
+아이스 아메리카노 한 잔 주세요,S-TEMP S-COFFEE B-COUNT E-COUNT O
 아메리카노 하나 따뜻한 걸로 주세요,S-COFFEE S-COUNT S-TEMP O O
 아메리카노 4잔 주세요,S-COFFEE S-COUNT O
 그럼 밤라떼 하나 주세요,O S-COFFEE S-COUNT O
@@ -1666,3 +1772,4 @@ question,label
 주문 좀 취소할게요,O O O
 취소좀요,O
 취소요,O
+취소할게요,O
