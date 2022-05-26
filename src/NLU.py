@@ -1,7 +1,6 @@
 import torch
 from src.dataset import MakeDataset
 from src.model import MakeEmbed, textCNN, DAN, BiLSTM_CRF, SBERT
-import re
 
 class NaturalLanguageUnderstanding:
     def __init__(self):
@@ -31,7 +30,6 @@ class NaturalLanguageUnderstanding:
         self.ood_clsf.eval()
 
     def predict(self, query):
-        query = self.text_preprocessing(query)
         tokens = self.dataset.tokenize(query)
         q2idx = self.embed.query2idx(tokens)
         x = self.dataset.prep.pad_idx_sequencing(q2idx)
@@ -85,14 +83,3 @@ class NaturalLanguageUnderstanding:
         NLU_result["INTENT"] = intent
         NLU_result["SLOT"] = slots
         return NLU_result
-
-    def text_preprocessing(self, text):
-        text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text)  # 특수문자 제거
-        text = re.sub('만 ', ' ', text)
-        text = re.sub('라뗴', '라떼', text)
-        text = re.sub('쥬스', '주스', text)
-        text = re.sub('티라미수', '티라미슈', text)
-        text = re.sub('티라미스', '티라미슈', text)
-        text = re.sub('마키아토', '마끼아또', text)
-        text = re.sub('캐러멜', '카라멜', text)
-        return text

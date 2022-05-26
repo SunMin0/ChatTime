@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="OOD Model의 오류 해결. 연동완료.&#10;&#10;numpy로 변환하는 문제였음.&#10;&#10;이제 탬플릿을 완성시키자.&#10;2022-05-25 PM 1:43">
+    <list default="true" id="9498eeb3-e439-4e29-8827-eef2645f53e1" name="Changes" comment="대답 template 살짝 수정. '큰사이즈, 작은사이즈'에 반응하지 못하는 오류 수정. 수정을 위해 모델 재학습&#10;&#10;2022-05-25 PM 6:33">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/Make Entity Data-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Make Entity Data-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/[Entity] Bilstm-crf-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/[Entity] Bilstm-crf-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/[OOD] DAN Model-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/[OOD] DAN Model-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/[OOD] sbert-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/[OOD] sbert-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Make Entity Data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Make Entity Data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Entity] Bilstm-crf.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Entity] Bilstm-crf.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Intent] TextCNN.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[OOD] DAN Model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[OOD] DAN Model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[OOD] sbert.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[OOD] sbert.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafe_entity_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cafe_entity_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cafe_intent_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cafe_intent_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Page.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Test Page.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cafe_search_template_dataset.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cafe_search_template_dataset.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/cafe_entity_recog_90.804_steps_7.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/cafe_intent_clsf_98.525_steps_94.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/ood_clsf_99.609_steps_9.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" beforeDir="false" afterPath="$PROJECT_DIR$/nlp/pretrained/word2vec_skipgram.gensim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NLG.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLG.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NLU.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/NLU.py" afterDir="false" />
     </list>
@@ -253,7 +239,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653453841859</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="대답 template 살짝 수정. '큰사이즈, 작은사이즈'에 반응하지 못하는 오류 수정. 수정을 위해 모델 재학습&#10;&#10;2022-05-25 PM 6:33">
+      <created>1653471237989</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1653471237989</updated>
+    </task>
+    <task id="LOCAL-00014" summary="대답 template 살짝 수정. '큰사이즈, 작은사이즈'에 반응하지 못하는 오류 수정. 수정을 위해 모델 재학습&#10;&#10;2022-05-25 PM 6:33">
+      <created>1653471273370</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1653471273370</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,6 +288,7 @@
     <MESSAGE value="OOD 모델 추가, 입력데이터 전처리 코드 추가 &#10;&#10;2022-05-23 PM 10:33" />
     <MESSAGE value="ood 처리를 위한 sbert 모델 추가. chat 동기 통신 완료&#10;&#10;sbert 모델의 cos_sim이 자꾸 아규먼트 오류가 난다. 해결해야함&#10;2022-05-24 PM 2:03" />
     <MESSAGE value="OOD Model의 오류 해결. 연동완료.&#10;&#10;numpy로 변환하는 문제였음.&#10;&#10;이제 탬플릿을 완성시키자.&#10;2022-05-25 PM 1:43" />
-    <option name="LAST_COMMIT_MESSAGE" value="OOD Model의 오류 해결. 연동완료.&#10;&#10;numpy로 변환하는 문제였음.&#10;&#10;이제 탬플릿을 완성시키자.&#10;2022-05-25 PM 1:43" />
+    <MESSAGE value="대답 template 살짝 수정. '큰사이즈, 작은사이즈'에 반응하지 못하는 오류 수정. 수정을 위해 모델 재학습&#10;&#10;2022-05-25 PM 6:33" />
+    <option name="LAST_COMMIT_MESSAGE" value="대답 template 살짝 수정. '큰사이즈, 작은사이즈'에 반응하지 못하는 오류 수정. 수정을 위해 모델 재학습&#10;&#10;2022-05-25 PM 6:33" />
   </component>
 </project>

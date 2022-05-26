@@ -1,6 +1,6 @@
 import pandas as pd
 from src.NLU import NaturalLanguageUnderstanding
-
+import re
 
 class NaturalLanguageGenerator:
     def __init__(self):
@@ -22,6 +22,30 @@ class NaturalLanguageGenerator:
             slot_name = name_value.split("^")[0]
             slot_value = name_value.split("^")[1]
             keys.add(slot_name)
+            if slot_name == 'TEMP':
+                if (slot_value.find('뜨') != -1) or (slot_value.find('따') != -1) or (slot_value.find('핫') != -1):
+                    slot_value = '뜨거운'
+                elif (slot_value.find('시원') != -1) or (slot_value.find('차') != -1) or (slot_value.find('아이스') != -1):
+                    slot_value = '아이스'
+            elif slot_name == 'SIZE':
+                if (slot_value.find('작') != -1) or (slot_value.find('레귤러') != -1) or \
+                        (slot_value.find('스몰') != -1) or (slot_value.find('숏') != -1):
+                    slot_value = '스몰 사이즈'
+                elif (slot_value.find('빅') != -1) or (slot_value.find('톨') != -1) or (slot_value.find('라지') != -1) or \
+                        (slot_value.find('업') != -1) or (slot_value.find('큰') != -1) or (slot_value.find('그란데') != -1) or\
+                        (slot_value.find('벤티') != -1):
+                    slot_value = '라지 사이즈'
+            elif slot_name == 'COUNT':
+                slot_value = slot_value.replace(' 잔', '잔')
+                slot_value = slot_value.replace('잔', '')
+                slot_value = slot_value.replace(' 개', '개')
+                slot_value = slot_value.replace('개', '')
+                slot_value = slot_value.replace(' 조각', '조각')
+                slot_value = slot_value.replace('조각', '')
+                slot_value = slot_value.replace(' 봉지', '봉지')
+                slot_value = slot_value.replace('봉지', '')
+            print('slot_name',slot_name)
+            print('slot_value',slot_value)
             self.values[slot_name] = slot_value
         slots = "^".join(keys)
         return intent, slots
@@ -29,7 +53,6 @@ class NaturalLanguageGenerator:
     def search_template(self, nlu_result):
         intent, slots = self.make_search_key(nlu_result)
         matched_template = []
-
         for data in self.template.iterrows():
             intent_flag = False
             slot_flag = False
@@ -92,17 +115,53 @@ class NaturalLanguageGenerator:
                 filling_templates.append(template)
         return filling_templates
 
+    def text_preprocessing(self, text):
+        text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text)  # 특수문자 제거
+        text = re.sub('만 ', ' ', text)
+        text = re.sub('도 ', ' ', text)
+        text = re.sub('로 ', ' ', text)
+        text = re.sub('라뗴', '라떼', text)
+        text = re.sub('쥬스', '주스', text)
+        text = re.sub('티라미수', '티라미슈', text)
+        text = re.sub('티라미스', '티라미슈', text)
+        text = re.sub('아인슈패너', '아인슈페너', text)
+        text = re.sub('마키아토', '마끼아또', text)
+        text = re.sub('캐러멜', '카라멜', text)
+        text = re.sub('이요', '', text)
+        text = re.sub('잔요', '잔', text)
+        text = re.sub('잔', ' 잔', text)
+        text = re.sub('  잔', ' 잔', text)
+        text = re.sub('개', ' 잔', text)
+        text = re.sub('  개', ' 잔', text)
+        text = re.sub('조각', ' 잔', text)
+        text = re.sub('  조각', ' 잔', text)
+        text = re.sub('봉지', ' 잔', text)
+        text = re.sub('  봉지', ' 잔', text)
+        text = re.sub('하나', '1잔', text)
+        text = re.sub('한잔', '1잔', text)
+        text = re.sub('한', '1', text)
+        text = re.sub('둘', '2', text)
+        text = re.sub('두 ', '2 ', text)
+        text = re.sub('셋', '3', text)
+        text = re.sub('세 ', '3 ', text)
+        text = re.sub('넷', '4', text)
+        text = re.sub('네 ', '4 ', text)
+        text = re.sub('다섯', '5', text)
+        text = re.sub(' 잔', '잔', text)
+        return text
+
     def run_nlg(self, text):
-        intent, predict = self.nlu.predict(text)
+        ptext = self.text_preprocessing(text)
+        print('ptext',ptext)
+        intent, predict = self.nlu.predict(ptext)
         print("intent:",intent)
-        print("predict:", predict)
         # ood일 경우 ood에 관련된 대답을 함
         if intent == 'ood':
-            result = self.nlu.ood_answer.return_answer(text)
+            result = self.nlu.ood_answer.return_answer(ptext)
             return result
         # ood가 아닐경우 탬플릿에 맞게 대답을 함
         else:
-            nlu_result = self.nlu.convert_nlu_result(text, intent, predict)
+            nlu_result = self.nlu.convert_nlu_result(ptext, intent, predict)
             templates = self.search_template(nlu_result)
             result = self.filling_nlg_slot(templates)
             print("nlu_result:", nlu_result)
