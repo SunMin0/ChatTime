@@ -17,7 +17,7 @@ from django.views.generic import ListView
 
 from config.settings import SOCIAL_OUTH_CONFIG
 from order.models import Order
-from users.forms import SignupForm, UpdateUserForm, UpdateProfileForm
+from users.forms import SignupForm, UpdateUserForm, UpdateProfileForm, Signup_manager
 from .forms import CheckPasswordForm
 from django.shortcuts import redirect
 import os
@@ -45,6 +45,23 @@ def signup(request):
         else:
             messages.info(request, '올바르지 않습니다.')
             return redirect('/signup')
+
+
+
+#관리자 회원가입
+def signup2(request):
+    if request.method == "GET":
+        signupForm = Signup_manager(request.GET)
+        return render(request, 'user/signup_manager.html', {'signupForm': signupForm})
+    elif request.method == "POST":
+        signupForm = Signup_manager(request.POST)
+        if signupForm.is_valid():
+            if request.POST["password1"] == request.POST["password2"]:
+                signupForm.save()
+            return redirect('/')
+        else:
+            messages.info(request, '올바르지 않습니다.')
+            return redirect('/signup_manager')
 
 
 # 유저 로그인
@@ -94,7 +111,7 @@ def change_password(request):
             return redirect('/profile')
         else:
             messages.info(request, '올바르지 않습니다.')
-            return redirect('/user/change_password')
+            return redirect('/password')
 
 
 

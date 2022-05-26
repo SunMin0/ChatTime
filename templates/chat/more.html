@@ -53,10 +53,11 @@
       <button style="font-size:15px;color:red" onclick="location.href='http://127.0.0.1:8000/delete'">회원탈퇴<i class="fa fa-warning"></i></button>
       {% if user.is_manager == 1%}
       <button style="font-size:15px;color:brown" onclick="location.href='http://127.0.0.1:8000/create_menu'">메뉴 등록 하기 </button>
-      {% endif %}
     </header>
     <section class="more__links">
+      <button style="font-size:40px;color:green" onclick="location.href='http://127.0.0.1:8000/manager'">주문 내역 확인 하기 </button>
     </section>
+    {% endif %}
   </main>
   <nav class="tab-bar">
     <a href="index" class="tab-bar__tab">

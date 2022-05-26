@@ -1,5 +1,70 @@
 <!-- 필터를 사용할 수 있게 해준다 -->
+<head>
+<button style="font-size:15px;color:black" onclick="location.href='http://127.0.0.1:8000/more'">돌아가기 </button>
+    </head>
+<center><h1 style="font-size:50px;color:orange;">주문 내역</h1></center>
+<center><body>
+<br>
+<section>
+{% if user.is_manager == 1 %}
 
+<br>
+<br>
+<div class="row mt-5">
+    <div class="col-12">
+        <table class="table table-light" border="1">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">이미지</th>
+                    <th scope="col">상품명</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">사이즈</th>
+                    <th scope="col">온도</th>
+                    <th scope="col">가격</th>
+                    <th scope="col">주문날짜</th>
+                    <th scope="col">주문자</th>
+                    <th scope="col">전화번호</th>
+
+
+                </tr>
+            </thead>
+
+            <tbody class="text-dark" style="font-size:25px;">
+
+                {% for order in order_list %}
+                {% if order.order.paid %}
+                <tr>
+
+                    <th scope="row">{{order.id}}</th>
+                    <th><img src="{{ order.product.image.url }}" class="img-thumbnail" style="width:60%;"></th>
+                    <th>{{order.product}}</th>
+                    <th>{{order.quantity}}개</th>
+                    <th>{{order.size}}</th>
+                    <th>{{order.temp}}</th>
+                    <th>{{order.price}}원</th>
+                    <th>{{order.created|date:'Y-m-d H:i'}}</th>
+                    <th>{{order.order.nick_name}}</th>
+                    <th>0{{order.order.phone}}</th>
+                </tr>
+                {% endif %}
+                {% endfor %}
+                사이즈 : S는 small, L은 lage <br>
+                온도: C는 Cold, H는 Hot <br><br>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endif %}
+    </section>
+<br>
+<br>
+<center><h1 style="font-size:50px;color:orange;">총 주문 내역</h1></center>
+<section>
+{% if user.is_manager == 1 %}
+<br>
+<br>
 <div class="row mt-5">
     <div class="col-12">
         <table class="table table-light" border="1">
@@ -8,27 +73,45 @@
                     <th scope="col">#</th>
                     <th scope="col">상품명</th>
                     <th scope="col">수량</th>
+                    <th scope="col">사이즈</th>
+                    <th scope="col">온도</th>
                     <th scope="col">가격</th>
                     <th scope="col">주문날짜</th>
                     <th scope="col">주문자</th>
                     <th scope="col">전화번호</th>
+                    <th scope="col">총 주문 가격</th>
                 </tr>
             </thead>
+            <tbody class="text-dark" style="font-size:25px;">
 
-            <tbody class="text-dark">
                 {% for order in order_list %}
+                {% if order.order.paid %}
                 <tr>
 
                     <th scope="row">{{order.id}}</th>
                     <th>{{order.product}}</th>
                     <th>{{order.quantity}}개</th>
+                    <th>{{order.size}}</th>
+                    <th>{{order.temp}}</th>
                     <th>{{order.price}}원</th>
                     <th>{{order.created|date:'Y-m-d H:i'}}</th>
                     <th>{{order.order.nick_name}}</th>
                     <th>0{{order.order.phone}}</th>
+                    <th>{{order.order.total_price}}원</th>
                 </tr>
+                {% endif %}
                 {% endfor %}
+                사이즈 : S는 small, L은 lage <br>
+                온도: C는 Cold, H는 Hot <br><br>
+
             </tbody>
         </table>
     </div>
 </div>
+
+{% endif %}
+    </section>
+
+</body>
+</center>
+

@@ -9,9 +9,12 @@ from django.contrib.auth.hashers import check_password
 class SignupForm(UserCreationForm): # 내장 회원가입 폼을 상속받아서 확장한다.
     class Meta:
         model = CustomUser
-        fields = ["email","birth_year","u_sex","u_nickname","username","login_method","is_manager"]
+        fields = ["email","birth_year","u_sex","u_nickname","username","login_method"]
 
-
+class Signup_manager(UserCreationForm): # 내장 회원가입 폼을 상속받아서 확장한다.
+    class Meta:
+        model = CustomUser
+        fields = ["email","birth_year","u_sex","u_nickname","username","login_method","is_manager","is_master"]
 
 # class UserChangeForm(forms):
 #     # password = ReadOnlyPasswordHashField()

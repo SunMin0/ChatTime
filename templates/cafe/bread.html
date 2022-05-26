@@ -40,7 +40,7 @@
         </div>
         <div class="header__column">
             <i class="fa fa-shopping-cart"></i>
-            <a class="nav-link btn btn-outline-success" href="{% url 'cart:detail' %}" >Cart
+            <a class="nav-link btn btn-outline-success" href="{% url 'cart:detail' %}">Cart
             </a>
         </div>
     </div>
@@ -77,7 +77,7 @@
             <span class="recommended_text">Menu</span>
         </div>
     </section>
-<br>
+    <br>
     <br>
     <br>
 
@@ -87,24 +87,34 @@
                 {% for product in products %}
                 {% if product.category == 'bread' %}
                 <div class="col-4">
-                    <center><div class="card">
-                        <img class="card-img-top" src="{{product.image.url}}" alt="Product Image" style="width:30%;height30%;">
-                        <div class="card-body">
-                            <br>
-                            <h5 class="card-title">{{product.name}}</h5><br>
-                            <p class="card-text">{{product.description}} <span class="badge badge-secondary"><br>&#8361; {{product.price}} 원</span>
-                            </p>
-                             <br>
-                            <form action="{% url 'cart:product_add' product.id %}" method="post">
-                                <input type="number" name="quantity" required id="id_quantity" style="width:50px;height:20px;font-size:18px;" min="1">
+                    <center>
+                        <div class="card">
+                            <img class="card-img-top" src="{{product.image.url}}" alt="Product Image"
+                                 style="width:30%;height30%;">
+                            <div class="card-body">
+                                <br>
+                                <h5 class="card-title">{{product.name}}</h5><br>
+                                <p class="card-text">{{product.description}} <span class="badge badge-secondary"><br>&#8361; {{product.price}} 원</span>
+                                </p>
+                                <br>
+                                <form action="{% url 'cart:product_add' product.id %}" method="post">
+                                    <input type="number" name="quantity" required id="id_quantity"
+                                           style="width:50px;height:20px;font-size:18px;" min="1">
+                                    <select name="size" required id="id_size">
+                                        <option value="N">없음</option>
+                                    </select>
+                                    <select name="temp" required id="id_temp">
+                                        <option value="N">없음</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                    {{add_to_cart}}
 
-                                {{add_to_cart}}
-
-                                {% csrf_token %}
-                                <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
-                            </form>
+                                    {% csrf_token %}
+                                    <input type="submit" class="btn btn-primary btn-sm" value="Add to Cart">
+                                </form>
+                            </div>
                         </div>
-                    </div>
                     </center>
                 </div>
                 <br>

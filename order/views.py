@@ -31,6 +31,7 @@ def order_create(request):
             order = form.save(commit=False)
             order.save()
             for item in cart:
+                print('item:',item)
                 OrderItem.objects.create(order=order,
                                          product=item['product'],
                                          price=item['price'],
@@ -57,16 +58,21 @@ class OrderCreateAjaxView(View):
             return JsonResponse({"authenticated": False}, status=403)
 
         cart = Cart(request)
+        total_price = cart.get_total_price()
+        print('total_price:',total_price)
         form = OrderCreateForm(request.POST)
-
         if form.is_valid():
             order = form.save(commit=False)
+            order.total_price = total_price
             order.save()
             for item in cart:
+                print(item)
                 OrderItem.objects.create(order=order,
                                          product=item['product'],
                                          price=item['price'],
-                                         quantity=item['quantity']
+                                         quantity=item['quantity'],
+                                         size=item['size'],
+                                         temp=item['temp']
                                          )
             cart.clear()
             data = {
@@ -140,17 +146,17 @@ class OrderImpAjaxView(View):
             return JsonResponse({}, status=401)
 
 
-@staff_member_required
-def admin_order_detail(request, order_id):
-    order = get_object_or_404(Order, id=order_id)
-    return render(request, 'order/admin/detail.html', {'order': order})
-
-
-@staff_member_required
-def admin_order_pdf(request, order_id):
-    order = get_object_or_404(Order, id=order_id)
-    html = render_to_string('order/admin/pdf.html', {'order': order})
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'filename=order_{}.pdf'.format(order.id)
-#    weasyprint.HTML(string=html).write_pdf(response, stylesheets=[weasyprint.CSS(settings.STATICFILES_DIRS[0]+'/css/pdf.css')])
-    return response
+# @staff_member_required
+# def admin_order_detail(request, order_id):
+#     order = get_object_or_404(Order, id=order_id)
+#     return render(request, 'order/admin/detail.html', {'order': order})
+#
+#
+# @staff_member_required
+# def admin_order_pdf(request, order_id):
+#     order = get_object_or_404(Order, id=order_id)
+#     html = render_to_string('order/admin/pdf.html', {'order': order})
+#     response = HttpResponse(content_type='application/pdf')
+#     response['Content-Disposition'] = 'filename=order_{}.pdf'.format(order.id)
+# #    weasyprint.HTML(string=html).write_pdf(response, stylesheets=[weasyprint.CSS(settings.STATICFILES_DIRS[0]+'/css/pdf.css')])
+#     return response

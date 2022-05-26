@@ -62,6 +62,7 @@ urlpatterns = [
 
     #매니져
     path('manager',OrderList.as_view()),
+    path('signup_manager',users.views.signup2),
 
     #Menu 등록
     path('create_menu', cafe.views.create_product),
