@@ -76,11 +76,8 @@ INSTALLED_APPS = [
     'users',
     'cafe',
     'comments',
-    'menu',
-    'menu_in_order',
     'order',
     'cart',
-    'phonenumber_field',
     #django-rest-auth
 
     #django-allauth

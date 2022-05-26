@@ -13,12 +13,18 @@ def add(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     form = AddProductForm(request.POST)
-    print('form:',form)
-    print('cart:',cart)
+    # print('form:',form)
+    # print('cart:',cart)
+    print('test')
     if form.is_valid():
         cd = form.cleaned_data
+        print('폼진입')
+        cart.add(product=product, quantity=cd['quantity'], is_update=cd['is_update'], size=cd['size'], temp=cd['temp'])
         print('cd:', cd)
-        cart.add(product=product, quantity=cd['quantity'], is_update=cd['is_update'])
+        print('product:', product)
+        print('is_update:', cd['is_update'])
+        print('quantity:', cd['quantity'])
+        #size,temp 넣기위해서 추가
     return redirect('cart:detail')
 
 
@@ -33,6 +39,6 @@ def remove(request, product_id):
 def detail(request):
     cart = Cart(request)
     for product in cart:
-        product['quantity_form'] = AddProductForm(initial={'quantity': product['quantity'], 'is_update': True})
-
+        product['quantity_form'] = AddProductForm(initial={'quantity': product['quantity'], 'is_update': False, 'size': 'L', 'temp': 'H'})
+        print("product['quantity_form']:",product['quantity_form'])
     return render(request, 'cart/detail.html', {'cart': cart})

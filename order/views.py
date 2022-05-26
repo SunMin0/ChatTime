@@ -16,8 +16,12 @@ from django.template.loader import render_to_string
 ##매니저 페이지
 class OrderList(ListView):
     model = OrderItem
-    template_name = 'manager.html'
+    template_name = 'orderitem_list.html'
     context_object_name = 'order_list'
+
+
+
+
 
 def order_create(request):
     cart = Cart(request)
@@ -31,7 +35,8 @@ def order_create(request):
                                          product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'],
-                                         size=item['size']
+                                         size=item['size'],
+                                         temp=item['temp']
                                          )
             cart.clear()
             return render(request, 'order/created.html', {'order': order})

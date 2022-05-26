@@ -12,8 +12,7 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
-    phone = models.IntegerField(unique=True)
-    size = models.CharField(max_length=50)
+    phone = models.IntegerField(unique=True, null=True)
 
 
     class Meta:
@@ -36,7 +35,9 @@ class OrderItem(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     quantity = models.PositiveIntegerField(default=1)
     created = models.DateTimeField(auto_now_add=True)
-    size = models.CharField(max_length=50)
+    # size = models.CharField(max_length=50)
+    # temp = models.CharField(max_length=50)
+
 
     def __str__(self):
         return '{}'.format(self.id)

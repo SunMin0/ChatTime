@@ -26,18 +26,27 @@ class Cart(object):
         for item in self.cart.values():
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
-
+            # size,temp 넣기위해서 추가
             yield item
 
-    def add(self, product, quantity=1, is_update=False):
+    # size,temp 넣기위해서 추가
+    def add(self, product, quantity=1, is_update=False, size='S', temp='C'):
+        print('cart_add에 진입')
         product_id = str(product.id)
         if product_id not in self.cart:
             self.cart[product_id] = {'quantity': 0, 'price': str(product.price)}
-
+            self.cart[product_id]['size'] = size
+            self.cart[product_id]['temp'] = temp
+        # size,temp 넣기위해서 추가
         if is_update:
+            print('is_update에 진입')
             self.cart[product_id]['quantity'] = quantity
+            print('update_size:', self.cart[product_id]['size'])
+            print('update_temp:', self.cart[product_id]['temp'])
+
         else:
             self.cart[product_id]['quantity'] += quantity
+
 
         self.save()
 

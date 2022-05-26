@@ -101,7 +101,14 @@
                                 <form action="{% url 'cart:product_add' product.id %}" method="post">
                                     <input type="number" name="quantity" required id="id_quantity"
                                            style="width:50px;height:20px;font-size:18px;" min="1">
-
+                                    <select name="size" required id="id_size">
+                                        <option value="S">small</option>
+                                        <option value="L">large</option>
+                                    </select>
+                                    <select name="temp" required id="id_temp">
+                                        <option value="C">cold</option>
+                                        <option value="H">hot</option>
+                                    </select>
                                     <br>
                                     <br>
                                     {{add_to_cart}}
