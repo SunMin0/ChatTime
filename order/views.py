@@ -1,23 +1,34 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView
-
+from users.models import CustomUser
 from .models import *
 from cart.cart import Cart
 from .forms import *
 from django.views.generic.base import View
 from django.http import JsonResponse
-from django.contrib.admin.views.decorators import staff_member_required
-# pdf를 위한 임포트
-from django.conf import settings
-from django.http import HttpResponse
-from django.template.loader import render_to_string
-# import weasyprint
 
-##매니저 페이지
-class OrderList(ListView):
-    model = OrderItem
-    template_name = 'orderitem_list.html'
-    context_object_name = 'order_list'
+
+
+def order_list(request):
+    #오브젝트 불러오기
+    order_list = OrderItem.objects.all()
+    total_price = 0
+    for order in order_list:
+        total_price += order.price
+    return render(request, 'order/orderitem_list.html', {'order_list':order_list, 'total_price' : total_price})
+
+
+
+
+
+def customer_order_list(request):
+    #오브젝트 불러오기
+    u_id = CustomUser.objects.filter(is_manager=0,is_master=0)
+    o_id = Order.objects.filter()
+
+    print(u_id)
+    order_list = OrderItem.objects.all()
+    return render(request, 'order/common_orderitem_list.html', {'order_list':order_list})
 
 
 
@@ -160,3 +171,5 @@ class OrderImpAjaxView(View):
 #     response['Content-Disposition'] = 'filename=order_{}.pdf'.format(order.id)
 # #    weasyprint.HTML(string=html).write_pdf(response, stylesheets=[weasyprint.CSS(settings.STATICFILES_DIRS[0]+'/css/pdf.css')])
 #     return response
+
+

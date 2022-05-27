@@ -9,14 +9,14 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<center><h1 style="font-size:50px;color:orange;">주문 내역</h1></center>
+<center><h1 style="font-size:50px;color:orange;">내 주문 내역</h1></center>
 <center>
     <body style="width:80%;padding:100px;">
     <br>
     <ul class="pagination">    <!-- li태그의 클래스에 disabled를 넣으면 마우스를 위에 올렸을 때 클릭 금지 마크가 나오고 클릭도 되지 않는다.-->
         <!-- disabled의 의미는 앞의 페이지가 존재하지 않다는 뜻이다. -->
     <section>
-        {% if user.is_manager == 1 %}
+        {% if user.is_manager == 0 and user.is_master == 0  %}
         <br>
         <br>
         <div class="row mt-5">
@@ -59,57 +59,6 @@
                     {% endif %}
                     {% endfor %}
                     <h2>사이즈 : S는 small, L은 lage &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;온도: C는 Cold, H는 Hot</h2>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        {% endif %}
-    </section>
-    <br>
-    <br>
-    <center><h1 style="font-size:50px;color:orange;">총 주문 내역</h1></center>
-    <section>
-        {% if user.is_manager == 1 %}
-        <br>
-        <br>
-        <div class="row mt-5">
-            <div class="col-12">
-                <table class="table table-light" border="1">
-                    <thead class="thead-light">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">상품명</th>
-                        <th scope="col">수량</th>
-                        <th scope="col">사이즈</th>
-                        <th scope="col">온도</th>
-                        <th scope="col">가격</th>
-                        <th scope="col">주문날짜</th>
-                        <th scope="col">주문자</th>
-                        <th scope="col">전화번호</th>
-                    </tr>
-                    </thead>
-                    <tbody class="text-dark" style="font-size:25px;">
-                    {% for order in order_list %}
-                    {% if order.order.paid %}
-                    <tr>
-                        <th scope="row">{{order.id}}</th>
-                        <th>{{order.product}}</th>
-                        <th>{{order.quantity}}개</th>
-                        <th>{{order.size}}</th>
-                        <th>{{order.temp}}</th>
-                        <th>{{order.price}}원</th>
-                        <th>{{order.created|date:'Y-m-d H:i'}}</th>
-                        <th>{{order.order.nick_name}}</th>
-                        <th>0{{order.order.phone}}</th>
-                    </tr>
-
-
-                    {% endif %}
-                    {% endfor %}
-                    <h2>사이즈 : S는 small, L은 lage       온도: C는 Cold, H는 Hot</h2>
-                    <span  style="font-size:50px;color:#210B61;">Total_price = {{ total_price }} 원</span><br><br>
 
                     </tbody>
                 </table>

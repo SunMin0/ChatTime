@@ -59,6 +59,11 @@
     </section>
     {% endif %}
   </main>
+    {% if user.is_manager == 0 and user.is_master == 0 %}
+    <section class="more__links">
+      <button style="font-size:40px;color:green" onclick="location.href='http://127.0.0.1:8000/customer'">주문 내역 확인 하기 </button>
+    </section>
+    {% endif %}
   <nav class="tab-bar">
     <a href="index" class="tab-bar__tab">
       <i class="fas fa-user"></i>

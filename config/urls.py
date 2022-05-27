@@ -16,13 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import cafe.views
-import cart.views
 import chat.views
+import order.views
 import users.views
 from django.conf import settings
 from django.conf.urls.static import static
-from config.settings import MEDIA_URL
-from order.views import OrderList
 
 urlpatterns = [
     #어드민
@@ -59,9 +57,10 @@ urlpatterns = [
 
     #order
     path('order/', include('order.urls', namespace='order')),
+    path('customer', order.views.customer_order_list),
 
     #매니져
-    path('manager',OrderList.as_view()),
+    path('manager', order.views.order_list),
     path('signup_manager',users.views.signup2),
 
     #Menu 등록
