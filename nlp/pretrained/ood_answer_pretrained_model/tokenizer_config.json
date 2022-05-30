@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:823bdd9ce5660e81b0a0bf0abeddb1db1de70d29f4f7c611b6e97322add1a081
-size 624
+{"bos_token": "<s>", "eos_token": "</s>", "sep_token": "</s>", "cls_token": "<s>", "unk_token": "<unk>", "pad_token": "<pad>", "mask_token": {"content": "<mask>", "single_word": false, "lstrip": true, "rstrip": false, "normalized": true, "__type": "AddedToken"}, "model_max_length": 512, "special_tokens_map_file": "output/xlm-r-nli-stsb-40langs/0_Transformer/special_tokens_map.json", "full_tokenizer_file": null, "name_or_path": "C:\\Users\\slinfo/.cache\\torch\\sentence_transformers\\sentence-transformers_xlm-r-100langs-bert-base-nli-stsb-mean-tokens\\", "sp_model_kwargs": {}, "tokenizer_class": "XLMRobertaTokenizer"}
