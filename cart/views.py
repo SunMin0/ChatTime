@@ -7,7 +7,6 @@ from .cart import Cart
 
 
 
-
 @require_POST
 def add(request, product_id):
     cart = Cart(request)
@@ -26,6 +25,13 @@ def add(request, product_id):
         print('quantity:', cd['quantity'])
         #size,temp 넣기위해서 추가
     return redirect('cart:detail')
+
+
+
+
+
+
+
 
 
 def remove(request, product_id):

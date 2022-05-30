@@ -1,27 +1,14 @@
 import webbrowser
-from datetime import time
-import pymysql
 from django.contrib.auth import login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
 from django.contrib import messages, auth
 import requests
-from django.contrib.auth.hashers import check_password
-from django.db.models.functions import window
-from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
-from django.contrib.auth import get_user_model
-from django.contrib.auth.backends import ModelBackend
-from django.contrib.auth.models import AnonymousUser
-from django.views.generic import ListView
-
 from config.settings import SOCIAL_OUTH_CONFIG
-from order.models import Order
 from users.forms import SignupForm, UpdateUserForm, UpdateProfileForm, Signup_manager
 from .forms import CheckPasswordForm
 from django.shortcuts import redirect
-import os
-import json
 from .models import CustomUser
 
 

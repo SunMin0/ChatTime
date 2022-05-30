@@ -4,9 +4,37 @@ from torch import nn
 import torch.nn.functional as F
 import torch
 from torchcrf import CRF
+from sentence_transformers import SentenceTransformer
+from numpy import dot
+from numpy.linalg import norm
+import pandas as pd
+import numpy as np
+
+class SBERT():
+    def __init__(self):
+        self.model_pretrain_path = "./nlp/pretrained/ood_answer_pretrained_model"
+        self.model = SentenceTransformer(self.model_pretrain_path)
+        self.train_data = pd.read_csv('cafe_ood_answer_data.csv')
+        self.data_preprocessing()
+
+    def data_preprocessing(self):
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('\[ ', '[')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace(' \]', ']')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('    ', ' ')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('   ', ' ')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace('  ', ' ')
+        self.train_data['embedding'] = self.train_data['embedding'].str.replace(' ', ',')
+        self.train_data['embedding'] = self.train_data['embedding'].apply(eval).apply(np.array)
+
+    def cos_sim(self, A, B):
+        return dot(A, B) / (norm(A) * norm(B))
+
+    def return_answer(self, question):
+        embedding = self.model.encode(question)
+        self.train_data['score'] = self.train_data.apply(lambda x: self.cos_sim(x['embedding'], embedding), axis=1)
+        return self.train_data.loc[self.train_data['score'].idxmax()]['A']
 
 class DAN(nn.Module):
-
     def __init__(self, w2v, dim, dropout, num_class = 2):
         super(DAN, self).__init__()
         #load pretrained embedding in embedding layer.
@@ -88,6 +116,9 @@ class textCNN(nn.Module):
         super(textCNN, self).__init__()
         vocab_size = w2v.size()[0]
         emb_dim = w2v.size()[1]
+        self.emb_dim = emb_dim
+        self.vocab_size = vocab_size
+        self.w2v = w2v
         self.embed = nn.Embedding(vocab_size +2, emb_dim)
         self.embed.weight[2:].data.copy_(w2v)
         self.convs = nn.ModuleList([nn.Conv2d(1, dim, (w,emb_dim)) for w in kernels])
@@ -97,7 +128,6 @@ class textCNN(nn.Module):
     def forward(self, x):
         emb_x = self.embed(x)
         emb_x = emb_x.unsqueeze(1) # 예를들어 32x32일 경우 1x32x32로 만들어줌
-
         con_x = [conv(emb_x) for conv in self.convs]
         pool_x = [F.max_pool1d(x.squeeze(-1), x.size()[2]) for x in con_x]
         fc_x = torch.cat(pool_x, dim=1) # concatenate. 다 이어지게 함. (768,1)
@@ -172,3 +202,4 @@ class MakeEmbed:
                 idx = 1
             sent_idx.append(idx)
         return sent_idx
+

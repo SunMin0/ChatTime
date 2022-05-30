@@ -1,9 +1,7 @@
 from django import forms
-from django.forms import ModelForm
 from .models import CustomUser
-from django.contrib.auth.forms import UserCreationForm, ReadOnlyPasswordHashField
-from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+
 from django.contrib.auth.hashers import check_password
 
 class SignupForm(UserCreationForm): # 내장 회원가입 폼을 상속받아서 확장한다.

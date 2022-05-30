@@ -31,6 +31,7 @@ urlpatterns = [
     path("more", chat.views.f_more),
     path("profile", chat.views.f_profile),
     path("index", chat.views.f_index),
+    path('chatbot', chat.views.chatbot),
 
     #로그인, 회원가입 페이지
     path("", users.views.base),

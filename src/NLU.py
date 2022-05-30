@@ -1,6 +1,6 @@
 import torch
 from src.dataset import MakeDataset
-from src.model import MakeEmbed, textCNN, DAN, BiLSTM_CRF
+from src.model import MakeEmbed, textCNN, DAN, BiLSTM_CRF, SBERT
 
 class NaturalLanguageUnderstanding:
     def __init__(self):
@@ -14,15 +14,16 @@ class NaturalLanguageUnderstanding:
         self.intent_clsf = textCNN(self.weights, 256, [3,4,5], 0.5, len(self.dataset.intent_label))
         self.ood_clsf = DAN(self.weights, 256, 0.5, 2)
         self.entity_recog = BiLSTM_CRF(self.weights, self.dataset.entity_label, 256, 128)
+        self.ood_answer = SBERT()
 
     def model_load(self):
-        intent_pretrain_path = "./nlp/pretrained/intent_clsf_99.819_steps_4.pt"
-        entity_pretrain_path = "./nlp/pretrained/entity_recog_97.192_steps_3.pt"
-        ood_pretrain_path = "./nlp/pretrained/ood_clsf_99.801_steps_8.pt"
+        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_98.698_steps_13.pt"
+        entity_pretrain_path = "./nlp/pretrained/cafe_entity_recog_87.484_steps_13.pt"
+        ood_clsf_pretrain_path = "./nlp/pretrained/ood_clsf_99.787_steps_7.pt"
 
         self.intent_clsf.load_state_dict(torch.load(intent_pretrain_path))
         self.entity_recog.load_state_dict(torch.load(entity_pretrain_path))
-        self.ood_clsf.load_state_dict(torch.load(ood_pretrain_path))
+        self.ood_clsf.load_state_dict(torch.load(ood_clsf_pretrain_path))
 
         self.intent_clsf.eval()
         self.entity_recog.eval()
@@ -36,12 +37,11 @@ class NaturalLanguageUnderstanding:
         f = self.ood_clsf(x.unsqueeze(0))
         ood = torch.argmax(f).tolist()
 
-        if ood:
+        if ood: # ood가 아닐 때
             f = self.intent_clsf(x.unsqueeze(0))
             intent = self.dataset.intents[torch.argmax(f).tolist()]
-        else:
+        else: # ood일 때
             intent = 'ood'
-
         f = self.entity_recog(x.unsqueeze(0))
 
         mask = torch.where(x>0, torch.tensor([1.]), torch.tensor([0.])).type(torch.uint8)
@@ -69,7 +69,7 @@ class NaturalLanguageUnderstanding:
             elif "B-" in slot:
                 BIE.append(x_token[i])
                 prev = slot
-            elif "I-" in slot and ("B" in prev or "I" in prev) :
+            elif "I-" in slot and ("B" in prev or "I" in prev):
                 BIE.append(x_token[i])
                 prev = slot
             elif "E-" in slot and ("I" in prev or "B" in prev):

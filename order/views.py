@@ -1,5 +1,4 @@
-from django.contrib.auth.models import User
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from users.models import CustomUser
 from .models import *
 from cart.cart import Cart
@@ -25,7 +24,6 @@ def customer_order_list(request):
     #오브젝트 불러오기
     u_id = CustomUser.objects.filter(is_manager=0,is_master=0)
     o_id = Order.objects.filter()
-
     print(u_id)
     order_list = OrderItem.objects.all()
     return render(request, 'order/common_orderitem_list.html', {'order_list':order_list})
@@ -48,7 +46,7 @@ def order_create(request):
                                          price=item['price'],
                                          quantity=item['quantity'],
                                          size=item['size'],
-                                         temp=item['temp']
+                                         temp=item['temp'],
                                          )
             cart.clear()
             return render(request, 'order/created.html', {'order': order})
@@ -70,11 +68,14 @@ class OrderCreateAjaxView(View):
 
         cart = Cart(request)
         total_price = cart.get_total_price()
+        Current_user = request.user
+
         print('total_price:',total_price)
         form = OrderCreateForm(request.POST)
         if form.is_valid():
             order = form.save(commit=False)
             order.total_price = total_price
+            order.user = Current_user
             order.save()
             for item in cart:
                 print(item)

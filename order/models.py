@@ -1,7 +1,8 @@
 from django.db import models
-from django.core.validators import MinValueValidator, MaxValueValidator
 from cafe.models import Product
 import hashlib
+
+from users.models import CustomUser
 from .iamport import payments_prepare, find_transaction
 from django.db.models.signals import post_save
 
@@ -14,6 +15,7 @@ class Order(models.Model):
     paid = models.BooleanField(default=False)
     phone = models.IntegerField(unique=False, null=True)
     total_price = models.FloatField()
+    user = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['-created']

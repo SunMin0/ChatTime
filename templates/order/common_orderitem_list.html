@@ -16,7 +16,7 @@
     <ul class="pagination">    <!-- li태그의 클래스에 disabled를 넣으면 마우스를 위에 올렸을 때 클릭 금지 마크가 나오고 클릭도 되지 않는다.-->
         <!-- disabled의 의미는 앞의 페이지가 존재하지 않다는 뜻이다. -->
     <section>
-        {% if user.is_manager == 0 and user.is_master == 0  %}
+        {% if user.is_manager == 0 and user.is_master == 0 %}
         <br>
         <br>
         <div class="row mt-5">
@@ -42,7 +42,7 @@
                     <tbody class="text-dark" style="font-size:25px;">
 
                     {% for order in order_list %}
-                    {% if order.order.paid %}
+                    {% if order.order.paid and order.order.user_id == user.id %}
                     <tr>
 
                         <th scope="row">{{order.id}}</th>

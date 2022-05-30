@@ -1,12 +1,10 @@
-from django.contrib.auth.models import AbstractBaseUser, AbstractUser
+from django.contrib.auth.models import AbstractUser
 from django.db import models
-from django import forms
+
 
 
 class CustomUser(AbstractUser):
     """User model."""
-    # username = None
-    # email = models.CharField(max_length=50, unique=False)
     first_name = None
     last_name = None
     login_method = models.CharField(max_length=10, null=True, unique=False)

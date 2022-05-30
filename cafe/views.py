@@ -3,10 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
 from cart.forms import AddProductForm
 from .forms import ProductForm
-from django.db import transaction
-#
-from allauth.account.signals import user_signed_up
-from django.dispatch import receiver
+
 
 
 @login_required(login_url='/login')

@@ -17,12 +17,13 @@
         <i class="fas fa-wifi"></i>
       </div>
       <div class="header__column">
-        <span class="header__time">12:12</span>
+        <!--  윗부분 시간 출력    -->
+        <span class="header__time"></span>
       </div>
       <div class="header__column">
         <i class="far fa-moon"></i>
         <i class="fab fa-bluetooth-b"></i>
-        <span class="header__battery">100 <i class="fas fa-battery-full"></i> </span>
+        <span class="header__battery">66* <i class="fas fa-battery-full"></i> </span>
       </div>
     </div>
     <div class="header__bottom">
@@ -32,7 +33,7 @@
         </a>
       </div>
       <div class="header__column">
-        <span class="header__text">채로_Bot</span>
+        <span class="header__text">채로</span>
       </div>
       <div class="header__column">
         <i class="fas fa-search fa-lg"></i>
@@ -42,124 +43,102 @@
   </header>
   <main class="chat">
     <div class="date-divider">
-      <span class="date-divider__text">Monday, July 13, 2022</span>
+      <!--  날짜 출력    -->
+      <br><span class="date-divider__text"></span>
     </div>
-<!--&lt;!&ndash;    오디오 엘리먼트 &ndash;&gt;-->
-<!--    <div class="chat__message chat__message-from-me">-->
-<!--      <span class="chat__message-time">04:45</span>-->
-<!--      <span class="chat__message-body">-->
-<!--        <audio controls>녹음된 소리를 재생할 audio 엘리먼트</audio>-->
-<!--      </span>-->
-<!--    </div>-->
-<!--    내 질문 출력 부분 -->
-    {% if text %}
-    <div class="chat__message chat__message-from-me">
-      <span class="chat__message-time">12:13</span>
-      <span class="chat__message-body">
-        {{text}}
-      </span>
-    </div>
-    {% endif %}
-<!--    답변 출력 부분 -->
-    {% if answer %}
-    <div class="chat__message chat__message-to-me">
-      <img src="{%static 'images/bot.jpg' %}" alt="" class="chat__message-avatar">
-      <div class="chat__message-center">
-        <h3 class="chat__message-username">채로_Bot</h3>
-        <span class="chat__message-body">
-          {{answer}}
-        </span>
-      </div>
-      <span class="chat__message-time">09:30</span>
-    </div>
-    {% endif %}
   </main>
   <div class="type-message">
     <i class="fas fa-plus fa-lg"></i>
     <div class="type-message__input">
-      <form action="/chat" method="get">
+        <!-- 텍스트 입력   -->
         {% csrf_token %}
-        <input type="text" name="query" width="100%">
-      </form>
-      <i class="far fa-smile fa-lg"></i>
-      <!--  녹음 버튼    -->
-      <button class="record-message" >
-        <i class="fas fa-microphone fa-lg"></i>
-      </button>
+        <input type="text" id="message" width="100%">
+        <i class="far fa-smile fa-lg"></i>
+        <!--  녹음 버튼    -->
+        <span class="record-message">
+        <i class="fas fa-microphone fa-lg" id="record"></i>
+        </span>
     </div>
   </div>
-<!--  <div class="bigScreenText">-->
-<!--    <span>Please make your screen smaller.</span>-->
-<!--  </div>-->
 </body>
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
 <script>
-	// 엘리먼트 취득
-	const $audioEl = document.querySelector("audio");
-	const $btn = document.querySelector("button");
+/* 날짜 출력 부분 */
+$(document).ready(function() {
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let date = today.getDate();
+    let day = today.getDay();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
 
-	// 녹음중 상태 변수
-	let isRecording = false;
+    if (day === 1) {
+        day = '월요일'
+    } else if (day === 2) {
+        day = '화요일'
+    } else if (day === 3) {
+        day = '수요일'
+    } else if (day === 4) {
+        day = '목요일'
+    } else if (day === 5) {
+        day = '금요일'
+    } else if (day === 6) {
+        day = '토요일'
+    } else if (day === 7) {
+        day = '일요일'
+    }
+    $(".date-divider__text").html(year + '년 ' + month + '월 ' + date + '일, ' + day);
+    $(".header__time").html(hours + ':' + minutes);
+});
 
-	// MediaRecorder 변수 생성
-	let mediaRecorder = null;
+/* 메시지 부분 */
+$("#message").keydown(function(e) {
+    if (e.keyCode === 13) {
+        let today = new Date();
+        let hours = today.getHours();
+        let minutes = today.getMinutes();
 
-	// 녹음 데이터 저장 배열
-	const audioArray = [];
+        $(".chat").append('<div class="chat__message chat__message-from-me"><span class="chat__message-time">' + hours + ':' + minutes + '</span><span class="chat__message-body">' + $("#message").val() + '</span></div>');
 
-	$btn.onclick = async function (event) {
-		if(!isRecording){
+        // 메시지를 비동기로 보내는 곳
+        $.ajax({
+                url: "/chatbot",
+                data: '{"message":"' + $("#message").val() + '"}',
+                type: "POST",
+                dataType: "json"
+            })
+            .done(function(json) {
+                // 메시지를 받는 곳
+                let today = new Date();
+                let hours = today.getHours();
+                let minutes = today.getMinutes();
+                $(".chat").append('<div class="chat__message chat__message-to-me"><img src="/static/images/avatar.jpg" alt="" class="chat__message-avatar"><div class="chat__message-center"><h3 class="chat__message-username">챗봇</h3><span class="chat__message-body">' + json.message + '</span></div><span class="chat__message-time">' + hours + ':' + minutes + '</span></div>');
+                // 받을 때 스크롤 맨 밑으로
+                //$(document).scrollTop($(".chat").height());
+            });
 
-			// 마이크 mediaStream 생성: Promise를 반환하므로 async/await 사용
-			const mediaStream = await navigator.mediaDevices.getUserMedia({audio: true});
+        // 보낼 때 스크롤 맨 밑으로
+        //$(document).scrollTop($(".chat").height());
 
-			// MediaRecorder 생성
-			mediaRecorder = new MediaRecorder(mediaStream);
+        // 입력창 비우기
+        $("#message").val("");
+    }
+});
 
-			// 이벤트핸들러: 녹음 데이터 취득 처리
-			mediaRecorder.ondataavailable = (event)=>{
-				audioArray.push(event.data); // 오디오 데이터가 취득될 때마다 배열에 담아둔다.
-			}
+/* 녹음 부분 */
+// 엘리먼트 취득
+const $audioEl = document.querySelector("audio");
+const $btn = document.querySelector("button");
 
-			// 이벤트핸들러: 녹음 종료 처리 & 재생하기
-			mediaRecorder.onstop = (event)=>{
+// 녹음중 상태 변수
+let isRecording = false;
 
-				// 녹음이 종료되면, 배열에 담긴 오디오 데이터(Blob)들을 합친다: 코덱도 설정해준다.
-				const blob = new Blob(audioArray, {"type": "audio/ogg codecs=opus"});
-				audioArray.splice(0); // 기존 오디오 데이터들은 모두 비워 초기화한다.
+// MediaRecorder 변수 생성
+let mediaRecorder = null;
 
-				// Blob 데이터에 접근할 수 있는 주소를 생성한다.
-				const blobURL = window.URL.createObjectURL(blob);
+// 녹음 데이터 저장 배열
 
-				// Blob 데이터를 POST 방식으로 django로 전달.
-				$.ajax({
-					url: "chat",
-					type : 'POST',
-					headers: {
-						'X-CSRFTOKEN' : '{{ csrf_token }}'
-					},
-					data : {'blobURL':blobURL},
-					success : function(data){
-						console.log('ajax 성공');
-                        $audioEl.src = data.blobURL;
-                        $audioEl.play();
-					},
-					error : function(){
-						console.log('ajax 실패');
-					}
-				});
-				// audio엘리먼트로 재생한다.
-			}
-
-			// 녹음 시작
-			mediaRecorder.start();
-			isRecording = true;
-
-		}else{
-			// 녹음 종료
-			mediaRecorder.stop();
-			isRecording = false;
-		}
-	}
 </script>
 </html>
