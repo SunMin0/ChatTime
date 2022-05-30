@@ -22,9 +22,6 @@ def order_list(request):
 
 def customer_order_list(request):
     #오브젝트 불러오기
-    u_id = CustomUser.objects.filter(is_manager=0,is_master=0)
-    o_id = Order.objects.filter()
-    print(u_id)
     order_list = OrderItem.objects.all()
     return render(request, 'order/common_orderitem_list.html', {'order_list':order_list})
 
