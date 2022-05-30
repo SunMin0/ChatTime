@@ -1,10 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="PYTHON_MODULE" version="4">
-  <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/venv" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef07bdb911443442b8e39b3f6fcbef719d96ecc3864c23a7b0b937992a1932d3
+size 405
