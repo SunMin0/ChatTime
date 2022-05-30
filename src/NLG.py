@@ -1,19 +1,19 @@
 import pandas as pd
-import requests
-from bs4 import BeautifulSoup
 from src.NLU import NaturalLanguageUnderstanding
-
+import re
 
 class NaturalLanguageGenerator:
     def __init__(self):
-        self.template_dir = "./search_template_dataset.csv"
+        self.template_dir = "./cafe_search_template_dataset.csv"
         self.values = {
-            "DATE": "",
-            "LOCATION": "",
-            "PLACE": "",
-            "RESTAURANT": "",
+            "TEMP": "",
+            "SIZE": "",
+            "COUNT": "",
+            "COFFEE": "",
         }
         self.template = pd.read_csv(self.template_dir)
+        self.nlu = nlu = NaturalLanguageUnderstanding()
+        self.nlu.model_load()
 
     def make_search_key(self, nlu_result):
         intent = nlu_result.get("INTENT")
@@ -22,6 +22,30 @@ class NaturalLanguageGenerator:
             slot_name = name_value.split("^")[0]
             slot_value = name_value.split("^")[1]
             keys.add(slot_name)
+            if slot_name == 'TEMP':
+                if (slot_value.find('뜨') != -1) or (slot_value.find('따') != -1) or (slot_value.find('핫') != -1):
+                    slot_value = '뜨거운'
+                elif (slot_value.find('시원') != -1) or (slot_value.find('차') != -1) or (slot_value.find('아이스') != -1):
+                    slot_value = '아이스'
+            elif slot_name == 'SIZE':
+                if (slot_value.find('작') != -1) or (slot_value.find('레귤러') != -1) or \
+                        (slot_value.find('스몰') != -1) or (slot_value.find('숏') != -1):
+                    slot_value = '스몰 사이즈'
+                elif (slot_value.find('빅') != -1) or (slot_value.find('톨') != -1) or (slot_value.find('라지') != -1) or \
+                        (slot_value.find('업') != -1) or (slot_value.find('큰') != -1) or (slot_value.find('그란데') != -1) or\
+                        (slot_value.find('벤티') != -1):
+                    slot_value = '라지 사이즈'
+            elif slot_name == 'COUNT':
+                slot_value = slot_value.replace(' 잔', '잔')
+                slot_value = slot_value.replace('잔', '')
+                slot_value = slot_value.replace(' 개', '개')
+                slot_value = slot_value.replace('개', '')
+                slot_value = slot_value.replace(' 조각', '조각')
+                slot_value = slot_value.replace('조각', '')
+                slot_value = slot_value.replace(' 봉지', '봉지')
+                slot_value = slot_value.replace('봉지', '')
+            print('slot_name',slot_name)
+            print('slot_value',slot_value)
             self.values[slot_name] = slot_value
         slots = "^".join(keys)
         return intent, slots
@@ -29,7 +53,6 @@ class NaturalLanguageGenerator:
     def search_template(self, nlu_result):
         intent, slots = self.make_search_key(nlu_result)
         matched_template = []
-
         for data in self.template.iterrows():
             intent_flag = False
             slot_flag = False
@@ -65,87 +88,86 @@ class NaturalLanguageGenerator:
         filling_templates = []
 
         for template in templates:
-            date_index = template.find("{DATE}")
-            location_index = template.find("{LOCATION}")
-            place_index = template.find("{PLACE}")
-            restaurant_index = template.find("{RESTAURANT}")
+            temp_index = template.find("{TEMP}")
+            size_index = template.find("{SIZE}")
+            count_index = template.find("{COUNT}")
+            coffee_index = template.find("{COFFEE}")
 
-            date_flag = date_index == -1
-            location_flag = location_index == -1
-            place_flag = place_index == -1
-            restaurant_flag = restaurant_index == -1
+            temp_flag = temp_index == -1
+            size_flag = size_index == -1
+            count_flag = count_index == -1
+            coffee_flag = coffee_index == -1
 
             cnt = 0
-            while not (date_flag and location_flag and place_flag and restaurant_flag):
-                if not date_flag:
-                    key = "DATE"
-                    date_flag, template = self.replace_slot(date_flag, key, template)
-                if not location_flag:
-                    key = "LOCATION"
-                    location_flag, template = self.replace_slot(location_flag, key, template)
-                if not place_flag:
-                    key = "PLACE"
-                    place_flag, template = self.replace_slot(place_flag, key, template)
-                if not restaurant_flag:
-                    key = "RESTAURANT"
-                    restaurant_flag, template = self.replace_slot(restaurant_flag, key, template)
+            while not (temp_flag and size_flag and count_flag and coffee_flag):
+                if not temp_flag:
+                    key = "TEMP"
+                    temp_flag, template = self.replace_slot(temp_flag, key, template)
+                if not size_flag:
+                    key = "SIZE"
+                    size_flag, template = self.replace_slot(size_flag, key, template)
+                if not count_flag:
+                    key = "COUNT"
+                    count_flag, template = self.replace_slot(count_flag, key, template)
+                if not coffee_flag:
+                    key = "COFFEE"
+                    coffee_flag, template = self.replace_slot(coffee_flag, key, template)
                 filling_templates.append(template)
         return filling_templates
 
-    def filling_crawl_slot(self, intent, template):
-        nlu = NaturalLanguageUnderstanding()
-        intent_key_list = list(nlu.dataset.intent_label.keys())
-        search_text = ""
-        search_keyword = {"dust":"미세먼지","restaurant":"맛집","travel":"관광지","weather":"날씨"}
-        key_list = list(self.values.keys())
-        for key in key_list:
-            if self.values[key] != "":
-                search_text = search_text + str(self.values[key]) + " "
-            else:
-                continue
-        for intent_key in intent_key_list:
-            if intent == intent_key:
-                search_text = search_text + search_keyword[intent]
-                search_result = self.crawl(search_text)
-                template[0] = template[0].replace("{CRAWL}입니다.", "'%s'입니다." % search_result)
-        return template
-
-    def crawl(self, text):
-        url = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query="\
-               + text.replace(" ", "+")
-        res = requests.get(url)
-        soup = BeautifulSoup(res.content, 'html.parser')
-        if "미세먼지" in text:
-            select, select_am, select_pm = "", "", ""
-            if "내일" in text:
-                select_am = select_am + soup.select("dl")[2].text
-                select_am = select_am.split()[0] + " " + select_am.split()[1]
-                select_pm = select_pm + soup.select("dl")[3].text
-                select_pm = select_pm.split()[0] + " " + select_pm.split()[1]
-            elif "모레" in text:
-                select_am = select_am + soup.select("dl")[4].text
-                select_am = select_am.split()[0] + " " + select_am.split()[1]
-                select_pm = select_pm + soup.select("dl")[5].text
-                select_pm = select_pm.split()[0] + " " + select_pm.split()[1]
-            else:
-                select_am = select_am + soup.select("dl")[0].text
-                select_am = select_am.split()[0] + " " + select_am.split()[1]
-                select_pm = select_pm + soup.select("dl")[1].text
-                select_pm = select_pm.split()[0] + " " + select_pm.split()[1]
-            select = select_am + " " + select_pm
-        elif "날씨" in text:
-            print(text)
-        return select
+    def text_preprocessing(self, text):
+        text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text)  # 특수문자 제거
+        text = re.sub('만 ', ' ', text)
+        text = re.sub('도 ', ' ', text)
+        text = re.sub('로 ', ' ', text)
+        text = re.sub('라뗴', '라떼', text)
+        text = re.sub('쥬스', '주스', text)
+        text = re.sub('티라미수', '티라미슈', text)
+        text = re.sub('티라미스', '티라미슈', text)
+        text = re.sub('아인슈패너', '아인슈페너', text)
+        text = re.sub('마키아토', '마끼아또', text)
+        text = re.sub('캐러멜', '카라멜', text)
+        text = re.sub('이요', '', text)
+        text = re.sub('잔요', '잔', text)
+        text = re.sub('잔', ' 잔', text)
+        text = re.sub('  잔', ' 잔', text)
+        text = re.sub('개', ' 잔', text)
+        text = re.sub('  개', ' 잔', text)
+        text = re.sub('조각', ' 잔', text)
+        text = re.sub('  조각', ' 잔', text)
+        text = re.sub('봉지', ' 잔', text)
+        text = re.sub('  봉지', ' 잔', text)
+        text = re.sub('하나', '1잔', text)
+        text = re.sub('한잔', '1잔', text)
+        text = re.sub('한', '1', text)
+        text = re.sub('둘', '2', text)
+        text = re.sub('두 ', '2 ', text)
+        text = re.sub('셋', '3', text)
+        text = re.sub('세 ', '3 ', text)
+        text = re.sub('넷', '4', text)
+        text = re.sub('네 ', '4 ', text)
+        text = re.sub('다섯', '5', text)
+        text = re.sub(' 잔', '잔', text)
+        return text
 
     def run_nlg(self, text):
-        nlu = NaturalLanguageUnderstanding()
-        nlu.model_load()
-        intent, predict = nlu.predict(text)
-        nlu_result = nlu.convert_nlu_result(text, intent, predict)
-        templates = self.search_template(nlu_result)
-        result = self.filling_nlg_slot(templates)
-        try:
-            result = self.filling_crawl_slot(intent, result)
-        except:
-            print("크롤링 함수 실패")
-        return result
+        ptext = self.text_preprocessing(text)
+        print('ptext',ptext)
+        intent, predict = self.nlu.predict(ptext)
+        print("intent:",intent)
+        # ood일 경우 ood에 관련된 대답을 함
+        if intent == 'ood':
+            result = self.nlu.ood_answer.return_answer(ptext)
+            return result
+        # ood가 아닐경우 탬플릿에 맞게 대답을 함
+        elif intent == '결제요청':
+            # 결제 함수 실행
+            print('결제요청')
+        else:
+            nlu_result = self.nlu.convert_nlu_result(ptext, intent, predict)
+            templates = self.search_template(nlu_result)
+            result = self.filling_nlg_slot(templates)
+            print("nlu_result:", nlu_result)
+            print("templates:", templates)
+            print("result:", result)
+            return result
