@@ -1,6 +1,7 @@
 import pandas as pd
 from src.NLU import NaturalLanguageUnderstanding
 import re
+from cart.views import add2
 
 class NaturalLanguageGenerator:
     def __init__(self):
@@ -122,11 +123,18 @@ class NaturalLanguageGenerator:
         text = re.sub('로 ', ' ', text)
         text = re.sub('라뗴', '라떼', text)
         text = re.sub('쥬스', '주스', text)
+        text = re.sub('뜨신거', '따뜻한거', text)
+        text = re.sub('따신거', '따뜻한거', text)
         text = re.sub('티라미수', '티라미슈', text)
         text = re.sub('티라미스', '티라미슈', text)
         text = re.sub('아인슈패너', '아인슈페너', text)
         text = re.sub('마키아토', '마끼아또', text)
+        text = re.sub('마끼야또', '마끼아또', text)
         text = re.sub('캐러멜', '카라멜', text)
+        text = re.sub('카라맬', '카라멜', text)
+        text = re.sub('캬라멜', '카라멜', text)
+        text = re.sub('캬라맬', '카라멜', text)
+        text = re.sub('캐러맬', '카라멜', text)
         text = re.sub('이요', '', text)
         text = re.sub('잔요', '잔', text)
         text = re.sub('잔', ' 잔', text)
@@ -139,7 +147,7 @@ class NaturalLanguageGenerator:
         text = re.sub('  봉지', ' 잔', text)
         text = re.sub('하나', '1잔', text)
         text = re.sub('한잔', '1잔', text)
-        text = re.sub('한', '1', text)
+        text = re.sub('한 ', '1 ', text)
         text = re.sub('둘', '2', text)
         text = re.sub('두 ', '2 ', text)
         text = re.sub('셋', '3', text)
@@ -150,7 +158,7 @@ class NaturalLanguageGenerator:
         text = re.sub(' 잔', '잔', text)
         return text
 
-    def run_nlg(self, text):
+    def run_nlg(self, request, text):
         ptext = self.text_preprocessing(text)
         print('ptext',ptext)
         intent, predict = self.nlu.predict(ptext)
@@ -162,7 +170,14 @@ class NaturalLanguageGenerator:
         # ood가 아닐경우 탬플릿에 맞게 대답을 함
         elif intent == '결제요청':
             # 결제 함수 실행
-            print('결제요청')
+            data = {'temp':'C',
+                    'size':'S',
+                    'quantity': 1,
+                    'product_id': 3
+                    }
+            add2(request, data)
+            text = '장바구니에 담겼습니다.'
+            return text
         else:
             nlu_result = self.nlu.convert_nlu_result(ptext, intent, predict)
             templates = self.search_template(nlu_result)

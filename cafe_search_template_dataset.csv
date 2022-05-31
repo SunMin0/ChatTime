@@ -1,9 +1,11 @@
 question,label,slot,template
 차가운거로 주세요,음료온도요구,TEMP,온도는 {TEMP}를(을) 선택하셨습니당
 뜨겁게 아메리카노 주세요,음료온도요구,TEMP^COFFEE,{TEMP} {COFFEE} 주문 받았습니당.
-큰 사이즈로 주시겠어요,사이즈요구,SIZE,사이즈는 {SIZE}를(을) 선택하셨습니당
+따뜻한거 2잔,음료온도요구,TEMP^COUNT,{TEMP} 온도로 {COUNT}잔(개) 주문 받았습니당.
+뜨거운거로 두잔 라지사이즈요,음료온도요구,TEMP^COUNT^SIZE,{SIZE}사이즈 {TEMP} 온도로 {COUNT}잔(개) 주문 받았습니당.
+큰 사이즈로 주시겠어요,사이즈요구,SIZE,{SIZE}사이즈를 선택하셨습니당
+큰 사이즈로 뜨겁게요,사이즈요구,SIZE^TEMP, {SIZE}사이즈에 {TEMP} 온도로 선택하셨습니다.
 두 잔 주세요,일반주문,COUNT,앞서 주문 하신 메뉴를 {COUNT}잔으로 변경하겠습니당.
-결제할게요,결제요청,PAY,결제를 진행하겠습니당.
 아메리카노 주세요,일반주문,COFFEE,{COFFEE} 주문 받았습니당. 사이즈나 온도 조절이 필요하면 말씀해주세요~
 아메리카노 뜨겁게 주세요,일반주문,COFFEE^TEMP,{TEMP} {COFFEE} 주문 받았습니당.
 아메리카노 뜨겁게 큰걸로 주세요,일반주문,COFFEE^TEMP^SIZE,{TEMP} {COFFEE} {SIZE} 주문 받았습니당.
@@ -12,3 +14,6 @@ question,label,slot,template
 아메리카노 큰걸로 3잔 주세요,일반주문,COFFEE^SIZE^COUNT,{COFFEE} {SIZE} {COUNT}잔 주문 받았습니당.
 아메리카노 한잔 주세요,일반주문,COFFEE^COUNT,{COFFEE} {COUNT}잔 주문 받았습니당. 사이즈나 온도 조절이 필요하면 말씀해주세요~
 아메리카노 큰걸로 두잔 뜨겁게 주세요,일반주문,COFFEE^SIZE^COUNT^TEMP,{TEMP} {COFFEE} {SIZE} {COUNT}잔 주문 받았습니당. 결제가 필요하시면 말씀주세요!
+큰 사이즈로 두잔 주세요.일반주문,SIZE^COUNT,앞서 주문 하신 메뉴를 {SIZE}사이즈 {COUNT}잔으로 변경하겠습니당.
+큰 사이즈로 두잔 뜨겁게요,일반주문,SIZE^TEMP^COUNT,앞서 주문 하신 메뉴를 {TEMP} 온도로 {SIZE}사이즈 {COUNT}잔으로 변경하겠습니당.
+

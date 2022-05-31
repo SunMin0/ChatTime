@@ -14,7 +14,7 @@ def chatbot(request):
     get_data = json.loads(request.body.decode('utf-8'))
     text = get_data['message']
     data = {
-        'message': nlg.run_nlg(text)
+        'message': nlg.run_nlg(request, text)
     }
     return JsonResponse(data)
 
