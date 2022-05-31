@@ -18,6 +18,7 @@ def chatbot(request):
     }
     return JsonResponse(data)
 
+@login_required(login_url='/login')
 def f_chat(request):
     return render(request, "chat/chat.html")
 

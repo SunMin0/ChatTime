@@ -168,17 +168,44 @@ class NaturalLanguageGenerator:
             result = self.nlu.ood_answer.return_answer(ptext)
             return result
         # ood가 아닐경우 탬플릿에 맞게 대답을 함
-        elif intent == '결제요청':
-            # 결제 함수 실행
+        elif intent == '결제요청': # 결제요청 처리
             data = {'temp':'C',
                     'size':'S',
                     'quantity': 1,
                     'product_id': 3
                     }
+            # 온도
+            if self.values['TEMP'] == '뜨거운':
+                data['temp'] = 'H'
+            elif self.values['TEMP'] == '아이스':
+                data['temp'] = 'C'
+            else:
+                # if 빵이면 N 아니면 C
+                data['temp'] = 'C'
+            # 메뉴
+            if self.values['COFFEE'] == '아메리카노':
+                data['product_id'] = 3
+            elif self.values['COFFEE'] == '카페라떼':
+                data['product_id'] = 4
+            else:
+                data['product_id'] = 3
+            # 사이즈
+            if self.values['SIZE'] == '라지 사이즈':
+                data['size'] = 'L'
+            elif self.values['SIZE'] == '스몰 사이즈':
+                data['size'] = 'S'
+            else:
+                data['size'] = 'S'
+            try:
+                data['quantity'] = int(self.values['COUNT'])
+            except:
+                data['quantity'] = 1
+            # 장바구니에 담은 내용 추가
             add2(request, data)
-            text = '장바구니에 담겼습니다.'
+            print('data',data)
+            text = "장바구니에 담겼습니다."
             return text
-        else:
+        else: #주문 관련 모든 처리
             nlu_result = self.nlu.convert_nlu_result(ptext, intent, predict)
             templates = self.search_template(nlu_result)
             result = self.filling_nlg_slot(templates)

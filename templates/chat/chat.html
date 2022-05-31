@@ -23,7 +23,7 @@
       <div class="header__column">
         <i class="far fa-moon"></i>
         <i class="fab fa-bluetooth-b"></i>
-        <span class="header__battery">66* <i class="fas fa-battery-full"></i> </span>
+        <span class="header__battery">100* <i class="fas fa-battery-full"></i> </span>
       </div>
     </div>
     <div class="header__bottom">
@@ -116,11 +116,11 @@ $("#message").keydown(function(e) {
                 let minutes = today.getMinutes();
                 $(".chat").append('<div class="chat__message chat__message-to-me"><img src="/static/images/avatar.jpg" alt="" class="chat__message-avatar"><div class="chat__message-center"><h3 class="chat__message-username">챗봇</h3><span class="chat__message-body">' + json.message + '</span></div><span class="chat__message-time">' + hours + ':' + minutes + '</span></div>');
                 // 받을 때 스크롤 맨 밑으로
-                //$(document).scrollTop($(".chat").height());
+                $(document).scrollTop($(".chat").height());
             });
 
         // 보낼 때 스크롤 맨 밑으로
-        //$(document).scrollTop($(".chat").height());
+        $(document).scrollTop($(".chat").height());
 
         // 입력창 비우기
         $("#message").val("");
