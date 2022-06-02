@@ -9,12 +9,11 @@ from .forms import ProductForm
 @login_required(login_url='/login')
 def f_cafe(request):
     return render(request, 'cafe/cafe.html')
-#
+
 @login_required(login_url='/login')
 def espresso(request):
     return render(request, 'cafe/espresso.html')
 
-7
 @login_required(login_url='/login')
 def bread(request):
     return render(request, 'cafe/bread.html')

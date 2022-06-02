@@ -11,6 +11,9 @@ class NaturalLanguageGenerator:
             "SIZE": "",
             "COUNT": "",
             "COFFEE": "",
+            "BAKE":"",
+            "TEA": "",
+            "JUICE": "",
         }
         self.template = pd.read_csv(self.template_dir)
         self.nlu = nlu = NaturalLanguageUnderstanding()
@@ -25,7 +28,7 @@ class NaturalLanguageGenerator:
             keys.add(slot_name)
             if slot_name == 'TEMP':
                 if (slot_value.find('뜨') != -1) or (slot_value.find('따') != -1) or (slot_value.find('핫') != -1):
-                    slot_value = '뜨거운'
+                    slot_value = '핫'
                 elif (slot_value.find('시원') != -1) or (slot_value.find('차') != -1) or (slot_value.find('아이스') != -1):
                     slot_value = '아이스'
             elif slot_name == 'SIZE':
@@ -93,14 +96,20 @@ class NaturalLanguageGenerator:
             size_index = template.find("{SIZE}")
             count_index = template.find("{COUNT}")
             coffee_index = template.find("{COFFEE}")
+            bake_index = template.find("{BAKE}")
+            tea_index = template.find("{TEA}")
+            juice_index = template.find("{JUICE}")
 
             temp_flag = temp_index == -1
             size_flag = size_index == -1
             count_flag = count_index == -1
             coffee_flag = coffee_index == -1
+            bake_flag = bake_index == -1
+            tea_flag = tea_index == -1
+            juice_flag = juice_index == -1
 
             cnt = 0
-            while not (temp_flag and size_flag and count_flag and coffee_flag):
+            while not (temp_flag and size_flag and count_flag and coffee_flag and bake_flag and tea_flag and juice_flag) :
                 if not temp_flag:
                     key = "TEMP"
                     temp_flag, template = self.replace_slot(temp_flag, key, template)
@@ -113,6 +122,15 @@ class NaturalLanguageGenerator:
                 if not coffee_flag:
                     key = "COFFEE"
                     coffee_flag, template = self.replace_slot(coffee_flag, key, template)
+                if not bake_flag:
+                    key = "BAKE"
+                    bake_flag, template = self.replace_slot(bake_flag, key, template)
+                if not tea_flag:
+                    key = "TEA"
+                    tea_flag, template = self.replace_slot(tea_flag, key, template)
+                if not juice_flag:
+                    key = "JUICE"
+                    juice_flag, template = self.replace_slot(juice_flag, key, template)
                 filling_templates.append(template)
         return filling_templates
 
@@ -158,6 +176,95 @@ class NaturalLanguageGenerator:
         text = re.sub(' 잔', '잔', text)
         return text
 
+    def text2data(self):
+        data = {'temp': 'C',
+                'size': 'S',
+                'quantity': 1,
+                'product_id': 10
+                }
+        # 메뉴 - 티
+        if self.values['TEA'] == '녹차':
+            data['product_id'] = 1
+        elif self.values['TEA'] == '밀크티':
+            data['product_id'] = 2
+        elif self.values['TEA'] == '유자차':
+            data['product_id'] = 3
+        elif self.values['TEA'] == '자몽차':
+            data['product_id'] = 4
+        elif self.values['TEA'] == '홍차':
+            data['product_id'] = 5
+        # 메뉴 - 커피
+        elif self.values['COFFEE'] == '카푸치노':
+            data['product_id'] = 6
+        elif self.values['COFFEE'] == '카페모카':
+            data['product_id'] = 7
+        elif self.values['COFFEE'] == '카페라떼':
+            data['product_id'] = 8
+        elif self.values['COFFEE'] == '카라멜마끼아또':
+            data['product_id'] = 9
+        elif self.values['COFFEE'] == '아메리카노':
+            data['product_id'] = 10
+        # 메뉴 - 빵
+        elif self.values['BAKE'] == '케이크':
+            data['product_id'] = 11
+        elif self.values['BAKE'] == '머핀':
+            data['product_id'] = 12
+        elif self.values['BAKE'] == '티라미슈':
+            data['product_id'] = 13
+        elif self.values['BAKE'] == '마카롱':
+            data['product_id'] = 14
+        elif self.values['BAKE'] == '쿠키':
+            data['product_id'] = 15
+        # 메뉴 - 주스
+        elif self.values['JUICE'] == '토마토주스':
+            data['product_id'] = 16
+        elif self.values['JUICE'] == '자몽에이드':
+            data['product_id'] = 17
+        elif self.values['JUICE'] == '블루베리주스':
+            data['product_id'] = 18
+        elif self.values['JUICE'] == '레몬에이드':
+            data['product_id'] = 19
+        elif self.values['JUICE'] == '딸기주스':
+            data['product_id'] = 20
+        else:
+            data['product_id'] = 10
+        # 온도 빵이면 N 차면 H 아니면 C
+        if data['product_id'] >= 11 and data['product_id'] <= 15:  # '빵'이면
+            data['temp'] = 'N'
+        elif data['product_id'] >= 16 and data['product_id'] <= 20:  # '주스'면
+            data['temp'] = 'C'
+        elif self.values['TEMP'] == '뜨거운':
+            data['temp'] = 'H'
+        elif self.values['TEMP'] == '아이스':
+            data['temp'] = 'C'
+        else:
+            data['temp'] = 'C'
+        # 사이즈
+        if data['product_id'] >= 11 and data['product_id'] <= 15:  # 빵이면
+            data['size'] = 'N'
+        elif self.values['SIZE'] == '라지 사이즈':
+            data['size'] = 'L'
+        elif self.values['SIZE'] == '스몰 사이즈':
+            data['size'] = 'S'
+        else:
+            data['size'] = 'S'
+        # 수량
+        try:
+            data['quantity'] = int(self.values['COUNT'])
+        except:
+            data['quantity'] = 1
+        # value 초기화
+        self.values = {
+            "TEMP": "",
+            "SIZE": "",
+            "COUNT": "",
+            "COFFEE": "",
+            "BAKE":"",
+            "TEA": "",
+            "JUICE": "",
+        }
+        return data
+
     def run_nlg(self, request, text):
         ptext = self.text_preprocessing(text)
         print('ptext',ptext)
@@ -169,40 +276,10 @@ class NaturalLanguageGenerator:
             return result
         # ood가 아닐경우 탬플릿에 맞게 대답을 함
         elif intent == '결제요청': # 결제요청 처리
-            data = {'temp':'C',
-                    'size':'S',
-                    'quantity': 1,
-                    'product_id': 3
-                    }
-            # 온도
-            if self.values['TEMP'] == '뜨거운':
-                data['temp'] = 'H'
-            elif self.values['TEMP'] == '아이스':
-                data['temp'] = 'C'
-            else:
-                # if 빵이면 N 아니면 C
-                data['temp'] = 'C'
-            # 메뉴
-            if self.values['COFFEE'] == '아메리카노':
-                data['product_id'] = 3
-            elif self.values['COFFEE'] == '카페라떼':
-                data['product_id'] = 4
-            else:
-                data['product_id'] = 3
-            # 사이즈
-            if self.values['SIZE'] == '라지 사이즈':
-                data['size'] = 'L'
-            elif self.values['SIZE'] == '스몰 사이즈':
-                data['size'] = 'S'
-            else:
-                data['size'] = 'S'
-            try:
-                data['quantity'] = int(self.values['COUNT'])
-            except:
-                data['quantity'] = 1
+            data = self.text2data()
             # 장바구니에 담은 내용 추가
             add2(request, data)
-            print('data',data)
+            print('data:',data)
             text = "장바구니에 담겼습니다."
             return text
         else: #주문 관련 모든 처리
