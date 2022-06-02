@@ -149,7 +149,7 @@ def kakao_logout(request):
     """
     kakao_rest_api_key = SOCIAL_OUTH_CONFIG['KAKAO_REST_API_KEY']
     print(kakao_rest_api_key)
-    logout_redirect_uri = "http://127.0.0.1:8000/logout"
+    logout_redirect_uri = SOCIAL_OUTH_CONFIG['KAKAO_LOGOUT_URI']
     state = "none"
     kakao_service_logout_url = "https://kauth.kakao.com/oauth/logout"
     return redirect(f"{kakao_service_logout_url}?client_id={kakao_rest_api_key}&logout_redirect_uri={logout_redirect_uri}&state={state}")

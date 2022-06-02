@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <title>Chat</title>
   <link rel="stylesheet" href="{%static 'css/style.css' %}">
+  <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
 </head>
 <body class="body-chat">
   <header class="top-header chat-header">
@@ -53,12 +57,13 @@
         <!-- 텍스트 입력   -->
         {% csrf_token %}
         <input type="text" id="message" width="100%">
-        <i class="far fa-smile fa-lg"></i>
-        <!--  녹음 버튼    -->
-        <span class="record-message">
-        <i class="fas fa-microphone fa-lg" id="record"></i>
-        </span>
-    </div>
+      </div>
+    <div>
+            <i class="fa fa-shopping-cart"></i>
+            <a class="nav-link btn btn-outline-success" href="{% url 'cart:detail' %}" > Cart
+            </a>
+      </div>
+
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="

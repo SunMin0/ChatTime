@@ -183,55 +183,55 @@ class NaturalLanguageGenerator:
                 'product_id': 10
                 }
         # 메뉴 - 티
-        if self.values['TEA'] == '녹차':
+        if self.values['TEA'] == '홍차':
             data['product_id'] = 1
         elif self.values['TEA'] == '밀크티':
             data['product_id'] = 2
-        elif self.values['TEA'] == '유자차':
+        elif self.values['TEA'] == '녹차':
             data['product_id'] = 3
         elif self.values['TEA'] == '자몽차':
             data['product_id'] = 4
-        elif self.values['TEA'] == '홍차':
+        elif self.values['TEA'] == '유자차':
             data['product_id'] = 5
-        # 메뉴 - 커피
-        elif self.values['COFFEE'] == '카푸치노':
-            data['product_id'] = 6
-        elif self.values['COFFEE'] == '카페모카':
-            data['product_id'] = 7
-        elif self.values['COFFEE'] == '카페라떼':
-            data['product_id'] = 8
-        elif self.values['COFFEE'] == '카라멜마끼아또':
-            data['product_id'] = 9
-        elif self.values['COFFEE'] == '아메리카노':
-            data['product_id'] = 10
-        # 메뉴 - 빵
-        elif self.values['BAKE'] == '케이크':
-            data['product_id'] = 11
-        elif self.values['BAKE'] == '머핀':
-            data['product_id'] = 12
-        elif self.values['BAKE'] == '티라미슈':
-            data['product_id'] = 13
-        elif self.values['BAKE'] == '마카롱':
-            data['product_id'] = 14
-        elif self.values['BAKE'] == '쿠키':
-            data['product_id'] = 15
         # 메뉴 - 주스
         elif self.values['JUICE'] == '토마토주스':
-            data['product_id'] = 16
-        elif self.values['JUICE'] == '자몽에이드':
-            data['product_id'] = 17
+            data['product_id'] = 6
         elif self.values['JUICE'] == '블루베리주스':
-            data['product_id'] = 18
-        elif self.values['JUICE'] == '레몬에이드':
-            data['product_id'] = 19
+            data['product_id'] = 7
         elif self.values['JUICE'] == '딸기주스':
+            data['product_id'] = 8
+        elif self.values['JUICE'] == '레몬에이드':
+            data['product_id'] = 9
+        elif self.values['JUICE'] == '자몽에이드':
+            data['product_id'] = 10
+        # 메뉴 - 커피
+        elif self.values['COFFEE'] == '카페모카':
+            data['product_id'] = 11
+        elif self.values['COFFEE'] == '카푸치노':
+            data['product_id'] = 12
+        elif self.values['COFFEE'] == '카페라떼':
+            data['product_id'] = 13
+        elif self.values['COFFEE'] == '카라멜마끼아또':
+            data['product_id'] = 14
+        elif self.values['COFFEE'] == '아메리카노':
+            data['product_id'] = 15
+        # 메뉴 - 빵
+        elif self.values['BAKE'] == '머핀':
+            data['product_id'] = 16
+        elif self.values['BAKE'] == '티라미슈':
+            data['product_id'] = 17
+        elif self.values['BAKE'] == '마카롱':
+            data['product_id'] = 18
+        elif self.values['BAKE'] == '케이크':
+            data['product_id'] = 19
+        elif self.values['BAKE'] == '쿠키':
             data['product_id'] = 20
         else:
             data['product_id'] = 10
         # 온도 빵이면 N 차면 H 아니면 C
-        if data['product_id'] >= 11 and data['product_id'] <= 15:  # '빵'이면
+        if data['product_id'] >= 16 and data['product_id'] <= 20:  # '빵'이면
             data['temp'] = 'N'
-        elif data['product_id'] >= 16 and data['product_id'] <= 20:  # '주스'면
+        elif data['product_id'] >= 6 and data['product_id'] <= 10:  # '주스'면
             data['temp'] = 'C'
         elif self.values['TEMP'] == '뜨거운':
             data['temp'] = 'H'
@@ -240,7 +240,7 @@ class NaturalLanguageGenerator:
         else:
             data['temp'] = 'C'
         # 사이즈
-        if data['product_id'] >= 11 and data['product_id'] <= 15:  # 빵이면
+        if data['product_id'] >= 16 and data['product_id'] <= 20:  # 빵이면
             data['size'] = 'N'
         elif self.values['SIZE'] == '라지 사이즈':
             data['size'] = 'L'
@@ -254,16 +254,19 @@ class NaturalLanguageGenerator:
         except:
             data['quantity'] = 1
         # value 초기화
+        self.value_init()
+        return data
+
+    def value_init(self):
         self.values = {
             "TEMP": "",
             "SIZE": "",
             "COUNT": "",
             "COFFEE": "",
-            "BAKE":"",
+            "BAKE": "",
             "TEA": "",
             "JUICE": "",
         }
-        return data
 
     def run_nlg(self, request, text):
         ptext = self.text_preprocessing(text)

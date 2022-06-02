@@ -9,6 +9,15 @@ from django.http import JsonResponse
 import logging
 from logging import StreamHandler
 import logstash
+import datetime
+
+# 로그스태시
+host = get_secret('LOGSTASH_HOST')
+port = get_secret('LOGSTASH_PORT')
+logger = logging.getLogger('python-logstash-logger')
+logger.setLevel(logging.INFO)
+logger.addHandler(logstash.TCPLogstashHandler(host, port, version=1))
+logger.addHandler(StreamHandler())
 
 
 def order_list(request):
@@ -39,20 +48,6 @@ def order_create(request):
                                          size=item['size'],
                                          temp=item['temp'],
                                          )
-                # extra = {'product':item['product'],
-                #          'price':item['price'],
-                #          'quantity':item['quantity'],
-                #          'size':item['size'],
-                #          'temp':item['temp']
-                # }
-                #
-                # host = get_secret('LOGSTASH_HOST')
-                # port = get_secret('LOGSTASH_PORT')
-                # logger = logging.getLogger('python-logstash-logger')
-                # logger.setLevel(logging.INFO)
-                # logger.addHandler(logstash.TCPLogstashHandler(host, port, version=1))
-                # logger.addHandler(StreamHandler())
-                # logger.info(" 주문내역전송 ",extra=extra)
             cart.clear()
             return render(request, 'order/created.html', {'order': order})
     else:
@@ -66,23 +61,42 @@ def order_complete(request):
     order_item_list = OrderItem.objects.all()
     Current_user = request.user
     c_user = CustomUser.objects.get(username=Current_user)
+
     for order_item in order_item_list:
         if int(order_id) == int(order_item.order_id):
+            # UTC 타임을 한국에 맞게 수정
+            order_date = str(datetime.datetime.now())
+            order_date = order_date.replace(' ', 'T')
+            order_date = order_date + "+09:00"
             print('일치-----')
+            print('주문일:', order_date)
+            print('주문번호:', order_item.order_id)
             print('ID:', c_user.username)
-            print('사용자명:', c_user.u_nickname)
             print('성별:', c_user.u_sex)
             print('생년월일:', c_user.birth_year)
-            print('주문자명:', order.nick_name)
             print('이메일:', order.email)
             print('총가격:', order.total_price)
-            print('주문번호:', order_item.order_id)
-            print('주문일:', order.created)
-            print('상품명:',order_item.product)
+            print('상품명:',order_item.product.name)
             print('가격:',order_item.price)
             print('수량:',order_item.quantity)
             print('사이즈:',order_item.size)
             print('온도:',order_item.temp)
+
+            extra = {'order_date':order_date,
+                     'order_number':int(order_item.order_id),
+                     'uid': c_user.username,
+                     'sex':c_user.u_sex,
+                     'birth':int(c_user.birth_year),
+                     'email':order.email,
+                     'total_price':int(order.total_price),
+                     'product_name':order_item.product,
+                     'product_price':int(order_item.price),
+                     'quantity':int(order_item.quantity),
+                     'size':order_item.size,
+                     'temp':order_item.temp
+                     }
+            # 로그스태시 전송
+            logger.info(" 주문내역전송 ", extra=extra)
     return render(request, 'order/complete.html', {'order': order})
 
 class OrderCreateAjaxView(View):

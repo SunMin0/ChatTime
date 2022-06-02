@@ -1,7 +1,7 @@
 {% load static %}
 <!-- 필터를 사용할 수 있게 해준다 -->
 <head>
-    <button style="font-size:15px;color:black" onclick="location.href='http://127.0.0.1:8000/more'">돌아가기</button>
+    <button style="font-size:15px;color:black" onclick="location.href='/more'">돌아가기</button>
     <!-- Bootstrap cdn 설정 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
@@ -46,7 +46,7 @@
                     <tr>
 
                         <th scope="row">{{order.id}}</th>
-                        <th><img src="{{ order.product.image.url }}" class="img-thumbnail" style="width:60%;"></th>
+                        <th><img src="{{ order.product.image.url }}" class="img-thumbnail" style="width:30%;height30%;"></th>
                         <th>{{order.product}}</th>
                         <th>{{order.quantity}}개</th>
                         <th>{{order.size}}</th>

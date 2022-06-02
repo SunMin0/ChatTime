@@ -30,19 +30,19 @@
     <div class="header__bottom">
         <div class="header__column">
             {% if user.login_method == 'C' %}
-            <a href="#content" onclick="location.href='http://127.0.0.1:8000/logout';"
+            <a href="#content" onclick="location.href='/logout';"
                style='cursor:pointer; font-size: 15px; font-weight: bold; color:Pink;'>
                 <span class="header__text">일반계정 로그아웃</span>
                 <!--          <div class="alert alert-info">정상적으로 로그아웃 되었습니다.</div>-->
             </a>
             {% elif user.login_method == 'K' %}
-            <a href="#content" onclick="location.href='http://127.0.0.1:8000/kakao_logout';"
+            <a href="#content" onclick="location.href='/kakao_logout';"
                style='cursor:pointer; font-size: 15px; font-weight: bold; color: yellow;'>
                 <span class="header__text">카카오계정 로그아웃</span>
                 <!--          <div class="alert alert-info">정상적으로 로그아웃 되었습니다.</div>-->
             </a>
             {% elif user.login_method == 'N' %}
-            <a href="#content" onclick="location.href='http://127.0.0.1:8000/naver_logout';"
+            <a href="#content" onclick="location.href='/naver_logout';"
                style='cursor:pointer; font-size: 15px; font-weight: bold; color: Lime;'>
                 <span class="header__text">네이버계정 로그아웃</span>
                 <!--          <div class="alert alert-info">정상적으로 로그아웃 되었습니다.</div>-->
