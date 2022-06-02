@@ -33,5 +33,4 @@ def detail(request):
     cart = Cart(request)
     for product in cart:
         product['quantity_form'] = AddProductForm(initial={'quantity': product['quantity'], 'is_update': False, 'size': 'L', 'temp': 'H'})
-        print("product['quantity_form']:",product['quantity_form'])
     return render(request, 'cart/detail.html', {'cart': cart})

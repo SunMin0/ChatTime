@@ -11,7 +11,6 @@ class Cart(object):
             cart = self.session[settings.CART_ID] = {}
         self.cart = cart
 
-
     def __len__(self):
         return sum(item['quantity'] for item in self.cart.values())
 
@@ -31,7 +30,6 @@ class Cart(object):
 
     # size,temp 넣기위해서 추가
     def add(self, product, quantity=1, is_update=False, size='S', temp='C'):
-        print('cart_add에 진입')
         product_id = str(product.id)
         if product_id not in self.cart:
             self.cart[product_id] = {'quantity': 0, 'price': str(product.price)}
@@ -39,15 +37,9 @@ class Cart(object):
             self.cart[product_id]['temp'] = temp
         # size,temp 넣기위해서 추가
         if is_update:
-            print('is_update에 진입')
             self.cart[product_id]['quantity'] = quantity
-            print('update_size:', self.cart[product_id]['size'])
-            print('update_temp:', self.cart[product_id]['temp'])
-
         else:
             self.cart[product_id]['quantity'] += quantity
-
-
         self.save()
 
     def save(self):
