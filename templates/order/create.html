@@ -21,7 +21,7 @@ order_complete_url = "{% url 'order:order_complete' %}";
         {% for item in cart %}
             <li class="list-group-item">
                 {{item.quantity}} x {{item.product.name}}
-                <span>{{item.total_price}}</span>
+                <span>{{item.total_price}}원</span>
             </li>
         {% endfor %}
         {% if cart.coupon %}
@@ -31,7 +31,7 @@ order_complete_url = "{% url 'order:order_complete' %}";
             </li>
         {% endif %}
         </ul>
-        <div class="alert alert-success" role="alert">Total : {{cart.get_total_price|floatformat:"2"}}</div>
+        <div class="alert alert-success" role="alert">Total : {{cart.get_total_price|floatformat:"2"}}원</div>
 
         <!-- form에 class 추가 -->
         <form action="" method="post" class="order-form">

@@ -17,7 +17,7 @@
         <i class="fas fa-wifi"></i>
       </div>
       <div class="header__column">
-        <span class="header__time">18:38</span>
+        <span class="header__time"></span>
       </div>
       <div class="header__column">
         <i class="far fa-moon"></i>
@@ -86,4 +86,36 @@
 <!--    <span>Please make your screen smaller.</span>-->
   </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script>
+/* 날짜 출력 부분 */
+$(document).ready(function() {
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let date = today.getDate();
+    let day = today.getDay();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+
+    if (day === 1) {
+        day = '월요일'
+    } else if (day === 2) {
+        day = '화요일'
+    } else if (day === 3) {
+        day = '수요일'
+    } else if (day === 4) {
+        day = '목요일'
+    } else if (day === 5) {
+        day = '금요일'
+    } else if (day === 6) {
+        day = '토요일'
+    } else if (day === 7) {
+        day = '일요일'
+    }
+    $(".date-divider__text").html(year + '년 ' + month + '월 ' + date + '일, ' + day);
+    $(".header__time").html(hours + ':' + minutes);
+});
+</script>
 </html>

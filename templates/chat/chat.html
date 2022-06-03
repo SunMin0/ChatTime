@@ -99,6 +99,7 @@ $(document).ready(function() {
 });
 
 /* 메시지 부분 */
+var flag = 0;
 $("#message").keydown(function(e) {
     if (e.keyCode === 13) {
         let today = new Date();
@@ -121,12 +122,16 @@ $("#message").keydown(function(e) {
                 let minutes = today.getMinutes();
                 $(".chat").append('<div class="chat__message chat__message-to-me"><img src="/static/images/avatar.jpg" alt="" class="chat__message-avatar"><div class="chat__message-center"><h3 class="chat__message-username">챗봇</h3><span class="chat__message-body">' + json.message + '</span></div><span class="chat__message-time">' + hours + ':' + minutes + '</span></div>');
                 // 받을 때 스크롤 맨 밑으로
-                $(document).scrollTop($(".chat").height());
+                if (flag > 1){
+                  $(document).scrollTop($(".chat").height());
+                }
             });
 
         // 보낼 때 스크롤 맨 밑으로
-        $(document).scrollTop($(".chat").height());
-
+        if (flag > 1){
+          $(document).scrollTop($(".chat").height());
+        }
+        flag = flag + 1;
         // 입력창 비우기
         $("#message").val("");
     }

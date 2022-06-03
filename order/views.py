@@ -89,7 +89,7 @@ def order_complete(request):
                      'birth':int(c_user.birth_year),
                      'email':order.email,
                      'total_price':int(order.total_price),
-                     'product_name':order_item.product,
+                     'product_name':order_item.product.name,
                      'product_price':int(order_item.price),
                      'quantity':int(order_item.quantity),
                      'size':order_item.size,
