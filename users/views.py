@@ -142,8 +142,6 @@ def delete_user(request):
     return render(request, 'user/delete_user.html', {'password_form': password_form})
 #
 
-
-
 #카카오 계정과 서비스 같이 로그아웃
 @login_required
 def kakao_logout(request):
