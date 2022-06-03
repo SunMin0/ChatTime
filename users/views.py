@@ -17,6 +17,9 @@ from .models import CustomUser
 def base(request):
     return render(request, 'user/base.html')
 
+def manager_base(request):
+    return render(request, 'user/manager_base.html')
+
 
 #유저 회원가입
 def signup(request):

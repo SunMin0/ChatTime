@@ -61,6 +61,7 @@ urlpatterns = [
     path('customer', order.views.customer_order_list),
 
     #매니져
+    path('m_base', users.views.manager_base),
     path('manager', order.views.order_list),
     path('signup_manager',users.views.signup2),
 
