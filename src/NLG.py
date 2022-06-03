@@ -29,7 +29,8 @@ class NaturalLanguageGenerator:
             if slot_name == 'TEMP':
                 if (slot_value.find('뜨') != -1) or (slot_value.find('따') != -1) or (slot_value.find('핫') != -1):
                     slot_value = '핫'
-                elif (slot_value.find('시원') != -1) or (slot_value.find('차') != -1) or (slot_value.find('아이스') != -1):
+                elif (slot_value.find('시원') != -1) or (slot_value.find('차') != -1) or (slot_value.find('아이스') != -1) or \
+                        (slot_value.find('찬') != -1):
                     slot_value = '아이스'
             elif slot_name == 'SIZE':
                 if (slot_value.find('작') != -1) or (slot_value.find('레귤러') != -1) or \
@@ -138,7 +139,6 @@ class NaturalLanguageGenerator:
         text = re.sub('[-=+,#/\?:^$.@*\"※~&%ㆍ!』\\‘|\(\)\[\]\<\>`\'…》]', '', text)  # 특수문자 제거
         text = re.sub('만 ', ' ', text)
         text = re.sub('도 ', ' ', text)
-        text = re.sub('로 ', ' ', text)
         text = re.sub('라뗴', '라떼', text)
         text = re.sub('쥬스', '주스', text)
         text = re.sub('뜨신거', '따뜻한거', text)
@@ -165,7 +165,8 @@ class NaturalLanguageGenerator:
         text = re.sub('  봉지', ' 잔', text)
         text = re.sub('하나', '1잔', text)
         text = re.sub('한잔', '1잔', text)
-        text = re.sub('한 ', '1 ', text)
+        text = re.sub(' 한 ', ' 1 ', text)
+        text = re.sub('한잔 ', '1 ', text)
         text = re.sub('둘', '2', text)
         text = re.sub('두 ', '2 ', text)
         text = re.sub('셋', '3', text)
@@ -174,6 +175,7 @@ class NaturalLanguageGenerator:
         text = re.sub('네 ', '4 ', text)
         text = re.sub('다섯', '5', text)
         text = re.sub(' 잔', '잔', text)
+        text = re.sub('한 잔', '1 잔', text)
         return text
 
     def text2data(self):
@@ -227,13 +229,14 @@ class NaturalLanguageGenerator:
         elif self.values['BAKE'] == '쿠키':
             data['product_id'] = 20
         else:
-            data['product_id'] = 10
+            data['product_id'] = 15
         # 온도 빵이면 N 차면 H 아니면 C
         if data['product_id'] >= 16 and data['product_id'] <= 20:  # '빵'이면
             data['temp'] = 'N'
+            self.values['TEMP'] = ''
         elif data['product_id'] >= 6 and data['product_id'] <= 10:  # '주스'면
             data['temp'] = 'C'
-        elif self.values['TEMP'] == '뜨거운':
+        elif self.values['TEMP'] == '핫':
             data['temp'] = 'H'
         elif self.values['TEMP'] == '아이스':
             data['temp'] = 'C'
@@ -242,6 +245,7 @@ class NaturalLanguageGenerator:
         # 사이즈
         if data['product_id'] >= 16 and data['product_id'] <= 20:  # 빵이면
             data['size'] = 'N'
+            self.values['SIZE'] = ''
         elif self.values['SIZE'] == '라지 사이즈':
             data['size'] = 'L'
         elif self.values['SIZE'] == '스몰 사이즈':
@@ -253,8 +257,7 @@ class NaturalLanguageGenerator:
             data['quantity'] = int(self.values['COUNT'])
         except:
             data['quantity'] = 1
-        # value 초기화
-        self.value_init()
+            self.values['COUNT'] = "1"
         return data
 
     def value_init(self):
@@ -278,12 +281,16 @@ class NaturalLanguageGenerator:
             result = self.nlu.ood_answer.return_answer(ptext)
             return result
         # ood가 아닐경우 탬플릿에 맞게 대답을 함
-        elif intent == '결제요청': # 결제요청 처리
+        elif intent == '장바구니': # 장바구니에 담은 내용 추가
             data = self.text2data()
-            # 장바구니에 담은 내용 추가
-            add2(request, data)
-            print('data:',data)
-            text = "장바구니에 담겼습니다."
+            print('data:', data)
+            product_name = add2(request, data)
+            text = self.values['TEMP'] + " " + product_name+ " " + self.values['SIZE']+ " " + self.values['COUNT'] + "잔(개)" + " 장바구니에 담겼습니다. 결제를 원하시면 우측 하단의 장바구니 아이콘을 클릭하여 결제해주세요."
+            # value 초기화
+            self.value_init()
+            return text
+        elif intent == '결제요청': # 결제요구시 처리
+            text = "주문 감사드립니다. 우측 하단의 장바구니 아이콘을 클릭하여 결제해주세요."
             return text
         else: #주문 관련 모든 처리
             nlu_result = self.nlu.convert_nlu_result(ptext, intent, predict)

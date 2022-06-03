@@ -17,9 +17,9 @@ class NaturalLanguageUnderstanding:
         self.ood_answer = SBERT()
 
     def model_load(self):
-        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_99.219_steps_58.pt"
-        entity_pretrain_path = "./nlp/pretrained/cafe_entity_recog_90.32_steps_97.pt"
-        ood_clsf_pretrain_path = "./nlp/pretrained/ood_clsf_99.694_steps_67.pt"
+        intent_pretrain_path = "./nlp/pretrained/cafe_intent_clsf_99.531_steps_67.pt"
+        entity_pretrain_path = "./nlp/pretrained/cafe_entity_recog_92.5_steps_72.pt"
+        ood_clsf_pretrain_path = "./nlp/pretrained/ood_clsf_99.642_steps_8.pt"
 
         self.intent_clsf.load_state_dict(torch.load(intent_pretrain_path))
         self.entity_recog.load_state_dict(torch.load(entity_pretrain_path))

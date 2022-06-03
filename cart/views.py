@@ -20,7 +20,7 @@ def add2(request, data):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     cart.add(product=product, quantity=data['quantity'], is_update=False, size=data['size'], temp=data['temp'])
-
+    return product.name
 
 def remove(request, product_id):
     cart = Cart(request)
