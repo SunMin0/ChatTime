@@ -1,0 +1,68 @@
+<!doctype HTML>
+{% load static %}
+
+<head>
+	<meta charset="UTF-8">
+	<title>Master</title>
+	<link rel="stylesheet" href="{%static 'css/login.css' %}">
+	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<center>
+
+<p style="font-size: 50px; font-weight: bold; color: indianred; text-shadow: 1px 1px 1.2px midnightblue;">KY COMPANY</p>
+	<br>
+	</center>
+	<div class="main-container">
+		<div class="main-wrap">
+		<header>
+				<CENTER><img src="{%static 'images/logo1.png' %}" width=250 height=250 ></CENTER>
+		</header>
+			<br>
+			<br>
+			<div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+			{% if user.is_master == 1 %}
+			<center>
+				<div class = "login-button-wrap">
+				<button onclick="location.href='dash';" style='cursor:pointer;'>분석 자료 보러 가기</button>
+			</div>
+				<br>
+				<br>
+				{% if user.login_method == 'C' %}
+            <a href="#content" onclick="location.href='http://127.0.0.1:8000/logout';"
+               style='cursor:pointer; font-size: 30px; font-weight: bold; color:blue;'>
+                <span class="header__text">일반계정 로그아웃</span>
+                <!--          <div class="alert alert-info">정상적으로 로그아웃 되었습니다.</div>-->
+            </a>
+				{% endif %}
+			<br>
+			<br>
+			<center>
+                    {% if messages %}
+                        <ul class="messages" style="width:300px;height:50x;font-size:30px;color:Purple;">
+                    {% for message in messages %}
+                        <li {% if message.tags %}
+                        class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                        </ul>
+                    {% endif %}
+			</center>
+				{%endif%}
+<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+<footer>
+	<div class="copyright-wrap">
+		<span>	<img src="img/logo.png"> Copyright © KYcompany All Rights Reserved.</span>
+	</div>
+</footer>
+		</div>
+	</div>
+</body>
