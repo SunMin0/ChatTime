@@ -134,8 +134,9 @@ https://github.com/SunMin0/ChatTime/issues/8#issue-1260987993
 
 -----------------------------------------
 ### 📅 WBS
+* notion으로 협업하면서 WBS 작성
+> https://www.notion.so/WBS-Work-Broken-Structure-de61224f0d0b40b6ae4d800eafdfb0d2
 ![WBS](https://user-images.githubusercontent.com/97925049/168591525-677bc408-4363-48f2-a634-5fd36908df62.png)
-### notion으로 협업하면서 WBS 작성
 -----------------------------------------
 
 ### 🎞구현
