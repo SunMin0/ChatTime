@@ -25,11 +25,9 @@ def f_chat(request):
 def f_chats(request):
     return render(request, 'chat/chats.html')
 
-
 @login_required(login_url='/login')
 def f_cafe(request):
     return render(request, 'chat/cafe.html')
-
 
 @login_required(login_url='/login')
 def f_more(request):
@@ -39,11 +37,9 @@ def f_more(request):
 def f_profile(request):
     return render(request, 'chat/profile.html')
 
-
 @login_required(login_url='/login')
 def f_index(request):
     return render(request, 'chat/index.html')
-
 
 @login_required(login_url='/login')
 def espresso(request):
