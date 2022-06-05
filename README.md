@@ -117,7 +117,7 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 ### 🖌 ER Diagram(ERD)
 ![ERD](https://user-images.githubusercontent.com/97014086/172041171-76737639-8fbd-4221-9fdd-0fd05e3ff84c.png)
 
-
+https://github.com/SunMin0/ChatTime/issues/8#issue-1260987993
 
 -----------------------------------------
 ### 🎨플랫폼 구성도
