@@ -65,7 +65,7 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 
 -----------------------------------------  
 ### 🛠Skill & Tools
-![로고](https://user-images.githubusercontent.com/97925049/166637055-4f666242-f076-42ba-af36-7e377ed8379d.png)
+![Skill_Tools](https://user-images.githubusercontent.com/97014086/172040253-9c1ea521-ed1c-40b8-bbae-50343e18ff50.png)
 
 #### Backend
 * Django  
@@ -73,6 +73,11 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 
 #### DB  
 * MySQL  
+
+#### Restful API
+* Kakao Social Log-in API
+* Naver Social Log-in API
+* Google Map API
 
 #### Frontend  
 * HTML  
@@ -89,7 +94,6 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * Logstash
 * Kibana
 
-
 #### CI/CD
 * jenkins
 
@@ -100,10 +104,10 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * 개발하면서 수정 예정
 #### API 설계도에 따른 진행 상황
 # 노션으로 체크박스 관리
-https://www.notion.so/API-c120523cd89b41a88107ce7579a8165e
-
-
-
+* 회의록, API, WBS
+> https://www.notion.so/API-c120523cd89b41a88107ce7579a8165e
+* 업무일지, 해결일지
+> https://www.notion.so/Project-Chat-Time-3eacf18eb2fc4865baea5c9c1e15220b
 
 
 -----------------------------------------
