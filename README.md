@@ -65,7 +65,7 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 
 -----------------------------------------  
 ### 🛠Skill & Tools
-![로고](https://user-images.githubusercontent.com/97925049/166637055-4f666242-f076-42ba-af36-7e377ed8379d.png)
+![Skill_Tools](https://user-images.githubusercontent.com/97014086/172040253-9c1ea521-ed1c-40b8-bbae-50343e18ff50.png)
 
 #### Backend
 * Django  
@@ -73,6 +73,11 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 
 #### DB  
 * MySQL  
+
+#### Restful API
+* Kakao Social Log-in API
+* Naver Social Log-in API
+* Google Map API
 
 #### Frontend  
 * HTML  
@@ -89,7 +94,6 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * Logstash
 * Kibana
 
-
 #### CI/CD
 * jenkins
 
@@ -100,10 +104,10 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * 개발하면서 수정 예정
 #### API 설계도에 따른 진행 상황
 # 노션으로 체크박스 관리
-https://www.notion.so/API-c120523cd89b41a88107ce7579a8165e
-
-
-
+* 회의록, API, WBS
+> https://www.notion.so/API-c120523cd89b41a88107ce7579a8165e
+* 업무일지, 해결일지
+> https://www.notion.so/Project-Chat-Time-3eacf18eb2fc4865baea5c9c1e15220b
 
 
 -----------------------------------------
@@ -111,9 +115,9 @@ https://www.notion.so/API-c120523cd89b41a88107ce7579a8165e
 ## 🎊산출물
 > ERD, 프로세스정의 및 UI 설계 , WBS, 플랫폼 구성도
 ### 🖌 ER Diagram(ERD)
-![ChatTimeERD](https://user-images.githubusercontent.com/97925049/167329078-85c94686-aace-40b2-b306-699941d1907b.png)
+![ERD](https://user-images.githubusercontent.com/97014086/172041171-76737639-8fbd-4221-9fdd-0fd05e3ff84c.png)
 
-https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
+https://github.com/SunMin0/ChatTime/issues/8#issue-1260987993
 
 -----------------------------------------
 ### 🎨플랫폼 구성도
@@ -130,8 +134,9 @@ https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
 
 -----------------------------------------
 ### 📅 WBS
+* notion으로 협업하면서 WBS 작성
+> https://www.notion.so/WBS-Work-Broken-Structure-de61224f0d0b40b6ae4d800eafdfb0d2
 ![WBS](https://user-images.githubusercontent.com/97925049/168591525-677bc408-4363-48f2-a634-5fd36908df62.png)
-### notion으로 협업하면서 WBS 작성
 -----------------------------------------
 
 ### 🎞구현

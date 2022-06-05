@@ -40,7 +40,9 @@ order_complete_url = "{% url 'order:order_complete' %}";
             <!-- hidden field 추가-->
             <input type="hidden" name="pre_order_id" value="0">
             <input type="hidden" name="amount" value="{{ cart.get_total_price|floatformat:'2' }}">
-            <input type="submit" class="btn btn-primary float-right" value="Place Order">
+            <br>
+            <br>
+            <input type="submit" class="btn btn-primary float-right" value="주문 완료 하기" style="font-size:40px;color:grey;">
         </form>
     </div>
 </div>

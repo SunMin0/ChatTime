@@ -50,11 +50,12 @@
             <td class="num">&#8361;{{ cart.get_total_price|floatformat:"2" }}</td>
         </tr>
         </tbody>
-    </table>
-
+</table>
+    <br>
+    <br>
     <p class="text-right">
-        <a href="/espresso" class="btn btn-secondary">쇼핑 계속하기</a><br><Br>
-        <a href="/chat" class="btn btn-secondary" style="color:#5F04B4;" >채로와 쇼핑 계속하기</a><br><Br>
-        <a href="{% url 'order:order_create' %}" class="btn btn-secondary">계산 하기</a>
+        <a href="/espresso" class="btn btn-secondary" style="font-size:25px;color:MediumVioletRed   ;">쇼핑 계속하기</a><br><Br>
+        <a href="/chat" class="btn btn-secondary" style="font-size:25px;color:YellowGreen;" >채로와 쇼핑 계속하기</a><br><Br>
+        <a href="{% url 'order:order_create' %}" class="btn btn-secondary" style="font-size:25px;color:blue;">계산 하기</a>
     </p>
 </body>
