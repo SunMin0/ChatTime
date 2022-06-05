@@ -18,9 +18,13 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * 링크 : 
 -----------------------------------------
 ## 📑문서
-*  ELK 설정
-*  Python 파일
+
+*  ELK 설정 config 파일
+*  .py 파일
 *  회의록
+*  업무일지
+*  .html 파일
+*  static 정적 파일 
 
 
 -----------------------------------------  
@@ -82,7 +86,7 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 #### Frontend  
 * HTML  
 * CSS  
-* Js  
+* Javascript
 
 #### ML,DL
 * Jupyter notebook
@@ -93,9 +97,10 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * ElasticSearch
 * Logstash
 * Kibana
+* Kafka
 
 #### CI/CD
-* jenkins
+* Jenkins
 
 
 -----------------------------------------
@@ -145,5 +150,7 @@ https://github.com/SunMin0/ChatTime/issues/8#issue-1260987993
 
 
 ## ✏참고
+
 * 패쓰오더
 * 카카오톡
+* 쇼핑몰
