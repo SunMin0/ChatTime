@@ -115,7 +115,7 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 ## 🎊산출물
 > ERD, 프로세스정의 및 UI 설계 , WBS, 플랫폼 구성도
 ### 🖌 ER Diagram(ERD)
-[![ChatTimeERD](https://user-images.githubusercontent.com/97925049/167329078-85c94686-aace-40b2-b306-699941d1907b.png)](https://github.com/SunMin0/ChatTime/issues/7#issue-1260986846)
+
 
 https://github.com/SunMin0/ChatTime/blob/main/docs/ERD%EC%B4%88%EC%95%88.mwb
 
