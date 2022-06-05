@@ -120,7 +120,7 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * 업무일지, 해결일지
 > https://www.notion.so/Project-Chat-Time-3eacf18eb2fc4865baea5c9c1e15220b
 * 서비스 후 피드백 보완
-> https://nebulous-class-691.notion.site/1e40e33b7e014cc595060d2242793322?v=59c6c0257859477b957e424585cb7992
+> [https://nebulous-class-691.notion.site/1e40e33b7e014cc595060d2242793322?v=59c6c0257859477b957e424585cb7992](https://nebulous-class-691.notion.site/Start-9dbc2e6ce5114635a35df944b7bf1591)
 -----------------------------------------
 
 ## 🎊산출물
