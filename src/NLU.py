@@ -45,9 +45,7 @@ class NaturalLanguageUnderstanding:
         f = self.entity_recog(x.unsqueeze(0))
 
         mask = torch.where(x>0, torch.tensor([1.]), torch.tensor([0.])).type(torch.uint8)
-
         predict = self.entity_recog.decode(f, mask.view(1, -1))
-
         return intent, predict
 
     def convert_nlu_result(self, query, intent, predict):
@@ -79,7 +77,6 @@ class NaturalLanguageUnderstanding:
                 if BIE != []:
                     slots.append(prev[2:]+"^"+" ".join(BIE))
                     BIE = []
-
         NLU_result["INTENT"] = intent
         NLU_result["SLOT"] = slots
         return NLU_result
