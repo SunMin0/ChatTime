@@ -55,7 +55,6 @@ def order_create(request):
     return render(request, 'order/create.html', {'cart': cart, 'form': form})
 
 def order_complete(request):
-    print('주문완료')
     order_id = request.GET.get('order_id')
     order = Order.objects.get(id=order_id)
     order_item_list = OrderItem.objects.all()
@@ -68,19 +67,6 @@ def order_complete(request):
             order_date = str(datetime.datetime.now())
             order_date = order_date.replace(' ', 'T')
             order_date = order_date + "+09:00"
-            print('일치-----')
-            print('주문일:', order_date)
-            print('주문번호:', order_item.order_id)
-            print('ID:', c_user.username)
-            print('성별:', c_user.u_sex)
-            print('생년월일:', c_user.birth_year)
-            print('이메일:', order.email)
-            print('총가격:', order.total_price)
-            print('상품명:',order_item.product.name)
-            print('가격:',order_item.price)
-            print('수량:',order_item.quantity)
-            print('사이즈:',order_item.size)
-            print('온도:',order_item.temp)
 
             extra = {'order_date':order_date,
                      'order_number':int(order_item.order_id),
