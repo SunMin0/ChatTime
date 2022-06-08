@@ -71,8 +71,6 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * Master 계정에 kibana 분석 제공  
 > a. ELK의 활용으로 시각화된 분석 자료 제공  
 > b. 분석 자료를 통해 전략 수립 가능  
-* Kafka의 파이프 라인 관리 기능  
-> a. 서로 다른 웹 서버의 Chat log data or Order 정보등을 Elasticsearch의 각각의 인덱스에 적재   
 -----------------------------------------  
 ### 🛠Skill & Tools
 ![Skill_Tools](https://user-images.githubusercontent.com/97014086/172040253-9c1ea521-ed1c-40b8-bbae-50343e18ff50.png)
@@ -103,7 +101,6 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * ElasticSearch
 * Logstash
 * Kibana
-* Kafka
 
 #### CI/CD
 * Jenkins
