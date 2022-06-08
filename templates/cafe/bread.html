@@ -33,7 +33,7 @@
     </div>
     <div class="header__bottom">
         <div class="header__column">
-            <span class="header__text">Edit</span>
+            <span class="header__text"></span>
         </div>
         <div class="header__column">
             <span class="header__text">Cafe{{cafe.name}}</span>
@@ -100,11 +100,11 @@
                                 <form action="{% url 'cart:product_add' product.id %}" method="post">
                                     <input type="number" name="quantity" required id="id_quantity"
                                            style="width:50px;height:20px;font-size:18px;" min="1">
-                                    <select name="size" required id="id_size">
-                                        <option value="N">없음</option>
+                                    <select hidden name="size" required id="id_size">
+                                        <option  value="N">없음</option>
                                     </select>
-                                    <select name="temp" required id="id_temp">
-                                        <option value="N">없음</option>
+                                    <select hidden name="temp" required id="id_temp">
+                                        <option  value="N">없음</option>
                                     </select>
                                     <br>
                                     <br>

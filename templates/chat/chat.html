@@ -56,7 +56,7 @@
     <div class="type-message__input">
         <!-- 텍스트 입력   -->
         {% csrf_token %}
-        <input type="text" id="message" width="100%">
+        <input type="text" id="message" width="100%" >
       </div>
     <div>
             <i class="fa fa-shopping-cart"></i>
@@ -100,6 +100,16 @@ $(document).ready(function() {
 
 /* 메시지 부분 */
 var flag = 0;
+let today = new Date();
+                let hours = today.getHours();
+                let minutes = today.getMinutes();
+                $(".chat").append('<div class="chat__message chat__message-to-me"><img src="/static/images/bot.jpg" alt="" class="chat__message-avatar"><div class="chat__message-center"><h3 class="chat__message-username">채로</h3><span class="chat__message-body">'
+                + '안녕하세요~ 채로봇입니다! 메뉴 안내해 드릴게요 :)' + '<br>'
+                + '[커피] 아메리카노, 카페라떼, 카라멜 마끼아또, 카페모카, 카푸치노' + '<br>'
+                + '[주스] 토마토주스, 딸기주스, 블루베리주스, 레몬에이드, 자몽에이드' + '<br>'
+                + '[제과] 마카롱, 케이크, 티라미슈, 쿠키, 머핀' + '<br>'
+                + '[차] 밀크티, 홍차, 유자차, 녹차, 자몽차'
+                + '</span></div><span class="chat__message-time">' + hours + ':' + minutes + '</span></div>');
 $("#message").keydown(function(e) {
     if (e.keyCode === 13) {
         let today = new Date();
@@ -120,7 +130,7 @@ $("#message").keydown(function(e) {
                 let today = new Date();
                 let hours = today.getHours();
                 let minutes = today.getMinutes();
-                $(".chat").append('<div class="chat__message chat__message-to-me"><img src="/static/images/avatar.jpg" alt="" class="chat__message-avatar"><div class="chat__message-center"><h3 class="chat__message-username">챗봇</h3><span class="chat__message-body">' + json.message + '</span></div><span class="chat__message-time">' + hours + ':' + minutes + '</span></div>');
+                $(".chat").append('<div class="chat__message chat__message-to-me"><img src="/static/images/bot.jpg" alt="" class="chat__message-avatar"><div class="chat__message-center"><h3 class="chat__message-username">채로</h3><span class="chat__message-body">' + json.message + '</span></div><span class="chat__message-time">' + hours + ':' + minutes + '</span></div>');
                 // 받을 때 스크롤 맨 밑으로
                 if (flag > 1){
                   $(document).scrollTop($(".chat").height());

@@ -25,7 +25,6 @@ class Cart(object):
         for item in self.cart.values():
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
-            # size,temp 넣기위해서 추가
             yield item
 
     # size,temp 넣기위해서 추가

@@ -10,10 +10,11 @@ import logging
 from logging import StreamHandler
 import logstash
 import datetime
+from config.settings import LOGSTASH_HOST, LOGSTASH_PORT
 
 # 로그스태시
-host = get_secret('LOGSTASH_HOST')
-port = get_secret('LOGSTASH_PORT')
+host = LOGSTASH_HOST
+port = LOGSTASH_PORT
 logger = logging.getLogger('python-logstash-logger')
 logger.setLevel(logging.INFO)
 logger.addHandler(logstash.TCPLogstashHandler(host, port, version=1))
@@ -60,7 +61,8 @@ def order_complete(request):
     order_item_list = OrderItem.objects.all()
     Current_user = request.user
     c_user = CustomUser.objects.get(username=Current_user)
-
+    cart = Cart(request)
+    cart.clear()
     for order_item in order_item_list:
         if int(order_id) == int(order_item.order_id):
             # UTC 타임을 한국에 맞게 수정
@@ -106,7 +108,6 @@ class OrderCreateAjaxView(View):
                                          size=item['size'],
                                          temp=item['temp']
                                          )
-            cart.clear()
             data = {
                 "order_id": order.id
             }
@@ -121,7 +122,6 @@ class OrderCheckoutAjaxView(View):
         order_id = request.POST.get('order_id')
         order = Order.objects.get(id=order_id)
         amount = request.POST.get('amount')
-
         try:
             merchant_order_id = OrderTransaction.objects.create_new(
                 order=order,
@@ -131,11 +131,18 @@ class OrderCheckoutAjaxView(View):
             merchant_order_id = None
 
         if merchant_order_id is not None:
-            data = {
-                "works": True,
-                "merchant_id": merchant_order_id
-            }
-            return JsonResponse(data)
+            cart = Cart(request)
+            total_price = int(cart.get_total_price())
+            amount = int(amount)
+            if total_price == amount:
+                data = {
+                    "works": True,
+                    "merchant_id": merchant_order_id
+                }
+                return JsonResponse(data)
+            else:
+                bad_user = request.user
+                return JsonResponse({}, status=401)
         else:
             return JsonResponse({}, status=401)
 
@@ -159,16 +166,23 @@ class OrderImpAjaxView(View):
             trans = None
 
         if trans is not None:
-            trans.transaction_id = imp_id
-            trans.success = True
-            trans.save()
-            order.paid = True
-            order.save()
+            cart = Cart(request)
+            total_price = int(cart.get_total_price())
+            amount = int(amount)
+            if total_price == amount :
+                trans.transaction_id = imp_id
+                trans.success = True
+                trans.save()
+                order.paid = True
+                order.save()
 
-            data = {
-                "works": True
-            }
+                data = {
+                    "works": True
+                }
+                return JsonResponse(data)
 
-            return JsonResponse(data)
+            else:
+                bad_user = request.user
+                return JsonResponse({}, status=401)
         else:
             return JsonResponse({}, status=401)

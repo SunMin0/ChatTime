@@ -2,7 +2,7 @@
 {% load static %}
 <head>
     <br>
-    <a href="#content" onclick="location.href='';"
+    <a href="#content" onclick="location.href='/m_base';"
        style='cursor:pointer; font-size: 10px; font-weight: bold; color: indianred; text-shadow: 1px 1px 1.2px yellow;'>
         <span><h1>처음화면으로 돌아가기</h1></span></a>
     <br>
@@ -51,8 +51,7 @@
                    placeholder="비밀번호를 입력해주세요"
                    style="width:300px;height:50x;font-size:20px;" data-sb-validations="required,email">
             <p class="txt_guide square">
-            <h5><span class="txt txt_case2">영문/숫자/특수문자 포함 8자 이상,</span>
-                <span class="txt txt_case3">동일한 숫자 3개 이상 연속 사용 불가</span></h5>
+            <h5><span class="txt txt_case2">영문/숫자/ 포함 8자 이상</span></h5>
             </p>
             <h3 class="join_title"><h2>비밀번호 재확인</h2></h3>
             <input type="password" name="password2" required="" fld_esssential=""
@@ -106,7 +105,6 @@
             <h3 class="join_title"><h2>체크해주세요</h2></h3>
             <input type="checkbox" name="login_method" value="C" style="zoom:3.0;">
         </div>
-
         <div class="join_row">
             <h3 class="join_title"><h2>관리자 회원은 체크해 주세요! </h2></h3>
             <input type="checkbox" name="is_manager" value="True" style="zoom:3.0;">
@@ -115,7 +113,12 @@
             <h3 class="join_title"><h2>마스터 회원은 체크해 주세요! </h2></h3>
             <input type="checkbox" name="is_master" value="True" style="zoom:3.0;">
         </div>
-
+        <br>
+        <br>
+        <div class="join_row">
+            <h3 class="join_title"><h2>매니저,마스터 가입용 시크릿 코드를 입력해 주세요 </h2></h3>
+            <input type="password" name="token" style="width:300px;height:30px;">
+        </div>
         <br>
         <br>
         <!-- Submit Button-->
@@ -137,7 +140,7 @@
     </div>
     <footer>
         <div class="copyright-wrap">
-            <span>	<img src="img/logo.png"> Copyright © KYcompany All Rights Reserved.</span>
+            <span> Copyright © KYcompany All Rights Reserved.</span>
         </div>
     </footer>
     </div>

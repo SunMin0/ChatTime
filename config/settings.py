@@ -44,6 +44,9 @@ def get_secret(setting, secrets=secrets):
 SECRET_KEY = secrets['SECRET_KEY']
 IAMPORT_KEY = secrets['IAMPORT_REST_API']
 IAMPORT_SECRET = secrets['IAMPORT_SECRET']
+MANAGER_TOKEN = secrets['MANAGER_TOKEN']
+LOGSTASH_HOST = secrets["LOGSTASH_HOST"]
+LOGSTASH_PORT = secrets["LOGSTASH_PORT"]
 
 SOCIAL_OUTH_CONFIG = {
     'KAKAO_REST_API_KEY': secrets['KAKAO_REST_API_KEY'],

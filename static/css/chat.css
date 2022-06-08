@@ -1,5 +1,5 @@
 .body-chat {
-  padding-bottom: 0;
+  background-color: #a1c0d6;
 }
 .chat-header,
 .chat-header a {
@@ -16,6 +16,7 @@
   padding-top: 15px;
   padding-left: 5px;
   padding-right: 5px;
+  padding-bottom: 10%;
 }
 
 .chat .date-divider {

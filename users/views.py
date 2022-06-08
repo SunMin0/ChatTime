@@ -10,7 +10,7 @@ from users.forms import SignupForm, UpdateUserForm, UpdateProfileForm, Signup_ma
 from .forms import CheckPasswordForm
 from django.shortcuts import redirect
 from .models import CustomUser
-
+from config.settings import MANAGER_TOKEN
 
 
 #유저 베이스 화면
@@ -47,8 +47,11 @@ def signup2(request):
         signupForm = Signup_manager(request.POST)
         if signupForm.is_valid():
             if request.POST["password1"] == request.POST["password2"]:
-                signupForm.save()
-            return redirect('/')
+                token = MANAGER_TOKEN
+                if token == request.POST["token"]:
+                    signupForm.save()
+                    return redirect('/m_base')
+            return redirect('/signup_manager')
         else:
             messages.info(request, '올바르지 않습니다.')
             return redirect('/signup_manager')

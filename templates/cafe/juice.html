@@ -33,7 +33,7 @@
     </div>
     <div class="header__bottom">
         <div class="header__column">
-            <span class="header__text">Edit</span>
+            <span class="header__text"></span>
         </div>
         <div class="header__column">
             <span class="header__text">Cafe{{cafe.name}}</span>
@@ -103,11 +103,9 @@
                                       <select name="size" required id="id_size">
                                         <option value="S">small</option>
                                         <option value="L">large</option>
-                                          <option value="N">없음</option>
                                     </select>
-                                    <select name="temp" required id="id_temp">
-                                        <option value="C">cold</option>
-                                        <option value="N">없음</option>
+                                    <select hidden name="temp" required id="id_temp">
+                                        <option value="C" >cold</option>
                                     </select>
                                     <br>
                                     <br>
