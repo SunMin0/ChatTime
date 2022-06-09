@@ -85,7 +85,6 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 #### Restful API
 * Kakao Social Log-in API
 * Naver Social Log-in API
-* Google Map API
 
 #### Frontend  
 * HTML  
@@ -102,8 +101,6 @@ https://www.notion.so/Project-Chat-Time-7edccf0e361040fba461ecc3f7eed82a
 * Logstash
 * Kibana
 
-#### CI/CD
-* Jenkins
 
 
 -----------------------------------------
