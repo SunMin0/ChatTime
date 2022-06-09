@@ -154,6 +154,9 @@ http://chatmaster.kro.kr/
 
 마스터(프랜차이즈 마스터)>> order에 대한 분석 시각화 자료 제공
 
+#### 구현PPt
+https://docs.google.com/presentation/d/1tMeU9PC3Akew8caSv_C4oS0POuy04kk54zHd5-S79xo/edit?usp=sharing
+
 
 
 채로 도메인
