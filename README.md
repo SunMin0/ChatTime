@@ -148,6 +148,22 @@ https://github.com/SunMin0/ChatTime/issues/8#issue-1260987993
 -----------------------------------------
 
 ### 🎞구현
+#### 도메인
+마스터계정 도메인
+http://chatmaster.kro.kr/
+
+마스터(프랜차이즈 마스터)>> order에 대한 분석 시각화 자료 제공
+
+
+
+채로 도메인
+server1 : http://chattime.kro.kr:33114/
+server2 : http://chattime.kro.kr:33153/
+
+매니저계정 회원가입
+http://chattime.kro.kr:33153/m_base
+http://chattime.kro.kr:33114/m_base
+
 -----------------------------------------
 
 
